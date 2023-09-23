@@ -12,6 +12,14 @@ import Navbar from "./components/Navbar";
 function App() {
 
   return (
+<<<<<<< Updated upstream
+    <>
+ <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+    </>
+  )
+=======
   <>
   {/*it will always show navbar */}
     <Navbar />
@@ -39,6 +47,7 @@ function App() {
   
   </>
    )
+>>>>>>> Stashed changes
 }
 
 export default App
