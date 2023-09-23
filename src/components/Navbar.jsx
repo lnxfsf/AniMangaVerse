@@ -1,5 +1,6 @@
 
 import '../styles/navbar.css'
+import {Link} from 'react-router-dom'
 
 
 export default function Navbar () {
@@ -8,30 +9,29 @@ export default function Navbar () {
 
         <nav>
 
-            <div class="first">
+            <div className="first">
 
-                <img src="BabyBananya.png" />
-                <h2>AniManga Verse</h2>
+                <Link class="first_img" to="/" ><img src="BabyBananya.png" /></Link>
+                <Link class="first_h2" to="/">AniManga Verse</Link>
 
 
             </div>
 
-            <div class="second">
+            <div className="second">
         
 
-            <a>Home</a>
-            <a>Anime</a>
-            <a>Manga</a>
-            <a>Explore</a>
+            <Link to="/">Home</Link>
+            <Link to="/anime">Anime</Link>
+            <Link to="/manga">Manga</Link>
+            <Link to="/explore">Explore</Link>
 
         
-        <div class="profile_icon">
+
 
             {/*in index.html, boxicons, imported as css. use it as 'Font' */}
-            <i class='bx bxs-user-circle'></i>
+            <img src="bxs-user-circle.svg"  className="profile_icon  rounded-full  border-2 border-pinky"/>
 
 
-        </div>
 
             </div>
 

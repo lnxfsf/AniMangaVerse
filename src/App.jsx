@@ -1,21 +1,36 @@
 import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import './App.css'
 
+
+import {  Routes, Route } from 'react-router-dom'
 
 // import components
 import Navbar from "./components/Navbar";
 
+import Home from "./pages/Home";
+import Anime from "./pages/Anime";
+import Manga from "./pages/Manga";
+import Explore from "./pages/Explore";
 
 
 
 function App() {
 
+  
   return (
   <>
   {/*it will always show navbar */}
     <Navbar />
+
     
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/anime" element={<Anime />} />
+        <Route path="/manga" element={<Manga />} />
+        <Route path="/explore" element={<Explore />} />
+
+      </Routes>
+
 
     {/*main placeholder for components 
     <Router>

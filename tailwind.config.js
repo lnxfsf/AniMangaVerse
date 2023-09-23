@@ -6,6 +6,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    colors: {
+      'pinky': '#EA1179',
+    },
+
     extend: {},
   },
   plugins: [],
