@@ -1,13 +1,13 @@
 
 
 import '../styles/footer.css'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
-export default function Navbar () {
-    
+export default function Navbar() {
+
     return <>
-    
+
         <div className="line"> </div>
 
 
@@ -25,20 +25,19 @@ export default function Navbar () {
 
                     <p>support@animelist.me</p>
                     <p>020-XXX-XXX</p>
-        
 
-        
-                {/*TODO: fix those svg images, they not showing up  */}
+
+
                     <div className="social">
 
-                        <img src="ig.svg"></img>
-                        <img src="fb.svg"></img>
-                        <img src="threads.svg"></img>
-                        <img src="x.svg"></img>
+                        <img src="../src/assets/social/ig.svg"></img>
+                        <img src="../src/assets/social/fb.svg"></img>
+                        <img src="../src/assets/social/threads.svg"></img>
+                        <img src="../src/assets/social/x.svg"></img>
 
 
                     </div>
-                    
+
 
                 </div>
 
@@ -49,16 +48,16 @@ export default function Navbar () {
                         <div className="rectangle"></div>
                         <h3>Navigation:</h3>
                     </div>
-        
 
-        <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/anime">Anime</Link></li>
-            <li><Link to="/manga">Manga</Link></li>
-            <li><Link to="/explore">Explore</Link></li>
-        </ul>
-        
-                    
+
+                    <ul>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/anime">Anime</Link></li>
+                        <li><Link to="/manga">Manga</Link></li>
+                        <li><Link to="/explore">Explore</Link></li>
+                    </ul>
+
+
 
                 </div>
 
@@ -68,13 +67,14 @@ export default function Navbar () {
             </div>
 
 
-        
 
-            <div class="second">
+
+            <div className="second">
 
                 <div>
 
-                    <div className="small_header " style={{marginBottom: '0.8em'}} >
+
+                    <div className="small_header " style={{ marginBottom: '0.8em' }} >
                         {/* check index.css, for global use, vertical rectangle.. */}
                         <div className="rectangle_taller"></div>
 
@@ -88,32 +88,32 @@ export default function Navbar () {
 
                     </div>
 
-                        <button>SignUp</button>
-        
-        
+                    <button>SignUp</button>
 
-                    <div className="small_header " style={{marginBottom: '0.8em'}} >
+
+
+                    <div className="small_header " style={{ marginBottom: '0.8em' }} >
                         {/* check index.css, for global use, vertical rectangle.. */}
                         <div className="rectangle_smaller"></div>
 
-                            <p>Or if you already have an account</p>
+                        <p>Or if you already have an account</p>
 
 
                     </div>
 
-                        <button>LogIn</button>
-        
-                                   
+                    <button>LogIn</button>
+
+
 
                 </div>
 
-       
+
 
             </div>
 
-            
+
         </footer>
-    
+
     </>
 
 }
