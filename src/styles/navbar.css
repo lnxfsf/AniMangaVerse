@@ -1,0 +1,35 @@
+nav {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0;
+    background-color: black;
+    
+    
+   color: white; 
+
+}
+
+.first {
+    
+    display: flex;
+    align-items: center;
+    gap: 2em;
+
+
+}
+
+
+.second {
+    
+    display: flex;
+    align-items: center;
+    gap: 2em;
+
+}
+
+.profile_icon {
+    
+}
