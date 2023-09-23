@@ -3,3 +3,29 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* this is for global usage. vertical line. just put it in <div> and use this class on that <div> */
+.rectangle {
+  width: 3px;
+  height: 39px;
+  background-color: #EA1179;
+}
+
+.rectangle_taller {
+  width: 3px;
+  height: 63px;
+  background-color: #EA1179;
+}
+
+
+.rectangle_smaller {
+  width: 3px;
+  height: 24px;
+  background-color: #EA1179;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: #EA1179;
+}

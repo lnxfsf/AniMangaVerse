@@ -21,7 +21,10 @@ nav {
 
     display: flex;
     align-items: center;
-    gap: 2em;
+
+    justify-content: flex-start;
+
+    /* gap: 2em; */
 
     margin-left: 15px;
 
@@ -39,12 +42,14 @@ nav {
 
     font-family: Inika;
 
-/* with vw instead of px or pt, to make the text responsive. on viewport width */
-    font-size: 36px;
+/*TODO with vw instead of px or pt, to make the text responsive. on viewport width */
+    font-size: 2.8vw;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     color: #FFF;
+
+    
 
 }
 
@@ -64,7 +69,7 @@ nav {
 
     color: #FFF;
     font-family: Inter;
-/* with vw instead of px or pt, to make the text responsive. on viewport width */
+/* TODO: with vw instead of px or pt, to make the text responsive. on viewport width */
     font-size: 24px;
     font-style: normal;
     font-weight: 400;

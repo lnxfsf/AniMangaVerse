@@ -9,6 +9,8 @@ export default function Navbar () {
 
         <nav>
 
+        
+        {/*TODO: this should respond on justify-content: flex-start;  , so header starts right after image. so it have more space */}
             <div className="first">
 
                 <Link class="first_img" to="/" ><img src="BabyBananya.png" /></Link>

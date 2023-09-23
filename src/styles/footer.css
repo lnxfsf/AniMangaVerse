@@ -1,0 +1,153 @@
+
+/* GLOBAL STUFF */
+
+footer {
+    width: 100%;
+    height: 280px;
+
+    background: linear-gradient(180deg, #111 0%, #1E1E1E 50.52%, #1E1E1E 100%);
+
+    display: flex;
+    align-items: center;
+
+
+    color: white;
+
+}
+
+
+/* text in footer to have Inter font */
+p {
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* this is for those little headers i see everywhere with that vertical line */
+.small_header {
+    display: flex;
+    flex-direction: row;
+    column-gap: 6px;
+    align-items: center;
+    
+
+    /* TODO: don't use px */
+    margin-bottom: 24px;
+
+}
+
+.small_header>h3 , .small_header>div>h3{
+    color: #FFF;
+    font-family: Inter;
+    
+    
+    /* TODO: don't use px, use vw */
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+
+/* this is for those little headers i see everywhere with that vertical line */
+
+
+button {
+    
+width: 303px;
+height: 50px;
+    border-radius: 25px;
+border: 1px solid #EA1179;
+/*TODO, it had to be !important, it didn't want to show the background. can it be done without? */
+background: rgba(247, 155, 211, 0.502) !important;
+
+/*TODO, it had to be !important, it didn't want to show the background. can it be done without? because it works once,and second doesn't  ??? this css is scoped to Footer component for reason... */
+margin-bottom: 15px !important;
+
+
+}
+
+
+
+/* GLOBAL STUFF */
+
+
+
+/* this is first, which consist of 2 more div inside of it. this one have flex-grow: 2 , so rightmost div occupy smallest space */
+
+
+/* this is for both first and second div */
+.first > div {
+
+    /* so  header can be uppermost*/
+    align-self: flex-start;
+
+}
+/* this is for both first and second div */
+
+/* first div */
+.first {
+    display: flex;
+    flex-grow: 2;
+    gap: 6em;
+
+}
+
+
+/* this is for social images */
+
+.social {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    
+    
+    /* TODO: don't use px */
+    margin-top: 40px;
+
+
+
+}
+
+.social>img {
+
+    width: 32px;
+    height: 32px;
+}
+
+/* this is for social images */
+
+/* first div */
+
+
+/* second div */
+
+ul > li {
+    font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-bottom: 10px;
+padding: 0;
+
+}
+
+
+/* second div */
+
+
+
+/* this is first, which consist of 2 more div inside of it. this one have flex-grow: 2 , so rightmost div occupy smallest space */
+
+/* this is div on right where login and register appear if not logged in. otherwise just disappear  */
+.second {
+
+    flex-grow: 1;
+
+
+}
+

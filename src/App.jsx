@@ -6,11 +6,13 @@ import {  Routes, Route } from 'react-router-dom'
 
 // import components
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import Anime from "./pages/Anime";
 import Manga from "./pages/Manga";
 import Explore from "./pages/Explore";
+
 
 
 
@@ -32,25 +34,8 @@ function App() {
       </Routes>
 
 
-    {/*main placeholder for components 
-    <Router>
-      <div>
-        <Link style={padding} to="/">home</Link>
-        <Link style={padding} to="/notes">notes</Link>
-        <Link style={padding} to="/users">users</Link>
-      </div>
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/anime" element={<Anime />} />
-        <Route path="/manga" element={<Manga />} />
-        <Route path="/explore" element={<Explore />} />
-
-      </Routes>
-
-    </Router>
-
   {/*it will always show footer */}
+    <Footer />
   
   </>
    )
