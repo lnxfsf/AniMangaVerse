@@ -96,7 +96,7 @@ export default function Navbar() {
                     </div>
 
 
-                    <button>SignUp</button>
+                    <button className="btn">SignUp</button>
 
 
 
@@ -109,7 +109,7 @@ export default function Navbar() {
 
                     </div>
 
-                    <button>LogIn</button>
+                    <button className="btn">LogIn</button>
 
 
 

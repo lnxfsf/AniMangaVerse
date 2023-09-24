@@ -23,8 +23,11 @@ nav {
 
     font-family: Inika;
 
-/*TODO with vw instead of px or pt, to make the text responsive. on viewport width */
-    font-size: 2.8vw;
+
+
+    /*TODO breakpoint font-size */
+    font-size: 2.4vw;
+
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -40,8 +43,12 @@ nav {
 
     color: #FFF;
     font-family: Inter;
-/* TODO: with vw instead of px or pt, to make the text responsive. on viewport width */
-    font-size: 24px;
+    
+
+
+    /*TODO breakpoint font-size */
+    font-size: 1.6vw;
+
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -62,3 +69,26 @@ nav {
 
 
 }
+
+
+
+
+.login {
+
+    width: 15%;
+    height: 2.5em;
+
+    border-radius: 25px;
+    border: 1px solid #EA1179;
+
+
+    background: rgba(247, 155, 211, 0.502) ;
+
+
+
+    /*TODO breakpoint font-size */
+    font-size: 1.2vw;
+
+
+}
+

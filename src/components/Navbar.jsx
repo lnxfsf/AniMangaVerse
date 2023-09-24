@@ -33,8 +33,15 @@ export default function Navbar () {
 
 
             {/*in index.html, boxicons, imported as css. use it as 'Font' */}
-            <img src="bxs-user-circle.svg"  className="profile_icon  rounded-full  border-2 border-pinky"/>
 
+
+    {/*   @Dragan  , here, this is for showing profile and dropdown ..  
+
+            <img src="bxs-user-circle.svg"  className="profile_icon  rounded-full  border-2 border-pinky"/>
+ */ }
+
+
+                    <button className="login">LogIn</button>
 
             </div>
 
