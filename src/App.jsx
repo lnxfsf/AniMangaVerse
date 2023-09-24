@@ -15,14 +15,13 @@ import Explore from "./pages/Explore";
 
 
 
-
 function App() {
 
   
   return (
   <>
   {/*it will always show navbar */}
-    <Navbar />
+    <Navbar /> 
 
     
       <Routes>
@@ -35,7 +34,9 @@ function App() {
 
 
   {/*it will always show footer */}
+
     <Footer />
+
   
   </>
    )
