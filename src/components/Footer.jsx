@@ -30,10 +30,10 @@ export default function Navbar() {
 
                     <div className="social">
 
-                        <img src="../src/assets/social/ig.svg"></img>
-                        <img src="../src/assets/social/fb.svg"></img>
-                        <img src="../src/assets/social/threads.svg"></img>
-                        <img src="../src/assets/social/x.svg"></img>
+                        <img src="../public/assets/social/ig.svg"></img>
+                        <img src="../public/assets/social/fb.svg"></img>
+                        <img src="../public/assets/social/threads.svg"></img>
+                        <img src="../public/assets/social/x.svg"></img>
 
 
                     </div>
