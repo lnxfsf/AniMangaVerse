@@ -1,5 +1,17 @@
+
+
+import PopularCarousel from "../components/PopularCarousel";
+
+
+
 export default function Home () {
 
-    return <h1>Home</h1>
+    return <>
+    
+        <PopularCarousel />
+        
+        
+    
+    </>
     
 }
