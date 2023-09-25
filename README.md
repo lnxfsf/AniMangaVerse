@@ -9,3 +9,4 @@
 
 [tailwind](https://tailwindcss.com/)
 
+[react-touch-carousel](https://github.com/xiaody/react-touch-carousel)
