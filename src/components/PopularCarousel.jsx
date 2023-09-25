@@ -1,9 +1,9 @@
 
 
-import '../styles/popularcarousel.css'
+import '../styles/PopularCarousel.css'
 
 
-export default function Navbar() {
+export default function PopularCarousel() {
 
     return <>
 

@@ -34,10 +34,10 @@ export default function Navbar() {
 
                     <div className="social flex flex-row gap-4">
 
-                        <img src="../public/assets/social/ig.svg"></img>
-                        <img src="../public/assets/social/fb.svg"></img>
-                        <img src="../public/assets/social/threads.svg"></img>
-                        <img src="../public/assets/social/x.svg"></img>
+                        <img src="/assets/social/ig.svg"></img>
+                        <img src="/assets/social/fb.svg"></img>
+                        <img src="/assets/social/threads.svg"></img>
+                        <img src="/assets/social/x.svg"></img>
 
 
                     </div>
