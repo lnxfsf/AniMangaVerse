@@ -1,4 +1,7 @@
 
+
+@import '../node_modules/scroll-carousel/dist/scroll.carousel.min.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

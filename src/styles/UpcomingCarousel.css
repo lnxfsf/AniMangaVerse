@@ -65,6 +65,7 @@
 
     border-radius: 20px 20px 0 0;
 
+
 }
 
 .inner>h1 {
@@ -107,4 +108,15 @@
 }
 
 
+
+
+
+
+
+
+.carousel-container {
+  overflow-x: auto;
+  white-space: nowrap; /* Prevents items from wrapping to the next line */
+  width: 100%; /* Set the width to your desired value */
+}
 
