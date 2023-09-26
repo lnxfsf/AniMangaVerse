@@ -112,11 +112,77 @@ export default function BrowseHome() {
     return <>
 
 
-        <div className="main2 flex  ">
+        <div className="main2 flex justify-center items-center ">
 
-            <div className="filter  basis-1/4">
+            <div className="basis-1/4">
 
-                <p>i</p>
+                <div className="filter flex flex-col border-2 border-pinky m-6 ">
+
+                    <h1 className="self-center m-4 mt-8 ">Browse</h1>
+
+                    <div className="flex flex-col  justify-start ml-3 mt-3">
+                        <p className="filter_txt">Search:</p>
+
+
+                        <div className="search-container">
+                            <div className="input-container">
+                                <input type="text" placeholder="Search" />
+                                <button className="search-icon"><i className='bx bx-search-alt-2'></i></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div className="flex flex-col  justify-start ml-3 mt-3">
+                        <p className="filter_txt">Genres:</p>
+
+                        <select class="dropdown-select">
+                            <option value="option1">Option 1</option>
+                            <option value="option2">Option 2</option>
+                            <option value="option3">Option 3</option>
+                        </select>
+
+
+                    </div>
+
+                    <div className="flex flex-col  justify-start ml-3 mt-3">
+                        <p className="filter_txt">Year:</p>
+
+
+                        <select class="dropdown-select">
+                            <option value="option1">Option 1</option>
+                            <option value="option2">Option 2</option>
+                            <option value="option3">Option 3</option>
+                        </select>
+
+
+
+                    </div>
+
+                    <div className="flex flex-col  justify-start ml-3 mt-3">
+                        <p className="filter_txt">Studio:</p>
+
+
+
+                        <select class="dropdown-select">
+                            <option value="option1">Option 1</option>
+                            <option value="option2">Option 2</option>
+                            <option value="option3">Option 3</option>
+                        </select>
+
+
+
+
+
+                    </div>
+
+
+                    <button className="submit bg-pinky rounded-xl  self-center p-2 m-3 mt-6 mb-4">Submit</button>
+
+                </div>
+
+
+
             </div>
 
 
@@ -126,35 +192,35 @@ export default function BrowseHome() {
 
 
 
-        {/*TODO, you should fix that grid, just to stretch a little bit more..  */}
+                {/*TODO, you should fix that grid, just to stretch a little bit more..  */}
                 <div className="cards  grid grid-cols-4 gap-x-36 gap-y-6  grow " >
 
 
-{/*individual card. if it is anime or manga (it will pass anime or manga id, depending which one it is..).
+                    {/*individual card. if it is anime or manga (it will pass anime or manga id, depending which one it is..).
 that is purpose of ternary operator down below in <Link>  */}
                     {data.map((item, index) => (
 
 
 
-                    <Link to="/detailedpage"  state={{ id: item.anime_id ? item.anime_id : item.manga_id, anime: !!item.anime_id }}>
-                        <div className="card">
-                            <img src={item.image} />
+                        <Link to="/detailedpage" state={{ id: item.anime_id ? item.anime_id : item.manga_id, anime: !!item.anime_id }}>
+                            <div className="card">
+                                <img src={item.image} />
 
 
 
 
-                            <div className="flex flex-row gap-x-2 mt-3"   >
-                                {/* check index.css, for global use, vertical rectangle.. */}
-                                <div className="rectangle_smaller"></div>
+                                <div className="flex flex-row gap-x-2 mt-3"   >
+                                    {/* check index.css, for global use, vertical rectangle.. */}
+                                    <div className="rectangle_smaller"></div>
 
-                                <p className="title8">{item.title}</p>
+                                    <p className="title8">{item.title}</p>
 
-                                {/*TODO you add favorite button, and for it to work properly */}
+                                    {/*TODO you add favorite button, and for it to work properly */}
+                                </div>
+
+
                             </div>
-
-
-                        </div>
-                    </Link>
+                        </Link>
 
                     ))}
 
