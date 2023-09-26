@@ -8,6 +8,7 @@ export default {
   theme: {
     colors: {
       'pinky': '#EA1179',
+      'blacky': '#111'
     },
 
     extend: {},
