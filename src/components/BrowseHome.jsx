@@ -4,7 +4,6 @@ import '../styles/BrowseHome.css'
 import { Link } from 'react-router-dom'
 
 
-
 // data  : https://reactjsexample.com/ultra-customizable-carousel-framework-for-react-js/
 const data = [
     {
@@ -107,6 +106,94 @@ const data = [
 ]
 
 
+const genres = [
+    "Action",
+    "Adventure",
+    "Cars",
+    "Comedy",
+    "Dementia",
+    "Demons",
+    "Drama",
+    "Ecchi",
+    "Fantasy",
+    "Game",
+    "Harem",
+    "Hentai",
+    "Historical",
+    "Horror",
+    "Josei",
+    "Kids",
+    "Magic",
+    "Martial Arts",
+    "Mecha",
+    "Military",
+    "Music",
+    "Mystery",
+    "Parody",
+    "Police",
+    "Psychological",
+    "Romance",
+    "Samurai",
+    "School",
+    "Sci-Fi",
+    "Seinen",
+    "Shoujo",
+    "Shoujo Ai",
+    "Shounen",
+    "Shounen Ai",
+    "Slice of Life",
+    "Space",
+    "Sports",
+    "Super Power",
+    "Supernatural",
+    "Thriller",
+    "Vampire",
+    "Yaoi",
+    "Yuri",
+];
+
+const year = [1940, 1941, 1942, 1943, 1944, 1945, 1946, 1947, 1948, 1949, 1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
+
+
+const studio = [
+    "3Hz",
+    "A.C.G.T",
+    "A.P.P.P.",
+    "Actas",
+    "Ajia-do Animation Works",
+    "Anime International Company (AIC)",
+    "Arms Corporation (defunct)",
+    "Artland",
+    "Artmic (defunct)",
+    "Arvo Animation",
+    "Nippon Rois Cartoon (Regional Service Division for Japan from Indonesia)",
+    "Ashi Productions",
+    "Asahi Production",
+    "Asread",
+    "AXsiZ",
+    "Bandai Namco Pictures",
+    "Bee Train",
+    "Bibury Animation Studios",
+    "Blue Lynx",
+    "Bones",
+    "Brain's Base",
+    "Bridge (studio)",
+    "C2C",
+    "Chaos Project",
+    "CoMix Wave Films",
+    "Connect (studio) (defunct, absorbed by Silver Link and then dissolved)",
+    "Creators in Pack",
+    "C-Station",
+    "CygamesPictures",
+    "Daume",
+    "David Production",
+    "Diomeda",
+    "DLE",
+    "Doga Kobo",
+    "ENGI",
+    "EMT Squared",
+]
+
 export default function BrowseHome() {
 
     return <>
@@ -114,6 +201,11 @@ export default function BrowseHome() {
 
         <div className="main2 flex justify-center items-center ">
 
+        
+
+        {/* 
+// TODO , and with data we get in search, we need to pass and send it to BE. but dont bother. wait first BE to finish what they have ...
+        */}
             <div className="basis-1/4">
 
                 <div className="filter flex flex-col border-2 border-pinky m-6 ">
@@ -136,10 +228,20 @@ export default function BrowseHome() {
                     <div className="flex flex-col  justify-start ml-3 mt-3">
                         <p className="filter_txt">Genres:</p>
 
-                        <select class="dropdown-select">
-                            <option value="option1">Option 1</option>
-                            <option value="option2">Option 2</option>
-                            <option value="option3">Option 3</option>
+                        <select class="dropdown-select_g" multiple>
+
+                            {/* all genres possible */}
+
+                            {genres.map((item, index) => (
+
+                                <option value={item} key={index}>{item}</option>
+
+
+
+                            ))}
+
+
+
                         </select>
 
 
@@ -149,10 +251,22 @@ export default function BrowseHome() {
                         <p className="filter_txt">Year:</p>
 
 
-                        <select class="dropdown-select">
-                            <option value="option1">Option 1</option>
-                            <option value="option2">Option 2</option>
-                            <option value="option3">Option 3</option>
+                        <select class="dropdown-select" >
+
+                            <option disabled selected>Year</option>
+                            {/*  years from 1940 to 2023 */}
+
+                            {year.map((item, index) => (
+
+                                <option value={item} key={index}>{item}</option>
+
+
+
+                            ))}
+
+
+
+
                         </select>
 
 
@@ -165,9 +279,19 @@ export default function BrowseHome() {
 
 
                         <select class="dropdown-select">
-                            <option value="option1">Option 1</option>
-                            <option value="option2">Option 2</option>
-                            <option value="option3">Option 3</option>
+                            <option selected disabled>Studio</option>
+
+                            {/*  choose studios */}
+
+                            {studio.map((item, index) => (
+
+                                <option value={item} key={index}>{item}</option>
+
+
+
+                            ))}
+
+
                         </select>
 
 

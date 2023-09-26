@@ -125,7 +125,7 @@
 
 
 /* dropdown */
-.dropdown-select {
+.dropdown-select , .dropdown-select_g {
     width: 90%;
     padding: 5px;
     margin-top: 5px;
@@ -139,6 +139,7 @@
     cursor: pointer;
 
 }
+
 
 .dropdown-select:focus {
     outline: none;
