@@ -20,6 +20,7 @@ const data = [
     },
     {
         title: 'Mushoku Tensei',
+        anime_id: '3',
 
         season: 'Season 3',
         start_date: 'October 2023',
@@ -30,6 +31,7 @@ const data = [
     {
         title: 'Zom 100',
 
+        anime_id: '4',
         season: 'Season 4',
         start_date: 'October 2024',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159831-TxAC0ujoLTK6.png'
@@ -37,6 +39,7 @@ const data = [
     }, {
         title: 'JUJUTSU KAISEN',
 
+        anime_id: '5',
         season: 'Season 5',
         start_date: 'October 2025',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx145064-5fa4ZBbW4dqA.jpg'
@@ -45,6 +48,7 @@ const data = [
     {
         title: 'Horimiya',
 
+        anime_id: '6',
         season: 'Season 6',
         start_date: 'October 2026',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx163132-C220CO5UrTxY.jpg'
@@ -54,6 +58,7 @@ const data = [
     {
         title: 'My Happy Marriage',
 
+        anime_id: '7',
         season: 'Season 7',
         start_date: 'October 2027',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx147103-Om2LOXlhHNAe.png'
@@ -61,6 +66,7 @@ const data = [
     }, {
         title: 'GOBLIN SLAYER II',
 
+        anime_id: '8',
         season: 'Season 8',
         start_date: 'October 2028',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx129188-zWPBGutZXgjZ.jpg'
@@ -69,6 +75,7 @@ const data = [
     {
         title: 'The Eminence in Shadow',
 
+        anime_id: '9',
         season: 'Season 9',
         start_date: 'October 2029',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx161964-JpkEbHI8ivaP.jpg'
@@ -78,6 +85,7 @@ const data = [
     {
         title: 'Demon Slayer',
 
+        anime_id: '10',
         season: 'Season 10',
         start_date: 'October 2030',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101922-PEn1CTc93blC.jpg'
@@ -86,6 +94,7 @@ const data = [
     {
         title: 'Attack on Titan',
 
+        anime_id: '11',
         season: 'Season 11',
         start_date: 'October 2031',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-C6FPmWm59CyP.jpg'
@@ -142,7 +151,7 @@ export default function UpcomingCarousel() {
                 <div className="rectangle_taller"></div>
 
                 <div>
-                    <h3>Top 3 Upcoming animes:</h3>
+                    <h3>Top Upcoming animes:</h3>
                     <p>Season - fall 2023</p>
                 </div>
 
@@ -163,10 +172,13 @@ export default function UpcomingCarousel() {
 
                     {/* TODO from server we should get 10 items that are most recent by  'release_date'.   */}
                     {/* show items (render from object) dynamically render items */}
+
+                    {/*only prop that will be passed is 'anime_id'. because on DetailedPage, it will be fetched again from database for all info. And 'anime_id' because this if for 'upcoming animes'. it can be manga as well .. just say to include it if needed */}
+
                     {data.map((item, index) => (
 
 
-                        <Link to="/anime">
+                        <Link to="/detailedpage"  state={{ anime_id: item.anime_id }}>
                             <div className="item flex flex-col justify-start " key={index}>
 
 
