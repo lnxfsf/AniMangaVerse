@@ -13,7 +13,7 @@ const data = [
     {
 
 
-        anime_id: 2,
+        id: 2,
 
         user_id: 1,
 
@@ -32,7 +32,7 @@ const data = [
     {
 
 
-        anime_id: 3,
+        id: 3,
 
         user_id: 1,
 
@@ -52,7 +52,7 @@ const data = [
     {
 
 
-        anime_id: 4,
+        id: 4,
 
         user_id: 1,
 
@@ -71,7 +71,7 @@ const data = [
 
 
 
-        anime_id: 5,
+        id: 5,
 
         user_id: 1,
 
@@ -92,7 +92,7 @@ const data = [
 
 
 
-        anime_id: 5,
+        id: 11,
 
         user_id: 1,
 
@@ -111,7 +111,7 @@ const data = [
     {
 
 
-        anime_id: 6,
+        id: 6,
 
         user_id: 1,
 
@@ -129,7 +129,7 @@ const data = [
     }, {
 
 
-        anime_id: 7,
+        id: 7,
 
         user_id: 1,
 
@@ -148,7 +148,7 @@ const data = [
     {
 
 
-        anime_id: 8,
+        id: 8,
 
         user_id: 1,
 
@@ -168,7 +168,7 @@ const data = [
 
     {
 
-        anime_id: 9,
+        id: 9,
 
         user_id: 1,
 
@@ -189,7 +189,7 @@ const data = [
     {
 
 
-        anime_id: 10,
+        id: 10,
 
         user_id: 1,
 
@@ -222,21 +222,23 @@ export default function DetailedPage () {
  
     // this is prop from  UpcomingCarousel (anime_id), passed throught <Link> 
     const location = useLocation()
-    const {  anime_id } = location.state
+    const {  id, anime } = location.state
     
 
 
     // if this is anime in question
-    if(anime_id){
+    if(anime){
         
 
-        // TODO fetch anime data by 'anime_id'  to be in object. (for now, assume we have data in object we will use here)
+        // TODO fetch anime data by 'id'  to be in object. (for now, assume we have data in object we will use here)
         // just extract it into variables.. so I can show them.. 
+            // it will get 'id' .. but we will know if it is anime if it have prop passed as 'anime: true'. or manga if it is 'anime: false'
         
+
 
         data.forEach((item) => {
 
-            if (item.anime_id == anime_id) {
+            if (item.id == id) {
 
                 title = item.title;
 
@@ -263,6 +265,10 @@ export default function DetailedPage () {
 
 
 
+    }else{
+        // then it is manga for sure
+
+        
     }
 
 
