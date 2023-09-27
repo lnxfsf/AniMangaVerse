@@ -8,11 +8,6 @@ import { useLocation } from 'react-router-dom'
 
 // this is representing object that is fetched from database (subsequently), depending if it is 'anime_id' or 'manga_id', but format should be same.. 
 
-// it is BE job to give us 'image', wheter it is anime or manga
-// TODO. image should be anime_url , and manga_url . 
-// TODO also, anime_id , and manga_id , you should expect in response. so, here you filter only ...
-// TODO .. just we will sort this later ..  
-//TODO both data need to be in sync regarding 'id' 
 
 
 
@@ -23,9 +18,31 @@ const anime_data = [
 
         genre: ['adventure', 'drama', 'crime'],
         anime_id: 1,
-        season: 'Season 2',
-        start_date: 'October 2022',
-        image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21-tXMN3Y20PIL9.jpg'
+        seasons: 20,
+        
+        //aired
+        start_date: 'October 20, 1999',
+
+        //TODO Backend or you, work with these dates. if it's empty, then to show this string. to always convert it to string, or whatever, you work with these Dates
+        end_date: "Hasn't ended yet",
+
+        image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21-tXMN3Y20PIL9.jpg',
+
+        
+        // number of favorites
+        num_of_fav: 323,
+        desc: 'Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.',
+
+        studio: 'Toei Animation',
+        episodes: 420, 
+        
+        yt_trailer: 'https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP '
+        
+
+
+
+
+
 
     },
     {
@@ -384,15 +401,16 @@ export default function DetailedPage () {
     
 
 
-    //TODO, in fact, we only need this 'anime' variable for actual fetching !!! if 'anime' is true then to fetch from 'anime' table, and if not then from 'manga' table ! . or something like that
+    // in fact, we only need this 'anime' variable for actual fetching !!! if 'anime' is true then to fetch from 'anime' table, and if not then from 'manga' table ! 
+        // and it will help down below to show if there is some stuff to show depending if it is anime or manga
 
     // if this is anime in question
     if(anime){
         
 
-        // TODO fetch anime data by 'id'  to be in object. (for now, assume we have data in object we will use here)
         // just extract it into variables.. so I can show them.. 
             // it will get 'id' .. but we will know if it is anime if it have prop passed as 'anime: true'. or manga if it is 'anime: false'
+        
         
 
 
@@ -479,7 +497,10 @@ export default function DetailedPage () {
             </div>
         ))}
 
+    
 
+<iframe width="560" height="315" src={anime_data[0].yt_trailer} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
             
 
 
