@@ -232,6 +232,8 @@ export default function DetailedPage () {
     
 
 
+    //TODO, in fact, we only need this 'anime' variable for actual fetching !!! if 'anime' is true then to fetch from 'anime' table, and if not then from 'manga' table ! . or something like that
+
     // if this is anime in question
     if(anime){
         
