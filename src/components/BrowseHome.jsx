@@ -315,7 +315,6 @@ export default function BrowseHome() {
 
 
 
-                {/*TODO, you should fix that grid, just to stretch a little bit more..  */}
                 <div className="  grid grid-cols-4 gap-x-6 gap-y-6  grow " >
 
 
