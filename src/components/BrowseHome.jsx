@@ -317,7 +317,7 @@ export default function BrowseHome() {
 
 
                 {/*TODO, you should fix that grid, just to stretch a little bit more..  */}
-                <div className="cards  grid grid-cols-4 gap-x-36 gap-y-6  grow " >
+                <div className="  grid grid-cols-4 gap-x-6 gap-y-6  grow " >
 
 
                     {/*individual card. if it is anime or manga (it will pass anime or manga id, depending which one it is..).
