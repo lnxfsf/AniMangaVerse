@@ -9,12 +9,13 @@ import { Link } from 'react-router-dom'
 // don't mix anime and manga in one list..
 // TODO when it fetches it, then it fetches first from the manga table into a json object, and then anime in it's list..
 
+
 // anime_data
 const anime_data = [
     {
         title: 'ONE PIECE',
 
-        anime_id: 2,
+        anime_id: 1,
         season: 'Season 2',
         start_date: 'October 2022',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21-tXMN3Y20PIL9.jpg'
@@ -22,7 +23,7 @@ const anime_data = [
     },
     {
         title: 'Mushoku Tensei',
-        anime_id: 3,
+        anime_id: 2,
 
         season: 'Season 3',
         start_date: 'October 2023',
@@ -33,7 +34,7 @@ const anime_data = [
     {
         title: 'Zom 100',
 
-        anime_id: 4,
+        anime_id: 3,
         season: 'Season 4',
         start_date: 'October 2024',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159831-TxAC0ujoLTK6.png'
@@ -41,7 +42,7 @@ const anime_data = [
     }, {
         title: 'JUJUTSU KAISEN',
 
-        anime_id: 5,
+        anime_id: 4,
         season: 'Season 5',
         start_date: 'October 2025',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx145064-5fa4ZBbW4dqA.jpg'
@@ -50,7 +51,7 @@ const anime_data = [
     {
         title: 'Horimiya',
 
-        anime_id: 6,
+        anime_id: 5,
         season: 'Season 6',
         start_date: 'October 2026',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx163132-C220CO5UrTxY.jpg'
@@ -60,7 +61,7 @@ const anime_data = [
     {
         title: 'My Happy Marriage',
 
-        anime_id: 7,
+        anime_id: 6,
         season: 'Season 7',
         start_date: 'October 2027',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx147103-Om2LOXlhHNAe.png'
@@ -68,7 +69,7 @@ const anime_data = [
     }, {
         title: 'GOBLIN SLAYER II',
 
-        anime_id: 8,
+        anime_id: 7,
         season: 'Season 8',
         start_date: 'October 2028',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx129188-zWPBGutZXgjZ.jpg'
@@ -77,7 +78,7 @@ const anime_data = [
     {
         title: 'The Eminence in Shadow',
 
-        anime_id: 9,
+        anime_id: 8,
         season: 'Season 9',
         start_date: 'October 2029',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx161964-JpkEbHI8ivaP.jpg'
@@ -87,7 +88,7 @@ const anime_data = [
     {
         title: 'Demon Slayer',
 
-        anime_id: 10,
+        anime_id: 9,
         season: 'Season 10',
         start_date: 'October 2030',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101922-PEn1CTc93blC.jpg'
@@ -96,7 +97,7 @@ const anime_data = [
     {
         title: 'Attack on Titan',
 
-        anime_id: 11,
+        anime_id: 10,
         season: 'Season 11',
         start_date: 'October 2031',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-C6FPmWm59CyP.jpg'
@@ -108,7 +109,7 @@ const anime_data = [
     {
         title: 'ONE PIECE',
 
-        anime_id: 2,
+        anime_id: 1,
         season: 'Season 2',
         start_date: 'October 2022',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21-tXMN3Y20PIL9.jpg'
@@ -116,7 +117,7 @@ const anime_data = [
     },
     {
         title: 'Mushoku Tensei',
-        anime_id: 3,
+        anime_id: 2,
 
         season: 'Season 3',
         start_date: 'October 2023',
@@ -127,7 +128,7 @@ const anime_data = [
     {
         title: 'Zom 100',
 
-        anime_id: 4,
+        anime_id: 3,
         season: 'Season 4',
         start_date: 'October 2024',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159831-TxAC0ujoLTK6.png'
@@ -135,7 +136,7 @@ const anime_data = [
     }, {
         title: 'JUJUTSU KAISEN',
 
-        anime_id: 5,
+        anime_id: 4,
         season: 'Season 5',
         start_date: 'October 2025',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx145064-5fa4ZBbW4dqA.jpg'
@@ -144,7 +145,7 @@ const anime_data = [
     {
         title: 'Horimiya',
 
-        anime_id: 6,
+        anime_id: 5,
         season: 'Season 6',
         start_date: 'October 2026',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx163132-C220CO5UrTxY.jpg'
@@ -154,7 +155,7 @@ const anime_data = [
     {
         title: 'My Happy Marriage',
 
-        anime_id: 7,
+        anime_id: 6,
         season: 'Season 7',
         start_date: 'October 2027',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx147103-Om2LOXlhHNAe.png'
@@ -162,7 +163,7 @@ const anime_data = [
     }, {
         title: 'GOBLIN SLAYER II',
 
-        anime_id: 8,
+        anime_id: 7,
         season: 'Season 8',
         start_date: 'October 2028',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx129188-zWPBGutZXgjZ.jpg'
@@ -171,7 +172,7 @@ const anime_data = [
     {
         title: 'The Eminence in Shadow',
 
-        anime_id: 9,
+        anime_id: 8,
         season: 'Season 9',
         start_date: 'October 2029',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx161964-JpkEbHI8ivaP.jpg'
@@ -181,7 +182,7 @@ const anime_data = [
     {
         title: 'Demon Slayer',
 
-        anime_id: 10,
+        anime_id: 9,
         season: 'Season 10',
         start_date: 'October 2030',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101922-PEn1CTc93blC.jpg'
@@ -190,19 +191,12 @@ const anime_data = [
     {
         title: 'Attack on Titan',
 
-        anime_id: 11,
+        anime_id: 10,
         season: 'Season 11',
         start_date: 'October 2031',
         image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-C6FPmWm59CyP.jpg'
 
-    }
-
-
-
-
-
-
-
+    },
 
 
 
@@ -211,7 +205,6 @@ const anime_data = [
 
 
 ]
-
 
 
 // manga data
