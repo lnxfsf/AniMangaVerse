@@ -4,7 +4,6 @@ import '../styles/BrowseHome.css'
 import { Link } from 'react-router-dom'
 
 
-// data  : https://reactjsexample.com/ultra-customizable-carousel-framework-for-react-js/
 const data = [
     {
         title: 'ONE PIECE',
