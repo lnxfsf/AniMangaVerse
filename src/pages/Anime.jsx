@@ -356,7 +356,7 @@ export default function Anime() {
                         <p className="filter_txt1">Year:</p>
 
 
-                        <select class="dropdown-select1" >
+                        <select className="dropdown-select1" >
 
                             <option disabled selected>Year</option>
                             {/*  years from 1940 to 2023 */}
@@ -383,7 +383,7 @@ export default function Anime() {
 
 
 
-                        <select class="dropdown-select1">
+                        <select className="dropdown-select1">
                             <option selected disabled>Studio</option>
 
                             {/*  choose studios */}
@@ -410,7 +410,7 @@ export default function Anime() {
 
 
 
-                        <select class="dropdown-select1">
+                        <select className="dropdown-select1">
                             <option selected disabled>Seasons</option>
 
                             {/*  choose studios */}
@@ -439,7 +439,7 @@ export default function Anime() {
 
 
 
-                        <select class="dropdown-select1">
+                        <select className="dropdown-select1">
                             <option selected disabled>Episodes</option>
 
                             {/*  choose studios */}
@@ -474,13 +474,11 @@ export default function Anime() {
                 <div className=" cards_container1 grid grid-cols-6 gap-x-6 gap-y-6 p-6  " >
 
 
-                    {/*individual card. if it is anime or manga (it will pass anime or manga id, depending which one it is..).
-that is purpose of ternary operator down below in <Link>  */}
                     {data.map((item, index) => (
 
 
 
-                        <Link to="/detailedpage" state={{ id: item.anime_id ? item.anime_id : item.manga_id, anime: !!item.anime_id }}>
+                        <Link to="/detailedpage" state={{ id: item.anime_id , anime: true }}>
                             <div className="card">
                                 <img src={item.image} />
 

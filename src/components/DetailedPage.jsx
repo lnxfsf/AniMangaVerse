@@ -9,6 +9,12 @@ import { useLocation } from 'react-router-dom'
 // this is representing object that is fetched from database (subsequently), depending if it is 'anime_id' or 'manga_id', but format should be same.. 
 
 // it is BE job to give us 'image', wheter it is anime or manga
+// TODO. image should be anime_url , and manga_url . 
+// TODO also, anime_id , and manga_id , you should expect in response. so, here you filter only ...
+// TODO .. just we will sort this later ..
+
+
+
 const data = [
     {
 
@@ -249,7 +255,6 @@ export default function DetailedPage () {
                 
                 image = item.image;
                 
-                console.log(item.genre);
                 genre = item.genre;
 
 
@@ -266,7 +271,33 @@ export default function DetailedPage () {
 
 
     }else{
+        
+
+        console.log("manga");
         // then it is manga for sure
+        //
+
+ data.forEach((item) => {
+
+            if (item.id == id) {
+
+                title = item.title;
+
+                episodes = 'manga';
+                seasons = 'manga';
+                start_date = item.start_date;
+                end_date = item.end_date;
+                
+                image = item.image;
+                
+                genre = item.genre;
+
+
+
+
+            }
+
+        });
 
         
     }
@@ -274,6 +305,7 @@ export default function DetailedPage () {
 
     return <>
     
+
         
     <h1>{title}</h1>
 
