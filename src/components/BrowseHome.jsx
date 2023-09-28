@@ -200,9 +200,9 @@ export default function BrowseHome() {
 
         <div className="main2 flex justify-center items-center ">
 
-        
 
-        {/* 
+
+            {/* 
 // TODO , and with data we get in search, we need to pass and send it to BE. but dont bother. wait first BE to finish what they have ...
         */}
             <div className="basis-1/4">
