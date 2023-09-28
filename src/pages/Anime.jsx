@@ -305,152 +305,147 @@ export default function Anime() {
 
 
 
-                <div className="filter1 grid grid-cols-6 p-6 ">
+            <div className="filter1 grid grid-cols-6 p-6 ">
 
 
-                    <div className="flex flex-col  justify-start ml-3 mt-3">
-                        <p className="filter_txt1">Search:</p>
+                <div className="flex flex-col  justify-start ml-3 mt-3">
+                    <p className="filter_txt1">Search:</p>
 
 
-                        <div className="search-container">
-                            <div className="input-container1">
-                                <input type="text" placeholder="Search" />
-                                <button className="search-icon"><i className='bx bx-search-alt-2'></i></button>
-                            </div>
+                    <div className="search-container">
+                        <div className="input-container1">
+                            <input type="text" placeholder="Search" />
+                            <button className="search-icon"><i className='bx bx-search-alt-2'></i></button>
                         </div>
-
                     </div>
 
-                    <div className="flex flex-col  justify-start ml-3 mt-3">
-                        <p className="filter_txt1">Genres:</p>
+                </div>
 
-                        <select className="dropdown-select_g1" multiple>
+                <div className="flex flex-col  justify-start ml-3 mt-3">
+                    <p className="filter_txt1">Genres:</p>
 
-                            {/* all genres possible */}
+                    <select className="dropdown-select_g1" multiple>
 
-                            {genres.map((item, index) => (
+                        {/* all genres possible */}
 
-                                <option value={item} key={index}>{item}</option>
+                        {genres.map((item, index) => (
 
+                            <option value={item} key={index}>{item}</option>
 
 
-                            ))}
 
+                        ))}
 
 
-                        </select>
 
+                    </select>
 
-                    </div>
 
-                    <div className="flex flex-col  justify-start ml-3 mt-3">
-                        <p className="filter_txt1">Year:</p>
+                </div>
 
+                <div className="flex flex-col  justify-start ml-3 mt-3">
+                    <p className="filter_txt1">Year:</p>
 
-                        <select className="dropdown-select1" >
 
-                            <option disabled selected>Year</option>
-                            {/*  years from 1940 to 2023 */}
+                    <select className="dropdown-select1" >
 
-                            {year.map((item, index) => (
+                        <option disabled selected>Year</option>
+                        {/*  years from 1940 to 2023 */}
 
-                                <option value={item} key={index}>{item}</option>
+                        {year.map((item, index) => (
 
+                            <option value={item} key={index}>{item}</option>
 
 
-                            ))}
 
+                        ))}
 
 
 
-                        </select>
 
+                    </select>
 
 
-                    </div>
 
-                    <div className="flex flex-col  justify-start ml-3 mt-3">
-                        <p className="filter_txt1">Studio:</p>
+                </div>
 
+                <div className="flex flex-col  justify-start ml-3 mt-3">
+                    <p className="filter_txt1">Studio:</p>
 
 
-                        <select className="dropdown-select1">
-                            <option selected disabled>Studio</option>
 
-                            {/*  choose studios */}
+                    <select className="dropdown-select1">
+                        <option selected disabled>Studio</option>
 
-                            {studio.map((item, index) => (
+                        {/*  choose studios */}
 
-                                <option value={item} key={index}>{item}</option>
+                        {studio.map((item, index) => (
 
+                            <option value={item} key={index}>{item}</option>
 
 
-                            ))}
 
+                        ))}
 
-                        </select>
 
+                    </select>
 
 
 
 
-                    </div>
 
-          <div className="flex flex-col  justify-start ml-3 mt-3">
-                        <p className="filter_txt1">Seasons:</p>
+                </div>
 
+                <div className="flex flex-col  justify-start ml-3 mt-3">
+                    <p className="filter_txt1">Seasons:</p>
 
 
-                        <select className="dropdown-select1">
-                            <option selected disabled>Seasons</option>
 
-                            {/*  choose studios */}
+                    <select className="dropdown-select1">
+                        <option selected disabled>Seasons</option>
 
-                            {season.map((item, index) => (
+                        {/*  choose studios */}
 
-                                <option value={item} key={index}>{item}</option>
+                        {season.map((item, index) => (
 
+                            <option value={item} key={index}>{item}</option>
 
 
-                            ))}
 
+                        ))}
 
-                        </select>
 
+                    </select>
 
 
 
 
-                    </div>
 
+                </div>
 
 
-          <div className="flex flex-col  justify-start ml-3 mt-3">
-                        <p className="filter_txt1">Episodes:</p>
 
+                <div className="flex flex-col  justify-start ml-3 mt-3">
+                    <p className="filter_txt1">Episodes:</p>
 
 
-                        <select className="dropdown-select1">
-                            <option selected disabled>Episodes</option>
 
-                            {/*  choose studios */}
+                    <select className="dropdown-select1">
+                        <option selected disabled>Episodes</option>
 
-                            {episodes.map((item, index) => (
+                        {/*  choose studios */}
 
-                                <option value={item} key={index}>{item}</option>
+                        {episodes.map((item, index) => (
 
+                            <option value={item} key={index}>{item}</option>
 
 
-                            ))}
 
+                        ))}
 
-                        </select>
 
+                    </select>
 
-
-
-
-                    </div>
 
 
 
@@ -460,41 +455,46 @@ export default function Anime() {
 
 
 
-        
-
-                <div className=" cards_container1 grid grid-cols-6 gap-x-6 gap-y-6 p-6  " >
-
-
-                    {data.map((item, index) => (
-
-
-
-                        <Link to="/detailedpage" state={{ id: item.anime_id , anime: true }}>
-                            <div className="card">
-                                <img src={item.image} />
+            </div>
 
 
 
 
-                                <div className="flex flex-row gap-x-2 mt-3"   >
-                                    {/* check index.css, for global use, vertical rectangle.. */}
-                                    <div className="rectangle_smaller"></div>
-
-                                    <p className="title8">{item.title}</p>
-
-                                    {/*TODO you add favorite button, and for it to work properly */}
-                                </div>
 
 
+            <div className=" cards_container1 grid grid-cols-6 gap-x-6 gap-y-6 p-6  " >
+
+
+                {data.map((item, index) => (
+
+
+
+                    <Link to="/detailedpage" state={{ id: item.anime_id, anime: true }}>
+                        <div className="card">
+                            <img src={item.image} />
+
+
+
+
+                            <div className="flex flex-row gap-x-2 mt-3"   >
+                                {/* check index.css, for global use, vertical rectangle.. */}
+                                <div className="rectangle_smaller"></div>
+
+                                <p className="title8">{item.title}</p>
+
+                                {/*TODO you add favorite button, and for it to work properly */}
                             </div>
-                        </Link>
-
-                    ))}
 
 
+                        </div>
+                    </Link>
+
+                ))}
 
 
-                </div>
+
+
+            </div>
 
 
 

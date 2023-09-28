@@ -275,7 +275,7 @@ export default function UpcomingCarousel() {
                     {data.map((item, index) => (
 
 
-                        <Link to="/detailedpage"  state={{ id: item.anime_id, anime: true }}>
+                        <Link to="/detailedpage" state={{ id: item.anime_id, anime: true }}>
                             <div className="item flex flex-col justify-start " key={index}>
 
 
