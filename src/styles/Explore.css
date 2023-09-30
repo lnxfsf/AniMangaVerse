@@ -1,20 +1,17 @@
 .subtitle1 {
-
-    color: white;
-    font-family: Inter;
-    font-size: 10pt;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  color: white;
+  font-family: Inter;
+  font-size: 10pt;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-
-.subtitle>h2 {
-
-    color: white;
-    font-family: Inter;
-    font-size: 16pt;
-    font-style: bold;
-    font-weight: 700;
-    line-height: normal;
+.subtitle > h2 {
+  color: white;
+  font-family: Inter;
+  font-size: 16pt;
+  font-style: bold;
+  font-weight: 700;
+  line-height: normal;
 }
