@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 import { anime_data, manga_data, genres, year } from "../data";
 
-export function Explore() {
+const Explore = () => {
   return (
     <>
       <div className="main3">
@@ -120,3 +120,5 @@ export function Explore() {
     </>
   );
 }
+
+export {Explore}

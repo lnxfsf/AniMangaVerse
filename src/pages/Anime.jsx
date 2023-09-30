@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // data
 import { anime_data, genres, year, studio, season, episodes } from "../data";
 
-export function Anime() {
+const Anime = () => {
   return (
     <>
       <div className="main3">
@@ -134,3 +134,5 @@ export function Anime() {
     </>
   );
 }
+
+export {Anime}

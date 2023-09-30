@@ -1,0 +1,51 @@
+.main4 {
+  background: #111;
+}
+
+.ttl-box {
+  /* https://bennettfeely.com/clippy/ 
+    https://css-tricks.com/notched-boxes/
+    */
+  clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+}
+
+.ttl-box > div > h1 {
+  color: white;
+  font-family: Inter;
+  font-size: 24pt;
+  font-style: bold;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.ttl-box > div > p {
+  color: white;
+  font-family: Inter;
+  font-size: 10pt;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.parag,
+.parag1 {
+  color: white;
+  font-family: Inter;
+  font-size: 10pt;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.parag1 {
+  font-size: 12pt;
+}
+
+.about_ttl {
+  color: white;
+  font-family: Inter;
+  font-size: 20pt;
+  font-style: bold;
+  font-weight: 700;
+  line-height: normal;
+}

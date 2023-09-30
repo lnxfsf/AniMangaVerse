@@ -1,7 +1,7 @@
 import "../styles/navbar.css";
 import { Link } from "react-router-dom";
 
-export function Navbar() {
+const Navbar = () => {
   return (
     <>
       <nav className="grid grid-cols-2 justify-center">
@@ -33,3 +33,5 @@ export function Navbar() {
     </>
   );
 }
+
+export {Navbar}

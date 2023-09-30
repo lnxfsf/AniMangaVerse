@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { manga_data, genres, year, publishing, country_origin } from "../data";
 
-export function Manga() {
+const Manga = () => {
   return (
     <>
       <div className="main3">
@@ -115,3 +115,5 @@ export function Manga() {
     </>
   );
 }
+
+export {Manga}

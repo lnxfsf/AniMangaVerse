@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import ScrollCarousel from "scroll-carousel";
 import { anime_data } from "../data";
 
-export function UpcomingCarousel() {
+const UpcomingCarousel = () => {
   useEffect(() => {
     let main1 = document.querySelector(".main1");
 
@@ -74,3 +74,5 @@ export function UpcomingCarousel() {
     </>
   );
 }
+
+export {UpcomingCarousel}

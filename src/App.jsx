@@ -10,7 +10,7 @@ import { Explore } from "./pages/Explore";
 import { DetailsPage } from "./components/DetailsPage";
 import { PageNotFound } from "./pages/PageNotFound";
 
-export default function App() {
+const App = () => {
   return (
     <>
       {/*it will always show navbar */}
@@ -34,3 +34,4 @@ export default function App() {
   );
 }
 
+export {App}
