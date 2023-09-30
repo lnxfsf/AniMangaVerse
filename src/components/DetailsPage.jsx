@@ -99,7 +99,7 @@ const DetailsPage = () => {
         </div>
 
         <div className="flex w-full h-auto">
-          <div className="basis-1/3 flex items-center justify-center ">
+          <div className="basis-1/3 flex items-start justify-center ">
             <div className="flex border-pinky border-2 w-56 m-6 h-auto rounded-2xl p-4 flex-col">
               {anime ? (
                 <div>
