@@ -1,7 +1,7 @@
 import "../styles/footer.css";
 import { Link } from "react-router-dom";
 
-export function Footer() {
+const Footer = () => {
   return (
     <>
       <div className="line"> </div>
@@ -78,3 +78,5 @@ export function Footer() {
     </>
   );
 }
+
+export {Footer}

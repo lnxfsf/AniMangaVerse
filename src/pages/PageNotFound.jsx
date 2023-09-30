@@ -1,6 +1,6 @@
 import "../styles/PageNotFound.css";
 
-export function PageNotFound() {
+const PageNotFound = () => {
   return (
     <>
       <div className="f404 flex flex-row justify-center items-center bg-blacky h-96 p-6 ">
@@ -11,3 +11,5 @@ export function PageNotFound() {
     </>
   );
 }
+
+export {PageNotFound}

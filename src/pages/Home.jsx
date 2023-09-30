@@ -2,7 +2,7 @@ import { PopularCarousel } from "../components/PopularCarousel";
 import { UpcomingCarousel } from "../components/UpcomingCarousel";
 import { BrowseHome } from "../components/BrowseHome";
 
-export function Home() {
+const Home = () => {
   return (
     <>
       <PopularCarousel />
@@ -10,7 +10,6 @@ export function Home() {
       <BrowseHome />
     </>
   );
-}
+};
 
-
-
+export { Home };

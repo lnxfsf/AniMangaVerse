@@ -1,6 +1,6 @@
 import "../styles/PopularCarousel.css";
 
-export function PopularCarousel() {
+const PopularCarousel = () => {
   return (
     <>
       <div className="main">
@@ -11,3 +11,5 @@ export function PopularCarousel() {
     </>
   );
 }
+
+export {PopularCarousel}

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // data
 import { anime_data, genres, year, studio } from "../data";
 
-export function BrowseHome() {
+const BrowseHome = () => {
   return (
     <>
       <div className="main2 flex justify-center items-center ">
@@ -113,3 +113,5 @@ export function BrowseHome() {
     </>
   );
 }
+
+export {BrowseHome};
