@@ -93,7 +93,7 @@ const BrowseHome = () => {
                 state={{ id: item.anime_id, anime: true }}
                 key={item.anime_id}
               >
-                <div  className="card">
+                <div className="card">
                   <img src={item.image} />
 
                   <div className="flex flex-row gap-x-2 mt-3">
@@ -112,6 +112,6 @@ const BrowseHome = () => {
       </div>
     </>
   );
-}
+};
 
-export {BrowseHome};
+export { BrowseHome };

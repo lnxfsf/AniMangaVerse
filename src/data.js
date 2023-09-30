@@ -46,7 +46,7 @@ export const anime_data = [
     image:
       "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx146065-IjirxRK26O03.png",
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/146065-33RDijfuxLLk.jpg",
 
     // number of favorites
     num_of_fav: 323,
@@ -76,7 +76,7 @@ export const anime_data = [
     image:
       "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159831-TxAC0ujoLTK6.png",
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/159831-FWfdyqpxhLli.jpg",
 
     // number of favorites
     num_of_fav: 323,
@@ -105,7 +105,7 @@ export const anime_data = [
     image:
       "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx145064-5fa4ZBbW4dqA.jpg",
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/113415-jQBSkxWAAk83.jpg",
 
     // number of favorites
     num_of_fav: 323,
@@ -134,7 +134,7 @@ export const anime_data = [
     image:
       "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx163132-C220CO5UrTxY.jpg",
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/124080-ARyLAHHgikRq.jpg",
 
     // number of favorites
     num_of_fav: 323,
@@ -163,7 +163,7 @@ export const anime_data = [
     image:
       "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx147103-Om2LOXlhHNAe.png",
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/147103-MwFq1R7jphZT.jpg",
 
     // number of favorites
     num_of_fav: 323,
@@ -192,7 +192,7 @@ export const anime_data = [
     image:
       "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx129188-zWPBGutZXgjZ.jpg",
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/129188-3PyIXSkmcOPH.jpg",
 
     // number of favorites
     num_of_fav: 323,
@@ -221,7 +221,7 @@ export const anime_data = [
     image:
       "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx161964-JpkEbHI8ivaP.jpg",
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/130298-9yxFlFvKMwRk.jpg",
 
     // number of favorites
     num_of_fav: 323,
@@ -250,7 +250,7 @@ export const anime_data = [
     image:
       "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101922-PEn1CTc93blC.jpg",
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101922-YfZhKBUDDS6L.jpg",
 
     // number of favorites
     num_of_fav: 323,
@@ -279,7 +279,7 @@ export const anime_data = [
     image:
       "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-C6FPmWm59CyP.jpg",
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16498-8jpFCOcDmneX.jpg",
 
     // number of favorites
     num_of_fav: 323,
@@ -337,7 +337,7 @@ export const anime_data = [
     image:
       "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx146065-IjirxRK26O03.png",
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/146065-33RDijfuxLLk.jpg",
 
     // number of favorites
     num_of_fav: 323,
@@ -367,7 +367,7 @@ export const anime_data = [
     image:
       "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159831-TxAC0ujoLTK6.png",
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/159831-FWfdyqpxhLli.jpg",
 
     // number of favorites
     num_of_fav: 323,
@@ -396,7 +396,7 @@ export const anime_data = [
     image:
       "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx145064-5fa4ZBbW4dqA.jpg",
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/113415-jQBSkxWAAk83.jpg",
 
     // number of favorites
     num_of_fav: 323,
@@ -425,7 +425,7 @@ export const anime_data = [
     image:
       "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx163132-C220CO5UrTxY.jpg",
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/124080-ARyLAHHgikRq.jpg",
 
     // number of favorites
     num_of_fav: 323,
@@ -454,7 +454,7 @@ export const anime_data = [
     image:
       "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx147103-Om2LOXlhHNAe.png",
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/147103-MwFq1R7jphZT.jpg",
 
     // number of favorites
     num_of_fav: 323,
@@ -483,7 +483,7 @@ export const anime_data = [
     image:
       "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx129188-zWPBGutZXgjZ.jpg",
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/129188-3PyIXSkmcOPH.jpg",
 
     // number of favorites
     num_of_fav: 323,
@@ -512,7 +512,7 @@ export const anime_data = [
     image:
       "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx161964-JpkEbHI8ivaP.jpg",
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/130298-9yxFlFvKMwRk.jpg",
 
     // number of favorites
     num_of_fav: 323,
@@ -541,7 +541,7 @@ export const anime_data = [
     image:
       "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101922-PEn1CTc93blC.jpg",
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101922-YfZhKBUDDS6L.jpg",
 
     // number of favorites
     num_of_fav: 323,
@@ -570,7 +570,7 @@ export const anime_data = [
     image:
       "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-C6FPmWm59CyP.jpg",
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16498-8jpFCOcDmneX.jpg",
 
     // number of favorites
     num_of_fav: 323,
@@ -596,7 +596,7 @@ export const manga_data = [
       "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx105778-82gwrvQV6OBc.png",
 
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/manga/banner/105778-wk5qQ7zAaTGl.jpg",
     status: "Releasing",
     country_origin: "Japan",
 
@@ -620,7 +620,7 @@ export const manga_data = [
       "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx101517-H3TdM3g5ZUe9.jpg",
 
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/manga/banner/101517-FrJtb3Th3HtF.jpg",
     status: "Releasing",
     country_origin: "Japan",
 
@@ -644,7 +644,7 @@ export const manga_data = [
       "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx119257-KzlNZtgbRzxF.jpg",
 
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/manga/banner/119257-RtxJMRCunHXc.jpg",
     status: "Releasing",
     country_origin: "Japan",
 
@@ -668,7 +668,7 @@ export const manga_data = [
       "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30013-tZVlfBCHbrNL.jpg",
 
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/manga/banner/30013-hbbRZqC5MjYh.jpg",
     status: "Releasing",
     country_origin: "Japan",
 
@@ -692,7 +692,7 @@ export const manga_data = [
       "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx118586-F0Lp86XQV7du.jpg",
 
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/manga/banner/118586-1JLJiwaIlnBp.jpg",
     status: "Releasing",
     country_origin: "Japan",
 
@@ -716,7 +716,7 @@ export const manga_data = [
       "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx114605-MYUWMsdjry6m.jpg",
 
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/manga/banner/114605-TdVVCVg2jj28.jpg",
     status: "Releasing",
     country_origin: "Japan",
 
@@ -740,7 +740,7 @@ export const manga_data = [
       "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx159930-pX4aWN9aqihH.jpg",
 
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "",
     status: "Releasing",
     country_origin: "Japan",
 
@@ -764,7 +764,7 @@ export const manga_data = [
       "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx46765-KPXir4sRqJBW.png",
 
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/manga/banner/46765-8DqCBEYyt9yP.jpg",
     status: "Releasing",
     country_origin: "Japan",
 
@@ -788,7 +788,7 @@ export const manga_data = [
       "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx106929-flAUvHZDUz5v.jpg",
 
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/manga/banner/106929-jYmT1n3Z0m46.jpg",
     status: "Releasing",
     country_origin: "Japan",
 
@@ -812,7 +812,7 @@ export const manga_data = [
       "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx169355-aLIPeq4iQfbK.jpg",
 
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/manga/banner/169355-MzURKZ3veXa7.jpg",
     status: "Releasing",
     country_origin: "Japan",
 
@@ -836,7 +836,7 @@ export const manga_data = [
       "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx119521-qYqxFvn0NnXo.png",
 
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "https://s4.anilist.co/file/anilistcdn/media/manga/banner/119521-CPhjvDuMReVg.jpg",
     status: "Releasing",
     country_origin: "Japan",
 
@@ -860,7 +860,7 @@ export const manga_data = [
       "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx143025-YL8hzpkVFR5J.jpg",
 
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "",
     status: "Releasing",
     country_origin: "Japan",
 
@@ -884,7 +884,7 @@ export const manga_data = [
       "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx117460-46JbftfHSXoc.jpg",
 
     background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+      "",
     status: "Releasing",
     country_origin: "Japan",
 

@@ -81,6 +81,8 @@ const DetailsPage = () => {
     end_date = "Hasn’t ended yet";
   } else if (!start_date) {
     start_date = "Hasn’t aired yet";
+  } else if (!background_image) {
+    background_image = '#111';
   }
 
   return (
