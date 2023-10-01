@@ -4,7 +4,7 @@ div.backgroundDiv{
   /*background: url("../../../test-banner.jpg");*/
   background-repeat: no-repeat !important;
   background-size: cover !important;
-  background-position: top right;
+  background-position: top left;
 }
 
 /*Content Container With Gradient Background - Layer 2 */
