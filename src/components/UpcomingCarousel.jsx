@@ -13,7 +13,6 @@ export const UpcomingCarousel = () => {
     // don't put it in a variable, then it won't work!
     //https://asif-jalil.github.io/scroll-carousel-website/#api
     new ScrollCarousel(main1, {
-      
       slideSelector: ".carousel-container",
       direction: "rtl", // ltr
       speed: 5,
@@ -57,45 +56,44 @@ export const UpcomingCarousel = () => {
           </div>
         </div>
         <div className="carousel-container">
-            {/* container for items*/}
+          {/* container for items*/}
 
-            <div className="flex  flex-row gap-3 justify-center mt-2">
-              {/* show items (render from object) dynamically render items */}
+          <div className="flex  flex-row gap-3 justify-center mt-2">
+            {/* show items (render from object) dynamically render items */}
 
-              {/*only prop that will be passed is 'anime_id'. because on DetailedPage, it will be fetched again from database for all info. And 'anime_id' because this if for 'upcoming animes'. it can be manga as well .. just say to include it if needed */}
+            {/*only prop that will be passed is 'anime_id'. because on DetailedPage, it will be fetched again from database for all info. And 'anime_id' because this if for 'upcoming animes'. it can be manga as well .. just say to include it if needed */}
 
-              {top10UpcomingAnime.map((item, index) => (
-                <Link
-                  to="/detailspage"
-                  state={{ id: item.anime_id, anime: true }}
-                  key={item.anime_id}
+            {top10UpcomingAnime.map((item, index) => (
+              <Link
+                to="/detailspage"
+                state={{ id: item.anime_id, anime: true }}
+                key={item.anime_id}
+              >
+                <div
+                  className="item flex flex-col justify-start items-stretch"
+                  key={index}
                 >
-                  <div
-                    className="item flex flex-col justify-start items-stretch"
-                    key={index}
-                  >
-                    {/* image */}
-                    {/* to scale it well you need to put in <div> contaiener. remove width and height and put ' object-fit: contain;' and on <div> put 'overflow: hidden;'*/}
-                    <div className="item_div">
-                      <img src={item.image} alt={item.title} />
-                    </div>
-                    <div className="line"> </div>
-
-                    <div className="inner flex flex-col gap-2 justify-start items-start ml-4 mt-4">
-                      <h1>{item.title}</h1>
-                      <p>Season {item.seasons}</p>
-                    </div>
-
-                    <p className="release_date mt-16 ml-4 ">
-                      {convertDate(item.start_date)}{" "}
-                    </p>
+                  {/* image */}
+                  {/* to scale it well you need to put in <div> contaiener. remove width and height and put ' object-fit: contain;' and on <div> put 'overflow: hidden;'*/}
+                  <div className="item_div">
+                    <img src={item.image} alt={item.title} />
                   </div>
-                </Link>
-              ))}
-            </div>
+                  <div className="line"> </div>
+
+                  <div className="inner flex flex-col gap-2 justify-start items-start ml-4 mt-4">
+                    <h1>{item.title}</h1>
+                    <p>Season {item.seasons}</p>
+                  </div>
+
+                  <p className="release_date mt-16 ml-4 ">
+                    {convertDate(item.start_date)}{" "}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </>
   );
 };
-
