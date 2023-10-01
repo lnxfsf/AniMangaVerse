@@ -1,10 +1,9 @@
 
 /*Background Image - Layer 1*/
 div.backgroundDiv{
-  /*background: url("../../../test-banner.jpg");*/
   background-repeat: no-repeat !important;
   background-size: cover !important;
-  background-position: top left;
+  background-position-x: -50vh !important;
 }
 
 /*Content Container With Gradient Background - Layer 2 */
