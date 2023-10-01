@@ -1,6 +1,5 @@
 import "../styles/UserProfile.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 import { favorites, anime_data, manga_data } from "../data";
 
