@@ -4,8 +4,7 @@ div.backgroundDiv{
   /*background: url("../../../test-banner.jpg");*/
   background-repeat: no-repeat !important;
   background-size: cover !important;
-  background-position-x: 25vw !important;
-  background-position-y: center !important;
+  background-position: top right;
 }
 
 /*Content Container With Gradient Background - Layer 2 */

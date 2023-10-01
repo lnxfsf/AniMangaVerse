@@ -28,7 +28,7 @@ const PopularCarousel = () => {
                   state={{ id: curAnime.anime_id, anime: true }}
                   key={curAnime.anime_id}
       >
-      <PopularItem  title={curAnime.title} subtitle={curAnime.subtitle} image={curAnime.image} seasons={curAnime.seasons} year={curAnime.start_date} age_restriction={curAnime.age_restriction} about={curAnime.desc} genres={curAnime.genre} />
+      <PopularItem  title={curAnime.title} subtitle={curAnime.subtitle} image={curAnime.background_image} seasons={curAnime.seasons} year={curAnime.start_date} age_restriction={curAnime.age_restriction} about={curAnime.desc} genres={curAnime.genre} />
     </Link></>
   );
 }
