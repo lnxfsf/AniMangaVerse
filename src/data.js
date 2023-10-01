@@ -683,7 +683,7 @@ export const manga_data = [
   },
 
   {
-    title: "Frieren: Beyond Journey’s End",
+    title: "Frieren: Beyond Journey's End",
     genre: ["adventure", "drama", "crime"],
 
     manga_id: 5,
@@ -911,8 +911,6 @@ export const genres = [
   "Ecchi",
   "Fantasy",
   "Game",
-  "Harem",
-  "Hentai",
   "Historical",
   "Horror",
   "Josei",
@@ -942,8 +940,6 @@ export const genres = [
   "Supernatural",
   "Thriller",
   "Vampire",
-  "Yaoi",
-  "Yuri",
 ];
 
 export const year = [
