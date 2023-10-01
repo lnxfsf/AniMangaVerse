@@ -683,7 +683,7 @@ export const manga_data = [
   },
 
   {
-    title: "Frieren: Beyond Journey’s End",
+    title: "Frieren: Beyond Journey's End",
     genre: ["adventure", "drama", "crime"],
 
     manga_id: 5,

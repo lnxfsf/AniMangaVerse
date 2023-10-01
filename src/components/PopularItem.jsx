@@ -1,8 +1,6 @@
 import { GenreBullet } from "./GenreBullet"
-export const PopularItem = ({ title,  subtitle, image, seasons, year, age_restriction, about, genres}) =>{
+export const PopularItem = ({ title,  subtitle, image, seasons, year, age_restriction = "13", about, genres}) =>{
 
-    let genresArr = genres.split(";")
-    console.log(genresArr)
     return <>
     <div className="backgroundDiv" style={{ background : "url("+image+")"}}>
         <div className="container">
@@ -12,12 +10,12 @@ export const PopularItem = ({ title,  subtitle, image, seasons, year, age_restri
                     <h1>{title}</h1>
                     <h2>{subtitle}</h2>
                 </div>
-                <h4>{seasons} {seasons>1?"seasons":"season"} - {year} - <span className="secondaryText">{age_restriction}+</span></h4>
-                <p>{about}</p>
+                <h4>{seasons} {seasons>1?"seasons":"season"} - {(year.split("-"))[0]} - <span className="secondaryText">{age_restriction}+</span></h4>
+                <p>{about.substring(0,257)+"..." }</p>
 
                 <div className="genres">
                     {
-                        genresArr.map((genre,i) => <GenreBullet genre={genre} key={i}/>)
+                        genres.map((genre,i) => <GenreBullet genre={genre} key={i}/>)
                     }
                 </div>
             </div>
