@@ -10,6 +10,7 @@ import { Explore } from "./pages/Explore";
 import { DetailsPage } from "./components/DetailsPage";
 import { PageNotFound } from "./pages/PageNotFound";
 import { EditUserProfile } from "./pages/EditUserProfile";
+import { UserProfile } from "./pages/UserProfile";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="*" element={<Navigate to="/404" />} />
 
         <Route path="/edituserprofile" element={<EditUserProfile />} />
+        <Route path="/userprofile" element={<UserProfile />} />
       </Routes>
 
       {/*it will always show footer */}

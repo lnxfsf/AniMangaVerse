@@ -899,6 +899,50 @@ export const manga_data = [
   },
 ];
 
+
+export const favorites = [
+
+{
+
+	user_id: 1,
+	anime_id: 2,
+	manga_id: null
+
+},
+{
+
+	user_id: 1,
+	anime_id: 3,
+	manga_id: null
+
+},
+{
+
+	user_id: 2,
+	anime_id: 8,
+	manga_id: null
+
+},
+{
+
+	user_id: 1,
+	anime_id: null,
+	manga_id: 3
+
+},
+
+
+{
+
+	user_id: 1,
+	anime_id: null,
+	manga_id: 9
+
+},
+
+
+]
+
 // options for dropdowns
 export const genres = [
   "Action",

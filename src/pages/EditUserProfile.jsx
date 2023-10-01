@@ -4,15 +4,16 @@ import { useState } from "react";
 
 const EditUserProfile = () => {
   // reactive variables
-  const [username, setUsername] = useState("hi");
+  const [username, setUsername] = useState("Jovan Popović");
   const [bio, setBio] = useState("");
+  //TODO click on image, and get to insert new image from local storage. it's first cropped to fit, and then it's uploaded to server.
   const [profile_image, setProfile_image] = useState(
     "https://png.pngtree.com/png-vector/20190927/ourmid/pngtree-user-icon-symbol-design-user-icon-isolated-design-png-image_1746919.jpg"
   );
-  const [email, setEmail] = useState("");
-  const [pass_confirm, setPass_confirm] = useState("");
-  const [pass_new, setPass_new] = useState("");
-  const [pass_new_confirm, setPass_new_confirm] = useState("");
+  const [email] = useState("");
+  const [passConfirm, setpassConfirm] = useState("");
+  const [passNew, setpassNew] = useState("");
+  const [passNewConfirm, setpassNewConfirm] = useState("");
 
   //TODO in this 'pass' you bring real password so it can be checked to
   const [pass, setPass] = useState("1234");
@@ -27,42 +28,42 @@ const EditUserProfile = () => {
   };
 
   let handlePassConfirmChange = (event) => {
-    setPass_confirm(event.target.value);
+    setpassConfirm(event.target.value);
   };
 
   let handlePassNewChange = (event) => {
-    setPass_new(event.target.value);
+    setpassNew(event.target.value);
   };
 
   let handlePassNewConfirmChange = (event) => {
-    setPass_new_confirm(event.target.value);
+    setpassNewConfirm(event.target.value);
   };
 
   // when 'submit' button is clicked
   let updateProfile = () => {
     // password fields validation
-    if (pass_new !== "" || pass_new_confirm !== "") {
-      if (pass_confirm == pass) {
-        if (pass_new !== pass_new_confirm) {
+    if (passNew !== "" || passNewConfirm !== "") {
+      if (passConfirm == pass) {
+        if (passNew !== passNewConfirm) {
           alert("Passwords don't match");
         } else {
           //if new password right, then assign it this new. and now handle it back to server
-          setPass(pass_new);
+          setPass(passNew);
 
           // clear fields
-          setPass_confirm("");
-          setPass_new("");
-          setPass_confirm("");
-          setPass_new_confirm("");
+          setpassConfirm("");
+          setpassNew("");
+          setpassConfirm("");
+          setpassNewConfirm("");
         }
       } else {
-        if (pass_confirm == "") {
+        if (passConfirm == "") {
           alert("Enter your current password");
-        } else if (pass_confirm !== pass) {
+        } else if (passConfirm !== pass) {
           alert("Current password incorrect");
         }
       }
-    } else if (pass_confirm && pass_confirm !== pass) {
+    } else if (passConfirm && passConfirm !== pass) {
       alert("Current password incorrect");
     }
 
@@ -104,7 +105,7 @@ const EditUserProfile = () => {
               className="input3"
               type="password"
               placeholder="Enter the current password"
-              value={pass_confirm}
+              value={passConfirm}
               onChange={handlePassConfirmChange}
             ></input>
 
@@ -112,7 +113,7 @@ const EditUserProfile = () => {
               className="input3"
               type="password"
               placeholder="Enter a new password"
-              value={pass_new}
+              value={passNew}
               onChange={handlePassNewChange}
             ></input>
           </div>
@@ -124,7 +125,7 @@ const EditUserProfile = () => {
               className="input3 mt-2"
               type="password"
               placeholder="Confirm the new password"
-              value={pass_new_confirm}
+              value={passNewConfirm}
               onChange={handlePassNewConfirmChange}
             ></input>
           </div>
