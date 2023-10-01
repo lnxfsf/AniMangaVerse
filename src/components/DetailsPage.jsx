@@ -171,7 +171,7 @@ const DetailsPage = () => {
             </div>
           </div>
 
-          <div className="flex grow bg-blacky justify-center items-start flex-col">
+          <div className="overflow-hidden flex grow bg-blacky justify-center items-start flex-col">
             <h2 className="about_ttl m-6 border-pinky border-l-2 pr-24 pl-2 ml-32">
               About {title}:
             </h2>
