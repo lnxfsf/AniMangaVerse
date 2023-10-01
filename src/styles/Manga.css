@@ -100,11 +100,17 @@
   height: 16rem;
 }
 
-.card > img {
+.card_img3 > img {
+  object-fit: contain;
+  border-radius: 10px;
+  border: 0;
+}
+
+.card_img3 {
   width: 100%;
   height: 12em;
-
   border-radius: 10px;
+  overflow: hidden;
   border: 0;
 }
 

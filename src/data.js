@@ -10,7 +10,7 @@ export const anime_data = [
     user_id: 1,
 
     //aired
-    start_date: "2023-03-25",
+    start_date: "2024-10-25",
     // TODO if null , then show 'hasn't landed yet.. '
     end_date: null,
 
@@ -39,7 +39,7 @@ export const anime_data = [
     user_id: 1,
 
     //aired
-    start_date: "2023-03-25",
+    start_date: "2028-03-25",
     // TODO if null , then show 'hasn't landed yet.. '
     end_date: "2023-03-25",
 
@@ -98,7 +98,7 @@ export const anime_data = [
     user_id: 1,
 
     //aired
-    start_date: "2023-03-25",
+    start_date: "2027-03-25",
     // TODO if null , then show 'hasn't landed yet.. '
     end_date: null,
 
@@ -127,7 +127,7 @@ export const anime_data = [
     user_id: 1,
 
     //aired
-    start_date: "2023-03-25",
+    start_date: "2027-04-25",
     // TODO if null , then show 'hasn't landed yet.. '
     end_date: null,
 
@@ -158,7 +158,7 @@ export const anime_data = [
     //aired
     start_date: "2023-03-25",
     // TODO if null , then show 'hasn't landed yet.. '
-    end_date: "2023-03-25",
+    end_date: "2027-05-25",
 
     image:
       "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx147103-Om2LOXlhHNAe.png",
@@ -185,7 +185,7 @@ export const anime_data = [
     user_id: 1,
 
     //aired
-    start_date: "2023-03-25",
+    start_date: "2027-08-25",
     // TODO if null , then show 'hasn't landed yet.. '
     end_date: null,
 
@@ -214,7 +214,7 @@ export const anime_data = [
     user_id: 1,
 
     //aired
-    start_date: "2023-03-25",
+    start_date: "2024-12-30",
     // TODO if null , then show 'hasn't landed yet.. '
     end_date: null,
 
@@ -243,7 +243,7 @@ export const anime_data = [
     user_id: 1,
 
     //aired
-    start_date: "2023-03-25",
+    start_date: "2023-01-10",
     // TODO if null , then show 'hasn't landed yet.. '
     end_date: null,
 
@@ -301,7 +301,7 @@ export const anime_data = [
     user_id: 1,
 
     //aired
-    start_date: "2023-03-25",
+    start_date: "2020-10-25",
     // TODO if null , then show 'hasn't landed yet.. '
     end_date: null,
 
@@ -330,7 +330,7 @@ export const anime_data = [
     user_id: 1,
 
     //aired
-    start_date: "2023-03-25",
+    start_date: "2020-03-25",
     // TODO if null , then show 'hasn't landed yet.. '
     end_date: null,
 

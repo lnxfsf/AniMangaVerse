@@ -116,7 +116,9 @@ const Anime = () => {
               key={item.anime_id}
             >
               <div className="card">
-                <img src={item.image} />
+                <div className="card_img1">
+                  <img src={item.image} />
+                </div>
 
                 <div className="flex flex-row gap-x-2 mt-3">
                   {/* check index.css, for global use, vertical rectangle.. */}
@@ -133,6 +135,6 @@ const Anime = () => {
       </div>
     </>
   );
-}
+};
 
-export {Anime}
+export { Anime };

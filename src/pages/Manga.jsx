@@ -97,7 +97,9 @@ const Manga = () => {
               key={item.manga_id}
             >
               <div className="card">
-                <img src={item.image} />
+                <div className="card_img3">
+                  <img src={item.image} />
+                </div>
 
                 <div className="flex flex-row gap-x-2 mt-3">
                   {/* check index.css, for global use, vertical rectangle.. */}
@@ -114,6 +116,6 @@ const Manga = () => {
       </div>
     </>
   );
-}
+};
 
-export {Manga}
+export { Manga };
