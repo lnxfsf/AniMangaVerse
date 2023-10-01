@@ -24,7 +24,7 @@ const UpcomingCarousel = () => {
   }, []);
 
   //convert date to 'Month Year' string..
-  var convertDate = (start_date) => {
+  let convertDate = (start_date) => {
     let dateObj = new Date(start_date);
 
     let month = dateObj.toLocaleString("en-US", { month: "long" });
