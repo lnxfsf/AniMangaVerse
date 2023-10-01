@@ -911,8 +911,6 @@ export const genres = [
   "Ecchi",
   "Fantasy",
   "Game",
-  "Harem",
-  "Hentai",
   "Historical",
   "Horror",
   "Josei",
@@ -942,8 +940,6 @@ export const genres = [
   "Supernatural",
   "Thriller",
   "Vampire",
-  "Yaoi",
-  "Yuri",
 ];
 
 export const year = [

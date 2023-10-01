@@ -1,10 +1,105 @@
-.main {
-  width: 100%;
-  height: 2rem;
-  background: linear-gradient(
-    97deg,
-    #1e1e1e 44.13%,
-    rgba(30, 30, 30, 0.5) 62.83%,
-    rgba(217, 217, 217, 0) 78.6%
-  );
+
+/*Background Image - Layer 1*/
+div.backgroundDiv{
+  /*background: url("../../../test-banner.jpg");*/
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position-x: 25vw !important;
+}
+
+/*Content Container With Gradient Background - Layer 2 */
+div.container{
+
+  min-height: calc(100vh - 4.375rem);
+  overflow: hidden;
+  line-height: normal;
+  width: 90%;
+  padding: 0 5%;
+  background: var(--MainColorGradient, linear-gradient(97deg, #1E1E1E 44.13%, rgba(30, 30, 30, 0.50) 62.83%, rgba(217, 217, 217, 0.00) 78.6%));
+}
+
+
+/*Text Content*/
+
+div.container div.content{
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 10% 0;
+  padding: 0;
+  border: none;
+}
+
+div.container div.content h1{
+  color: white;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+div.container div.content h2{
+  color: white;
+  font-size: 2.25rem;
+  font-weight: 400;
+}
+
+
+div.container div.content h3{
+  color: var(--secondary, #EA1179);
+  font-weight: 400;
+}
+
+div.container div.content h4{
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: white;
+}
+
+/*Main Title*/
+
+div.container div.content div.mainTitle{
+  display: flex;  
+  flex-direction: column;
+}
+
+div.container div.content div.mainTitle h1,h2,h3{
+  margin: -0.25rem;
+}
+
+/*Age*/
+div.container div.content h4 span.secondaryText{
+  color: var(--secondary, #EA1179) !important;
+}
+
+div.container div.content>p{
+  font-weight: 400;
+  max-width: 30%;
+  font-size: 1rem;
+  color: white;
+  text-align: start;
+
+}
+
+/*Genres*/
+
+div.container div.content div.genres{
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+div.container div.content div.genres div.genre{
+  padding: 0.6rem;
+  min-width: 75px;
+  border: var(--secondary, #EA1179) solid 3px;
+  display: inline-block;
+  border-radius: 25px;
+
+}
+
+div.container div.content div.genres div.genre p{
+  font-size: 1rem;
+  text-align: center;
+  color: white;
 }
