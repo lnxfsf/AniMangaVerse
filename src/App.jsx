@@ -9,6 +9,7 @@ import { Manga } from "./pages/Manga";
 import { Explore } from "./pages/Explore";
 import { DetailsPage } from "./components/DetailsPage";
 import { PageNotFound } from "./pages/PageNotFound";
+import { EditUserProfile } from "./pages/EditUserProfile";
 
 const App = () => {
   return (
@@ -25,6 +26,8 @@ const App = () => {
 
         <Route path="/404" element={<PageNotFound />} />
         <Route path="*" element={<Navigate to="/404" />} />
+
+        <Route path="/edituserprofile" element={<EditUserProfile />} />
       </Routes>
 
       {/*it will always show footer */}
@@ -32,6 +35,6 @@ const App = () => {
       <Footer />
     </>
   );
-}
+};
 
-export {App}
+export { App };
