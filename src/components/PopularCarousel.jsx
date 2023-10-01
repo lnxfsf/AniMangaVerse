@@ -17,7 +17,7 @@ const PopularCarousel = () => {
         curIndex = 0
       }
       setAnime(anime_data[curIndex])
-    }, 1000);
+    }, 15000);
     return () => clearInterval(interval);
   }, []);
 
