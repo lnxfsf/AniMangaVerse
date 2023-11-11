@@ -6,6 +6,13 @@ from rest_framework import generics
 from .models import Anime
 from .serializers import AnimeSerializer
 
+
+
+
+
+
+
+
 class DetailAnime(generics.RetrieveUpdateDestroyAPIView):
     queryset = Anime.objects.all()
     serializer_class = AnimeSerializer
@@ -15,4 +22,7 @@ class DetailAnime(generics.RetrieveUpdateDestroyAPIView):
 class ListAnime(generics.ListCreateAPIView):
     queryset = Anime.objects.all()
     serializer_class = AnimeSerializer
+    
+
+ 
     

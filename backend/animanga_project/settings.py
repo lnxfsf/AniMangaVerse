@@ -140,3 +140,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
     ]
 }
+
+
+MEDIA_ROOT = 'images/'
+MEDIA_URL= 'images/'
