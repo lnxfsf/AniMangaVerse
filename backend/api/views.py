@@ -9,10 +9,6 @@ from .serializers import AnimeSerializer
 
 
 
-
-
-
-
 class DetailAnime(generics.RetrieveUpdateDestroyAPIView):
     queryset = Anime.objects.all()
     serializer_class = AnimeSerializer

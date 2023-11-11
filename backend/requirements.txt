@@ -4,3 +4,4 @@ packaging
 whitenoise
 djangorestframework
 Pillow
+django-cors-headers

@@ -41,12 +41,15 @@ INSTALLED_APPS = [
     
     # 3rd party
     'rest_framework',
+    'corsheaders',
 
     # local
     'api',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -56,6 +59,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
@@ -142,5 +147,5 @@ REST_FRAMEWORK = {
 }
 
 
-MEDIA_ROOT = 'images/'
-MEDIA_URL= 'images/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
+MEDIA_URL= '/images/'

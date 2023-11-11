@@ -10,6 +10,8 @@ class Anime(models.Model):
     start_date = models.DateField(default=None)
     end_date = models.DateField(default=None)
 
+
+# TODO , implement this ImageField, when you have more knowledge about django..
     image = models.ImageField(default=None, upload_to='images') 
     background_image = models.ImageField(default=None, upload_to='images') 
 
@@ -21,7 +23,7 @@ class Anime(models.Model):
     
     episodes = models.IntegerField(default=0)
 
-    yt_trailer = models.TextField(default=None)
+    yt_trailer = models.URLField(default=None)
 
 
 
