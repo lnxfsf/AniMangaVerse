@@ -29,7 +29,7 @@ jobs:
     - name: Build the Docker image # push The image to the docker hub
       run: docker build backend/ --file backend/Dockerfile --tag $DOCKER_USER/$REPO_NAME:latest
     - name: Docker Push
-      run: docker push --force $DOCKER_USER/$REPO_NAME:latest
+      run: docker push $DOCKER_USER/$REPO_NAME:latest
 
     # https://render.com/docs/deploy-hooks#using-with-github-actions
     - name: Deploy on Render
