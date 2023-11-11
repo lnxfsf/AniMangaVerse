@@ -24,13 +24,15 @@ jobs:
     - name: Get current date # get the date of the build
       # we won't be using this, because of Render, but it can be usefull. To put it in:   $DOCKER_USER/$REPO_NAME:${{ steps.date.outputs.date }}
       id: date
-      run: echo "date=$(date +'%Y-%m-%d--%M-%S')" >> $GITHUB_OUTPUT 
+      # run: echo "date=$(date +'%Y-%m-%d--%M-%S')" >> $GITHUB_OUTPUT 
+      run: echo "tag=latest" >> $GITHUB_OUTPUT 
+
       
 
     - name: Build the Docker image # push The image to the docker hub
-      run: docker build backend/ --file backend/Dockerfile --tag $DOCKER_USER/$REPO_NAME:latest
+      run: docker build backend/ --file backend/Dockerfile --tag $DOCKER_USER/$REPO_NAME:${{ steps.date.outputs.tag }}
     - name: Docker Push
-      run: docker push $DOCKER_USER/$REPO_NAME:latest
+      run: docker push $DOCKER_USER/$REPO_NAME:${{ steps.date.outputs.tag }}
 
     # https://render.com/docs/deploy-hooks#using-with-github-actions
     - name: Deploy on Render
