@@ -1,5 +1,5 @@
 # AniMangaVerse
-List of animes, mangas and more: https://animanga-fklg.onrender.com/api
+List of animes, mangas and more
 
 
 [![Django CI](https://github.com/lnxfsf/AniMangaVerse/actions/workflows/django.yml/badge.svg?branch=main)](https://github.com/lnxfsf/AniMangaVerse/actions/workflows/django.yml)
