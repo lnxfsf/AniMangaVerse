@@ -6,3 +6,4 @@ djangorestframework
 Pillow
 django-cors-headers
 
+
