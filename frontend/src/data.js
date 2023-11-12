@@ -1,3 +1,30 @@
+
+// Import Axios
+import axios from 'axios';
+
+// Create an Axios instance
+const apiInstance = axios.create({
+  baseURL: 'https://animanga-fklg.onrender.com/api', // Set the base URL for the API
+});
+
+// Make a GET request to the API
+apiInstance.get('/') // Replace '/your-endpoint' with the specific endpoint you want to access
+  .then(response => {
+    // Handle the response data
+    console.log(response.data);
+  })
+  .catch(error => {
+    // Handle errors
+    console.error('Error fetching data:', error);
+  });
+
+
+
+
+
+
+
+  
 // dummy anime data values
 export const anime_data = [
   {
