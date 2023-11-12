@@ -1,3 +1,45 @@
+
+// Import Axios
+import axios from 'axios';
+
+// Create an Axios instance
+const apiInstance = axios.create({
+  baseURL: 'https://animanga-fklg.onrender.com/api', // Set the base URL for the API
+});
+
+
+
+
+// Show loader while loading
+const loaderInterval = setInterval(() => {
+  console.log('Loading...');
+}, 1000);
+
+
+
+// Make a GET request to the API
+apiInstance.get('/')
+  .then(response => {
+    // Handle the response data
+    console.log(response.data);
+  })
+  .catch(error => {
+    // Handle errors
+    console.error('Error fetching data:', error);
+  })
+  .finally(() => {
+
+    // Hide loader when loading is finished
+    clearInterval(loaderInterval);
+    console.log('Loading finished.');
+  });
+
+
+
+
+
+
+  
 // dummy anime data values
 export const anime_data = [
   {
