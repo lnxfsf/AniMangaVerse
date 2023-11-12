@@ -12,8 +12,12 @@ class Anime(models.Model):
 
 
 # TODO , implement this ImageField, when you have more knowledge about django..
-    image = models.ImageField(default=None, upload_to='images') 
-    background_image = models.ImageField(default=None, upload_to='images') 
+   # image = models.ImageField(default=None, upload_to='images') 
+   # background_image = models.ImageField(default=None, upload_to='images') 
+
+    image = models.URLField(default=None)
+    background_image = models.URLField(default=None)
+
 
     num_of_fav = models.IntegerField(default=None)
 
