@@ -1,25 +1,28 @@
 import "../styles/navbar.css";
 import { Link } from "react-router-dom";
 
+import React, { useState, useContext } from "react";
+
 // on button, redirect to other component. like <Link>
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
-
+import AuthContext from "../context/AuthContext";
 
 
 const Navbar = () => {
   
 
-// on button, redirect to other component. like <Link>
-const navigate = useNavigate();
-
-// on button, redirect to other component. like <Link>
-const handleRedirect = () => {
-  navigate('/login'); 
-};
-
+  let { user, logoutUser } = useContext(AuthContext);
 
   
+  // on button, redirect to other component. like <Link>
+  const navigate = useNavigate();
+
+  // on button, redirect to other component. like <Link>
+  const handleRedirect = () => {
+    navigate("/login");
+  };
+
   return (
     <>
       <nav className="grid grid-cols-2 justify-center">
@@ -40,16 +43,25 @@ const handleRedirect = () => {
 
           {/*in index.html, boxicons, imported as css. use it as 'Font' */}
 
-          {/*   @Dragan  , here, this is for showing profile and dropdown ..  
+          {user ? (
+            <>
+              <p onClick={logoutUser}>Logout</p>
 
-            <img src="bxs-user-circle.svg"  className="profile_icon  rounded-full  border-2 border-pinky"/>
- */}
-
-          <button className="login" onClick={handleRedirect}>LogIn</button>
+              {/* when its logged in. this should show. and in dropdown menu, there should be log out ! */}
+              <img
+                src="bxs-user-circle.svg"
+                className="profile_icon  rounded-full  border-2 border-pinky"
+              />
+            </>
+          ) : (
+            <button className="login" onClick={handleRedirect}>
+              LogIn
+            </button>
+          )}
         </div>
       </nav>
     </>
   );
-}
+};
 
-export {Navbar}
+export { Navbar };

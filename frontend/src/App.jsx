@@ -15,6 +15,14 @@ import { UserProfile } from "./pages/UserProfile";
 
 import { Login } from "./pages/Login";
 
+
+// TODO, so, you need to remove this from here, this is just so it works. but later on, you remove it from here. 
+import PrivateRoute from './utils/PrivateRoute'
+
+
+
+
+
 const App = () => {
   return (
     <>
@@ -22,8 +30,8 @@ const App = () => {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/anime" element={<Anime />} />
+        <Route path="/" element={ <PrivateRoute><Home /> </PrivateRoute>} />
+        <Route path="/anime" element={ <Anime />} />
         <Route path="/manga" element={<Manga />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/detailspage" element={<DetailsPage />} />
