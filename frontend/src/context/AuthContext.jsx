@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
   // TODO when in production, use address of Render server for this auth ! until then, locally
   let loginUser = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://127.0.0.1:8000/token/", {
+    const response = await fetch("https://animanga-fklg.onrender.com/token/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -60,9 +60,8 @@ export const AuthProvider = ({ children }) => {
     navigate("/login");
   };
 
-  // TODO when in production, use address of Render server for this auth ! until then, locally
   const updateToken = async () => {
-    const response = await fetch("http://127.0.0.1:8000/token/refresh/", {
+    const response = await fetch("https://animanga-fklg.onrender.com/token/refresh/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
