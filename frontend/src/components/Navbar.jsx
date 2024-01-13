@@ -1,7 +1,25 @@
 import "../styles/navbar.css";
 import { Link } from "react-router-dom";
 
+// on button, redirect to other component. like <Link>
+import { useNavigate } from 'react-router-dom';
+
+
+
+
 const Navbar = () => {
+  
+
+// on button, redirect to other component. like <Link>
+const navigate = useNavigate();
+
+// on button, redirect to other component. like <Link>
+const handleRedirect = () => {
+  navigate('/login'); 
+};
+
+
+  
   return (
     <>
       <nav className="grid grid-cols-2 justify-center">
@@ -27,7 +45,7 @@ const Navbar = () => {
             <img src="bxs-user-circle.svg"  className="profile_icon  rounded-full  border-2 border-pinky"/>
  */}
 
-          <button className="login">LogIn</button>
+          <button className="login" onClick={handleRedirect}>LogIn</button>
         </div>
       </nav>
     </>

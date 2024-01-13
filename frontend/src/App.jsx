@@ -12,6 +12,9 @@ import { PageNotFound } from "./pages/PageNotFound";
 import { EditUserProfile } from "./pages/EditUserProfile";
 import { UserProfile } from "./pages/UserProfile";
 
+
+import { Login } from "./pages/Login";
+
 const App = () => {
   return (
     <>
@@ -30,6 +33,14 @@ const App = () => {
 
         <Route path="/edituserprofile" element={<EditUserProfile />} />
         <Route path="/userprofile" element={<UserProfile />} />
+    
+
+
+
+        <Route path="/login" element={<Login />} />
+    
+
+    
       </Routes>
 
       {/*it will always show footer */}
