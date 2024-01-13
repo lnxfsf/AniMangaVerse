@@ -16,6 +16,7 @@ import json
 
 
 
+
 # this here, is consuming another API and using it !!!  in it's full glory
 def format_anime_data(graphql_data):
     media_data = graphql_data['data']['Media']
