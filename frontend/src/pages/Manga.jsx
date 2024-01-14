@@ -1,4 +1,4 @@
-import "../styles/Manga.css";
+import "../styles/Manga.scoped.scss";
 import { Link } from "react-router-dom";
 
 import { manga_data, genres, year, publishing, country_origin } from "../data";

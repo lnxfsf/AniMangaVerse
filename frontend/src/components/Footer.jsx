@@ -1,4 +1,4 @@
-import "../styles/footer.css";
+import "../styles/footer.scoped.scss";
 import { Link } from "react-router-dom";
 
 const Footer = () => {

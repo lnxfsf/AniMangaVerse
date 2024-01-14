@@ -1,4 +1,4 @@
-import "../styles/Explore.css";
+import "../styles/Explore.scoped.scss";
 import { Link } from "react-router-dom";
 
 // don't mix anime and manga in one list..

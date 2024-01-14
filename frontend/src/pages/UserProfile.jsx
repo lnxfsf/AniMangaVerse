@@ -1,4 +1,4 @@
-import "../styles/UserProfile.css";
+import "../styles/UserProfile.scoped.scss";
 import { Link } from "react-router-dom";
 
 import { favorites, anime_data, manga_data } from "../data";

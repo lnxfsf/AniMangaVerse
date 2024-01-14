@@ -1,4 +1,4 @@
-import "../styles/DetailsPage.css";
+import "../styles/DetailsPage.scoped.scss";
 import { useLocation } from "react-router-dom";
 
 import { anime_data, manga_data } from "../data";

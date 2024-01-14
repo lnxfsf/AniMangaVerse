@@ -1,4 +1,4 @@
-import "../styles/PageNotFound.css";
+import "../styles/PageNotFound.scoped.scss";
 
 const PageNotFound = () => {
   return (

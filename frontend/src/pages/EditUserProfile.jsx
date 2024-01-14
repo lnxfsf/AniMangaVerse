@@ -1,4 +1,4 @@
-import "../styles/EditUserProfile.css";
+import "../styles/EditUserProfile.scoped.scss";
 
 import { useState } from "react";
 

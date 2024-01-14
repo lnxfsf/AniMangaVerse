@@ -4,7 +4,7 @@ import React, {useContext} from 'react'
 import AuthContext from '../context/AuthContext'
 
 
-import "../styles/login.css";
+import "../styles/login.scoped.scss";
 
 const Login = () => {
     
@@ -38,13 +38,13 @@ const Login = () => {
 
   return (
     <>
-      <div>
+      {/* <div>
             <form onSubmit={loginUser}>
                 <input type="text" name="username" placeholder="Enter username"/>
                 <input type="password" name="password" placeholder="enter password"/>
                 <input type="submit"/>
             </form>
-        </div>
+        </div> */}
     
 
 
@@ -57,11 +57,11 @@ const Login = () => {
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" name="username" placeholder="Username" />
+              <input type="text" name="username" placeholder="Username" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" name="password" placeholder="Password" />
+              <input type="password" name="password" placeholder="Password"  required/>
             </div>
             <input type="submit" value="Login" class="btn solid" />
             <p class="social-text">Or Sign in with social platforms</p>
@@ -84,15 +84,15 @@ const Login = () => {
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" placeholder="Username" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+              <input type="email" placeholder="Email" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Password" required/>
             </div>
             <input type="submit" class="btn" value="Sign up" />
             <p class="social-text">Or Sign up with social platforms</p>

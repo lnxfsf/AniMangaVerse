@@ -1,4 +1,4 @@
-import "../styles/UpcomingCarousel.css";
+import "../styles/UpcomingCarousel.scoped.scss";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import ScrollCarousel from "scroll-carousel";

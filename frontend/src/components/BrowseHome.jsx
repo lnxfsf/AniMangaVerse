@@ -1,4 +1,4 @@
-import "../styles/BrowseHome.css";
+import "../styles/BrowseHome.scoped.scss";
 
 import { Link } from "react-router-dom";
 

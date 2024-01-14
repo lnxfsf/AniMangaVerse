@@ -1,4 +1,4 @@
-import "../styles/navbar.css";
+import "../styles/navbar.scoped.scss";
 import { Link } from "react-router-dom";
 
 import React, { useState, useContext } from "react";

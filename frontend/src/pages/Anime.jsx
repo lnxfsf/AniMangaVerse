@@ -1,4 +1,4 @@
-import "../styles/Anime.css";
+import "../styles/Anime.scoped.scss";
 import { Link } from "react-router-dom";
 
 // data

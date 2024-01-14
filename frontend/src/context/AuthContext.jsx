@@ -29,6 +29,11 @@ export const AuthProvider = ({ children }) => {
   // TODO when in production, use address of Render server for this auth ! until then, locally
   let loginUser = async (e) => {
     e.preventDefault();
+    
+
+    if(e.target.username.value && e.target.password.value){
+
+
     const response = await fetch("http://127.0.0.1:8000/token/", {
       method: "POST",
       headers: {
@@ -49,6 +54,10 @@ export const AuthProvider = ({ children }) => {
       navigate("/");
     } else {
       alert("Something went wrong while loggin in the user!");
+    }
+      
+
+    
     }
   };
 
