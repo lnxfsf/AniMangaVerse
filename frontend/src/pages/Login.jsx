@@ -133,7 +133,7 @@ const Login = () => {
               Sign in
             </button>
           </div>
-          <img src="login/bunny_register.png" className="image" alt="" />
+          <img src="login/bunny_register.gif" className="image" alt="" />
         </div>
       </div>
     </div>

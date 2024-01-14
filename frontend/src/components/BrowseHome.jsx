@@ -20,15 +20,8 @@ const BrowseHome = () => {
     <>
     
 
-    {/* for testing, auth */}
-    {/* This page should only be visible to users who are logged in, but for now, we'll hardcode an isAuthenticated value for demonstration purposes only */}
-
-     
-  {user ? (
-      <p>You are logged in to the homepage!</p>
-    ) : (
-      <p>You are not logged in, redirecting...</p>
-    )}
+      
+  
 
 
 

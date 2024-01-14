@@ -28,18 +28,18 @@ const Navbar = () => {
       <nav className="grid grid-cols-2 justify-center">
         <div className="flex flex-cols-2  justify-start items-center gap-6 ml-16">
           <Link className="first_img " to="/">
-            <img src="BabyBananya.png" />
+            <img src="doggy.png" />
           </Link>
-          <Link className="first_h2 " to="/">
+          <Link className="first_h2 nav_btns" to="/">
             AniManga Verse
           </Link>
         </div>
 
         <div className="second flex flex-cols-5 justify-center items-center gap-8 ">
-          <Link to="/">Home</Link>
-          <Link to="/anime">Anime</Link>
-          <Link to="/manga">Manga</Link>
-          <Link to="/explore">Explore</Link>
+          <Link to="/" className="nav_btns">Home</Link>
+          <Link to="/anime" className="nav_btns">Anime</Link>
+          <Link to="/manga" className="nav_btns">Manga</Link>
+          <Link to="/explore"  className="nav_btns">Explore</Link>
 
           {/*in index.html, boxicons, imported as css. use it as 'Font' */}
 

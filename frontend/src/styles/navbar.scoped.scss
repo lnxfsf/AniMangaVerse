@@ -55,4 +55,21 @@ nav {
 
   /*TODO breakpoint font-size */
   font-size: 1.2vw;
+  
+
+  
+  transition: background-color 0.5s ease-out; 
+}
+
+.login:hover{
+  background: #ea1179;
+
+  
+}
+
+
+
+.nav_btns:hover{
+  transition: color 0.2s ease-in; /* Combine transitions */
+  color: #e7358b;
 }

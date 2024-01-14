@@ -11,38 +11,38 @@ const Footer = () => {
           <div className="flex justify-start gap-4 flex-col">
             <div className="small_header">
               {/* check index.css, for global use, vertical rectangle.. */}
-              <h3 className="secondary-left-line">Contacts:</h3>
+              <h3 className="secondary-left-line non_clickable">Contacts:</h3>
             </div>
 
-            <p>support@animelist.me</p>
-            <p>020-XXX-XXX</p>
+            <p className="non_clickable" >support@animelist.me</p>
+            <p className="non_clickable">020-XXX-XXX</p>
 
             <div className="social flex flex-row gap-4">
-              <img src="/assets/social/ig.svg"></img>
-              <img src="/assets/social/fb.svg"></img>
-              <img src="/assets/social/threads.svg"></img>
-              <img src="/assets/social/x.svg"></img>
+              <img className="clickable" src="/assets/social/ig.svg"></img>
+              <img className="clickable" src="/assets/social/fb.svg"></img>
+              <img className="clickable" src="/assets/social/threads.svg"></img>
+              <img className="clickable" src="/assets/social/x.svg"></img>
             </div>
           </div>
 
           <div>
             <div className="small_header">
               {/* check index.css, for global use, vertical rectangle.. */}
-              <h3 className="secondary-left-line">Navigation:</h3>
+              <h3 className="secondary-left-line non_clickable">Navigation:</h3>
             </div>
 
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/" className="nav_btns">Home</Link>
               </li>
               <li>
-                <Link to="/anime">Anime</Link>
+                <Link to="/anime" className="nav_btns">Anime</Link>
               </li>
               <li>
-                <Link to="/manga">Manga</Link>
+                <Link to="/manga" className="nav_btns">Manga</Link>
               </li>
               <li>
-                <Link to="/explore">Explore</Link>
+                <Link to="/explore" className="nav_btns">Explore</Link>
               </li>
             </ul>
           </div>
@@ -53,7 +53,7 @@ const Footer = () => {
             <div className="small_header mb-3.5">
               {/* check index.css, for global use, vertical rectangle.. */}
 
-              <div className="secondary-left-line">
+              <div className="secondary-left-line non_clickable">
                 <h3>Like what you see ?</h3>
                 <p>Consider signing up</p>
               </div>
@@ -63,7 +63,7 @@ const Footer = () => {
 
             <div className="small_header " style={{ marginBottom: "0.8em" }}>
               {/* check index.css, for global use, vertical rectangle.. */}
-              <p className="secondary-left-line">Or if you already have an account</p>
+              <p className="secondary-left-line non_clickable">Or if you already have an account</p>
             </div>
 
             <button className="btn">LogIn</button>

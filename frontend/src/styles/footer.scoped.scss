@@ -45,12 +45,26 @@ p {
   background: rgba(247, 155, 211, 0.502);
 
   margin-bottom: 15px;
+  
+
+  transition: background-color 0.5s ease-out; 
+  
+}
+
+
+.btn:hover {
+  
+  background: #ea1179;
 }
 
 .social > img {
   width: 32px;
   height: 32px;
+  
 }
+
+
+
 
 ul > li {
   font-family: Inter;
@@ -60,4 +74,27 @@ ul > li {
   line-height: normal;
   margin-bottom: 10px;
   padding: 0;
+}
+
+
+
+
+
+.nav_btns:hover{
+  transition: color 0.2s ease-in; /* Combine transitions */
+  color: #e7358b;
+}
+
+
+.clickable {
+
+  cursor: pointer;
+
+}
+
+
+
+.non_clickable {
+  user-select: none;
+
 }
