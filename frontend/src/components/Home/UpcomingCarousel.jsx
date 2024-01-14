@@ -1,8 +1,8 @@
-import "../styles/UpcomingCarousel.scoped.scss";
+import "../../styles/UpcomingCarousel.scoped.scss";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import ScrollCarousel from "scroll-carousel";
-import { anime_data } from "../data";
+import { anime_data } from "../../data";
 
 var top10UpcomingAnime;
 

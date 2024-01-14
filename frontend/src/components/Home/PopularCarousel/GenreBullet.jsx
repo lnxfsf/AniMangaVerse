@@ -1,6 +1,6 @@
 
-import "../styles/PopularCarousel.scoped.scss";
 
+import "../../../styles/PopularCarousel.scoped.scss";
 
 export const GenreBullet = (genre) => {
    return <>

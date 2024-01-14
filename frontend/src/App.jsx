@@ -7,7 +7,7 @@ import { Home } from "./pages/Home";
 import { Anime } from "./pages/Anime";
 import { Manga } from "./pages/Manga";
 import { Explore } from "./pages/Explore";
-import { DetailsPage } from "./components/DetailsPage";
+import { DetailsPage } from "./components/DetailsPage/DetailsPage";
 import { PageNotFound } from "./pages/PageNotFound";
 import { EditUserProfile } from "./pages/EditUserProfile";
 import { UserProfile } from "./pages/UserProfile";

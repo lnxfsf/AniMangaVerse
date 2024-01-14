@@ -1,6 +1,6 @@
-import { PopularCarousel } from "../components/PopularCarousel";
-import { UpcomingCarousel } from "../components/UpcomingCarousel";
-import { BrowseHome } from "../components/BrowseHome";
+import { PopularCarousel } from "../components/Home/PopularCarousel/PopularCarousel";
+import { UpcomingCarousel } from "../components/Home/UpcomingCarousel";
+import { BrowseHome } from "../components/Home/BrowseHome";
 
 const Home = () => {
   return (

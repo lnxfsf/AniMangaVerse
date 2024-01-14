@@ -1,5 +1,6 @@
 
-import "../styles/PopularCarousel.scoped.scss";
+import "../../../styles/PopularCarousel.scoped.scss";
+
 import { GenreBullet } from "./GenreBullet"
 export const PopularItem = ({ title,  subtitle, image, seasons, year, age_restriction = "13", about, genres}) =>{
 

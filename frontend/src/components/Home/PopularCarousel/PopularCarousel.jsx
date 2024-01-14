@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { PopularItem } from "./PopularItem";
-import { anime_data } from "../data";
-import "../styles/PopularCarousel.scoped.scss";
+import { anime_data } from "../../../data";
+import "../../../styles/PopularCarousel.scoped.scss";
 
 
 const PopularCarousel = () => {
