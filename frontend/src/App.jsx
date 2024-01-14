@@ -30,7 +30,7 @@ const App = () => {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={ <PrivateRoute><Home /> </PrivateRoute>} />
+        <Route path="/" element={ <Home /> } />
         <Route path="/anime" element={ <Anime />} />
         <Route path="/manga" element={<Manga />} />
         <Route path="/explore" element={<Explore />} />
@@ -39,8 +39,8 @@ const App = () => {
         <Route path="/404" element={<PageNotFound />} />
         <Route path="*" element={<Navigate to="/404" />} />
 
-        <Route path="/edituserprofile" element={<EditUserProfile />} />
-        <Route path="/userprofile" element={<UserProfile />} />
+        <Route path="/edituserprofile" element={<PrivateRoute><EditUserProfile /></PrivateRoute>} />
+        <Route path="/userprofile" element={<PrivateRoute><UserProfile /></PrivateRoute>} />
     
 
 
