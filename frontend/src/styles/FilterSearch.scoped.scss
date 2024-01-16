@@ -1,34 +1,35 @@
-.main3 {
+
+.main {
   background: linear-gradient(180deg, #111 0%, #1e1e1e 50.52%, #1e1e1e 100%);
 }
 
 /* search part */
-.filter1 {
+.filter {
   width: 100%;
   height: auto;
   border-radius: 25px;
 }
 
-.filter1 > h1 {
+.filter > h1 {
   color: white;
   font-size: 16pt;
 }
 
-.filter_txt1 {
+.filter_txt {
   color: white;
   font-size: 10pt;
 }
 
 /* button for search */
 
-.search-container1 {
+.search-container {
   width: 100%;
   display: flex;
   align-items: center;
   margin-top: 8px;
 }
 
-.input-container1 {
+.input-container {
   width: 100%;
 
   margin-right: 13px;
@@ -43,7 +44,7 @@
   background: rgba(247, 155, 211, 0.5);
 }
 
-.input-container1 input[type="text"] {
+.input-container input[type="text"] {
   width: 100%;
   flex: 1;
   border: none;
@@ -52,14 +53,14 @@
   background: transparent;
 }
 
-.input-container1 .search-icon {
+.input-container .search-icon {
   background: transparent;
   border: none;
   cursor: pointer;
 }
 
 /* dropdown */
-.dropdown-select1,
+.dropdown-select,
 .dropdown-select_g1 {
   width: 90%;
   padding: 5px;
@@ -74,48 +75,13 @@
   cursor: pointer;
 }
 
-.dropdown-select1:focus {
+.dropdown-select:focus {
   outline: none;
 }
 
-.dropdown-select1 option {
+.dropdown-select option {
   background-color: #b80c5f;
   color: #fff;
 }
 
 /* search part */
-
-/* cards container and cards */
-.cards_container1 {
-  width: 100%;
-  height: 40rem;
-
-}
-
-/* card item */
-
-.card {
-  width: 100%;
-  height: 16rem;
-}
-
-.card_img3 > img {
-  object-fit: contain;
-  border-radius: 10px;
-  border: 0;
-}
-
-.card_img3 {
-  width: 100%;
-  height: 12em;
-  border-radius: 10px;
-  overflow: hidden;
-  border: 0;
-}
-
-.title8 {
-  color: white;
-  font-weight: bold;
-}
-
-/* cards container and cards */

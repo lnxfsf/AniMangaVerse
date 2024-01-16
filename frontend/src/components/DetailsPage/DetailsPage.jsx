@@ -13,11 +13,11 @@ const DetailsPage = () => {
   const { id, anime } = location.state;
 
   // we get all variables from external function (imported .js)
-  var dataObject = getDataObject(anime, id);
+  var dataObject = getDataObject(id, anime);
 
   return (
     <>
-      <div className="main4">
+      <div className="main">
         {/* upper part. header */}
         <Header data={dataObject} />
 

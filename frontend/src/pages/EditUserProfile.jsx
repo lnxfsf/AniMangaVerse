@@ -75,18 +75,18 @@ const EditUserProfile = () => {
 
   return (
     <>
-      <div className="main10 bg-blacky flex flex-col justify-center items-center">
+      <div className="main bg-blacky flex flex-col justify-center items-center">
         <div className="flex w-full p-32 pb-11 gap-x-4">
           <div className="flex flex-col gap-6 basis-1/2">
             <input
-              className="input3 font-bold"
+              className="input font-bold"
               type="text"
               value={username}
               placeholder="Name"
               onChange={handleUsernameChange}
             ></input>
             <textarea
-              className="input4 h-56"
+              className="input1 h-56"
               type="text"
               placeholder="Bio"
               value={bio}
@@ -94,7 +94,7 @@ const EditUserProfile = () => {
             ></textarea>
 
             <input
-              className="input3"
+              className="input"
               type="email"
               placeholder="Email"
               value={email}
@@ -102,7 +102,7 @@ const EditUserProfile = () => {
             ></input>
 
             <input
-              className="input3"
+              className="input"
               type="password"
               placeholder="Enter the current password"
               value={passConfirm}
@@ -110,7 +110,7 @@ const EditUserProfile = () => {
             ></input>
 
             <input
-              className="input3"
+              className="input"
               type="password"
               placeholder="Enter a new password"
               value={passNew}
@@ -122,7 +122,7 @@ const EditUserProfile = () => {
             <img className="img_profile_edit" src={profile_image} />
 
             <input
-              className="input3 mt-2"
+              className="input mt-2"
               type="password"
               placeholder="Confirm the new password"
               value={passNewConfirm}
@@ -132,7 +132,7 @@ const EditUserProfile = () => {
         </div>
 
         <button
-          className="submit1 bg-pinky rounded-xl  self-center p-2 ml-16 mr-16 mb-12 "
+          className="submit bg-pinky rounded-xl  self-center p-2 ml-16 mr-16 mb-12 "
           onClick={updateProfile}
         >
           Submit

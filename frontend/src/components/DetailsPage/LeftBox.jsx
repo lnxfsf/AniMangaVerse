@@ -1,7 +1,7 @@
 import "../../styles/DetailsPage.scoped.scss";
 import { GenreBullet } from "./GenreBullet";
 
-const LeftBox = ({ anime, data }) => {
+const LeftBox = ({ data , anime  }) => {
   return (
     <>
       <div className="basis-1/3 flex items-start justify-center ">

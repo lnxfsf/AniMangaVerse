@@ -12,7 +12,7 @@ const BrowseHome = () => {
 
   return (
     <>
-      <div className="main2 flex justify-center items-center ">
+      <div className="main flex justify-center items-center ">
 
         <div className="basis-1/4">
     

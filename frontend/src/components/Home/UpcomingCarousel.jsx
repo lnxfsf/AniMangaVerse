@@ -8,11 +8,11 @@ var top10UpcomingAnime;
 
 export const UpcomingCarousel = () => {
   useEffect(() => {
-    let main1 = document.querySelector(".main1");
+    let main = document.querySelector(".main");
 
     // don't put it in a variable, then it won't work!
     //https://asif-jalil.github.io/scroll-carousel-website/#api
-    new ScrollCarousel(main1, {
+    new ScrollCarousel(main, {
       slideSelector: ".carousel-container",
       direction: "rtl", // ltr
       speed: 5,
@@ -45,9 +45,9 @@ export const UpcomingCarousel = () => {
     <>
       <div className="line"> </div>
 
-      <div className="main1 flex flex-col 	">
+      <div className="main flex flex-col 	">
         {/* this is just container for showing title and then carousel */}
-        <div className="small_header1 ml-10 mt-6 ">
+        <div className="small_header ml-10 mt-6 ">
           {/* check index.css, for global use, vertical rectangle.. */}
 
           <div className="secondary-left-line">

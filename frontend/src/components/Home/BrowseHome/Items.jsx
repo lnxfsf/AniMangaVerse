@@ -27,7 +27,7 @@ const Items = () => {
                   <div className="flex flex-row gap-x-2 mt-3">
                     {/* check index.css, for global use, vertical rectangle.. */}
 
-                    <p className="title8 secondary-left-line">{item.title}</p>
+                    <p className="title secondary-left-line">{item.title}</p>
 
                     {/*TODO you add favorite button, and for it to work properly */}
                   </div>

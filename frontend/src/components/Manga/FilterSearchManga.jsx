@@ -1,17 +1,19 @@
-import "../../styles/Anime.scoped.scss";
 
-import { anime_data, genres, year, studio, season, episodes } from "../../data";
 
-const FilterSearch = () => {
+import "../../styles/FilterSearch.scoped.scss";
+
+import { manga_data, genres, year, publishing, country_origin } from "../../data";
+
+const FilterSearchManga = () => {
   return <>
   
   
-    <div className="filter1 grid grid-cols-6 p-6 ">
+        <div className="filter grid grid-cols-6 p-6 ">
           <div className="flex flex-col  justify-start ml-3 mt-3">
-            <p className="filter_txt1">Search:</p>
+            <p className="filter_txt">Search:</p>
 
             <div className="search-container">
-              <div className="input-container1">
+              <div className="input-container">
                 <input type="text" placeholder="Search" />
                 <button className="search-icon">
                   <i className="bx bx-search-alt-2"></i>
@@ -21,7 +23,7 @@ const FilterSearch = () => {
           </div>
 
           <div className="flex flex-col  justify-start ml-3 mt-3">
-            <p className="filter_txt1">Genres:</p>
+            <p className="filter_txt">Genres:</p>
 
             <select className="dropdown-select_g1" multiple>
               {/* all genres possible */}
@@ -35,9 +37,9 @@ const FilterSearch = () => {
           </div>
 
           <div className="flex flex-col  justify-start ml-3 mt-3">
-            <p className="filter_txt1">Year:</p>
+            <p className="filter_txt">Year:</p>
 
-            <select className="dropdown-select1">
+            <select className="dropdown-select">
               <option disabled selected>
                 Year
               </option>
@@ -52,16 +54,16 @@ const FilterSearch = () => {
           </div>
 
           <div className="flex flex-col  justify-start ml-3 mt-3">
-            <p className="filter_txt1">Studio:</p>
+            <p className="filter_txt">Publishing Status:</p>
 
-            <select className="dropdown-select1">
+            <select className="dropdown-select">
               <option selected disabled>
-                Studio
+                Publishing Status
               </option>
 
               {/*  choose studios */}
 
-              {studio.map((item, index) => (
+              {publishing.map((item, index) => (
                 <option value={item} key={index}>
                   {item}
                 </option>
@@ -70,34 +72,16 @@ const FilterSearch = () => {
           </div>
 
           <div className="flex flex-col  justify-start ml-3 mt-3">
-            <p className="filter_txt1">Seasons:</p>
+            <p className="filter_txt">Country Of Origin:</p>
 
-            <select className="dropdown-select1">
+            <select className="dropdown-select">
               <option selected disabled>
-                Seasons
+                Country Of Origin
               </option>
 
               {/*  choose studios */}
 
-              {season.map((item, index) => (
-                <option value={item} key={index}>
-                  {item}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div className="flex flex-col  justify-start ml-3 mt-3">
-            <p className="filter_txt1">Episodes:</p>
-
-            <select className="dropdown-select1">
-              <option selected disabled>
-                Episodes
-              </option>
-
-              {/*  choose studios */}
-
-              {episodes.map((item, index) => (
+              {country_origin.map((item, index) => (
                 <option value={item} key={index}>
                   {item}
                 </option>
@@ -105,9 +89,10 @@ const FilterSearch = () => {
             </select>
           </div>
         </div>
-  
+        
+        
   
   </>;
 };
 
-export { FilterSearch };
+export { FilterSearchManga };
