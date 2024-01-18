@@ -2,7 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 // import components
 import { Navbar } from "./components/Navbar";
-import { Footer } from "./components/Footer";
+import { Footer } from "./components/Footer/Footer";
 import { Home } from "./pages/Home";
 import { Anime } from "./pages/Anime";
 import { Manga } from "./pages/Manga";
