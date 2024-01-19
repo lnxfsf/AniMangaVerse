@@ -8,11 +8,17 @@ import {
   Button,
   IconButton,
   Hidden,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
 } from "@mui/material";
 
-import Drawer from '@mui/material/Drawer';
+import SwipeableDrawer from "@mui/material/Drawer";
 
-
+import HomeIcon from "@mui/icons-material/Home";
+import ExploreIcon from "@mui/icons-material/Explore";
+import LiveTvIcon from "@mui/icons-material/LiveTv";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
 
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -22,11 +28,6 @@ import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 import AuthContext from "../context/AuthContext";
-
-
-
-
-
 
 const Navbar = () => {
   let { user, logoutUser } = useContext(AuthContext);
@@ -39,23 +40,22 @@ const Navbar = () => {
     navigate("/login");
   };
 
-  
-
   const [open, setOpen] = useState(false);
 
-  
   return (
     <>
-    
-    
-      <AppBar position="static" >
+      <AppBar position="static">
         {/* <Toolbar sx={{bgcolor: "#1e1e1e", backg-image:linear-gradient(-45deg, #EA1179 0%, #75083c 100%) }} > */}
-        <Toolbar sx={{ bgcolor: "white",color: "white" , background: { sm:"#1e1e1e", md:`linear-gradient( 90deg, #1e1e1e 44.47%, rgba(30, 30, 30, 0.8) 62.64%) ` }, }} >
-    
-
-          <IconButton edge="start" color="inherit" aria-label="open drawer" onClick={() => setOpen(true)} sx={{ display: {  md: 'none'},  }} >
-          <MenuIcon />
-        </IconButton>
+        <Toolbar sx={{ bgcolor: "#1e1e1e" }}>
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="open drawer"
+            onClick={() => setOpen(true)}
+            sx={{ display: { md: "none" } }}
+          >
+            <MenuIcon />
+          </IconButton>
 
           {/* <IconButton edge="start" color="inherit" aria-label="menu">
             <MenuIcon />
@@ -65,14 +65,14 @@ const Navbar = () => {
             variant="h6"
             component="div"
             sx={{
-              flexGrow: 1, 
-                width: 100,
+              flexGrow: 1,
+              width: 300,
             }}
           >
             AniManga Verse
           </Typography>
-          <nav className="flex flex-wrap gap-8 justify-center items-center hidden md:flex" >
 
+          <nav className="flex flex-wrap gap-8 justify-center items-center hidden sm:flex">
             <Link to="/" className="nav_btns">
               Home
             </Link>
@@ -88,29 +88,69 @@ const Navbar = () => {
             {/* Conditional user elements */}
           </nav>
 
-         
-
-            {user ? (
-              <>
-                <p onClick={logoutUser}>Logout</p>
-              </>
-            ) : (
-              <Button  color="inherit" onClick={handleRedirect}>
-                Login
-              </Button>
-            )}
-
+          {user ? (
+            <>
+              <p onClick={logoutUser}>Logout</p>
+            </>
+          ) : (
+            <Button color="inherit" onClick={handleRedirect}>
+              Login
+            </Button>
+          )}
         </Toolbar>
       </AppBar>
-    
 
-      <Drawer open={open} onClose={() => setOpen(false)}>
-          <Link to="/" className="nav_btns">Home</Link>
+      <SwipeableDrawer
+        open={open}
+        onClose={() => setOpen(false)}
+        PaperProps={{
+          sx: {
+            backgroundColor: "#1e1e1e",
+            color: "white",
+          },
+        }}
+      >
+        {/* <Link to="/" className="nav_btns">Home</Link>
           <Link to="/anime" className="nav_btns">Anime</Link>
           <Link to="/manga" className="nav_btns">Manga</Link>
-          <Link to="/explore" className="nav_btns">Explore</Link>
-      </Drawer>
+          <Link to="/explore" className="nav_btns">Explore</Link> */}
 
+        <ListItem sx={{mt:1}}>
+          <Link to="/" className="nav_btns"  onClick={() => setOpen(false)}>
+
+          <HomeIcon sx={{mr:1 ,mb:0.5}}/>
+            Home
+          </Link>
+        </ListItem>
+
+        <ListItem  >
+          
+          <Link to="/anime" className="nav_btns" onClick={() => setOpen(false)} >
+<LiveTvIcon sx={{mr:1 ,mb:0.5}}/>
+            Anime
+          </Link>
+        </ListItem>
+
+        <ListItem  >
+          <Link to="/manga" className="nav_btns" onClick={() => setOpen(false)}>
+
+          <MenuBookIcon sx={{mr:1 ,mb:0.5 }}/>
+            Manga
+          </Link>
+        </ListItem>
+
+        <ListItem >
+          <Link
+            to="/explore"
+            className="nav_btns"
+            onClick={() => setOpen(false)}
+          >
+
+          <ExploreIcon sx={{mr:1,mb:0.5 }}/>
+            Explore
+          </Link>
+        </ListItem>
+      </SwipeableDrawer>
     </>
   );
 };
