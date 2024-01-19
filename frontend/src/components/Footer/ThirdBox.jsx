@@ -3,7 +3,18 @@ import { Link } from "react-router-dom";
 
 import { Button } from "@mui/material";
 
+import { useNavigate } from "react-router-dom";
+
+
 const ThirdBox = () => {
+  
+  const navigate = useNavigate();
+
+  const handleRedirectLogin = () => {
+    navigate("/login");
+  };
+
+
   return (
     <>
     {/* hidden lg:inline  */}
@@ -25,7 +36,7 @@ const ThirdBox = () => {
             </div>
           </div>
 
-          <Button className="btn"    sx={{bgcolor: "#e5c9d9", color: "#fff" , borderRadius: 25,  border: `1px solid #ea1179`,   '&:hover': { background: "rgb(234, 17, 121)", color: "white"    }  }}  >Sign Up</Button>
+          <Button className="btn"    sx={{bgcolor: "#e5c9d9", color: "#fff" , borderRadius: 25,  border: `1px solid #ea1179`,   '&:hover': { background: "rgb(234, 17, 121)", color: "white"    }  }} onClick={handleRedirectLogin}>Sign Up</Button>
 
           <div className="small_header " style={{ marginBottom: "0.8em" }}>
             {/* check index.css, for global use, vertical rectangle.. */}
@@ -35,7 +46,7 @@ const ThirdBox = () => {
           </div>
 
 
-          <Button className="btn"    sx={{bgcolor: "#e5c9d9", color: "#fff" , borderRadius: 25,  border: `1px solid #ea1179`,   '&:hover': { background: "rgb(234, 17, 121)", color: "white"    }  }}  >Login</Button>
+          <Button className="btn"    sx={{bgcolor: "#e5c9d9", color: "#fff" , borderRadius: 25,  border: `1px solid #ea1179`,   '&:hover': { background: "rgb(234, 17, 121)", color: "white"    }  }} onClick={handleRedirectLogin} >Login</Button>
         </div>
       </div>
     </>

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import AuthContext from "../context/AuthContext";
 
 import "../styles/login.scoped.scss";
@@ -9,8 +9,20 @@ import { Button, } from "@mui/material";
 
 
 
+
+
+
+
 const Login = () => {
   let { loginUser } = useContext(AuthContext);
+  
+  
+
+
+
+
+  
+
 
   const addSignUpModeClass = () => {
     // Get the container element
@@ -31,9 +43,15 @@ const Login = () => {
       container.classList.remove("sign-up-mode");
     }
   };
+  
+
+
+  
 
   return (
     <>
+    
+
     
 
       {/* <!-- form --> */}

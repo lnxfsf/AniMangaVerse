@@ -11,7 +11,7 @@ const FirstBox = () => {
         </div>
 
         <p className="non_clickable">support@animelist.me</p>
-        <p className="non_clickable">020-XXX-XXX</p>
+        <p className="non_clickable">020-211-432</p>
 
         <div className="social flex flex-row gap-4">
           <img className="clickable" src="/assets/social/ig.svg"></img>

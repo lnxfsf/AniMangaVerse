@@ -9,7 +9,6 @@ import {
   IconButton,
   ListItem,
   Hidden,
-
 } from "@mui/material";
 
 import SwipeableDrawer from "@mui/material/Drawer";
@@ -55,15 +54,14 @@ const Navbar = () => {
           >
             <MenuIcon />
           </IconButton>
-    
 
-    <Hidden mdDown>
-          <IconButton variant="text" sx={{mr:2,  }}>
-        <Link className="first_img " to="/">
-          <img src="doggy.png" />
-         </Link>
-          </IconButton>
-</Hidden>
+          <Hidden mdDown>
+            <IconButton variant="text" sx={{ mr: 2 }}>
+              <Link className="first_img " to="/">
+                <img src="doggy.png" />
+              </Link>
+            </IconButton>
+          </Hidden>
 
           {/* <IconButton edge="start" color="inherit" aria-label="menu">
             <MenuIcon />
@@ -78,8 +76,8 @@ const Navbar = () => {
             }}
           >
             <Link className="first_h2 nav_btns" to="/">
-           AniManga Verse
-         </Link>
+              AniManga Verse
+            </Link>
           </Typography>
 
           <nav className="flex flex-wrap gap-8 justify-center items-center hidden sm:flex">
@@ -101,20 +99,19 @@ const Navbar = () => {
           {user ? (
             <>
               {/* <p onClick={logoutUser}>Logout</p> */}
-            <Button color="inherit"  onClick={logoutUser}>
-              Logout
-            </Button>
+              <Button color="inherit" onClick={logoutUser}>
+                Logout
+              </Button>
             </>
           ) : (
             // <Button   sx={{bgcolor: "#e5c9d9", color: "#1e1e1e" , borderRadius: 25,  border: `1px solid #ea1179`,   '&:hover': { background: "rgb(234, 17, 121)", color: "white"    }  }} onClick={handleRedirect}>
             //
             //   Login
             // </Button>
-            // 
-            <Button color="inherit"onClick={handleRedirect}>
+            //
+            <Button color="inherit" onClick={handleRedirect}>
               Login
             </Button>
-            
           )}
         </Toolbar>
       </AppBar>
@@ -134,38 +131,34 @@ const Navbar = () => {
           <Link to="/manga" className="nav_btns">Manga</Link>
           <Link to="/explore" className="nav_btns">Explore</Link> */}
 
-        <ListItem sx={{mt:1}}>
-          <Link to="/" className="nav_btns"  onClick={() => setOpen(false)}>
-
-          <HomeIcon sx={{mr:1 ,mb:0.5}}/>
+        <ListItem sx={{ mt: 1 }}>
+          <Link to="/" className="nav_btns" onClick={() => setOpen(false)}>
+            <HomeIcon sx={{ mr: 1, mb: 0.5 }} />
             Home
           </Link>
         </ListItem>
 
-        <ListItem  >
-          
-          <Link to="/anime" className="nav_btns" onClick={() => setOpen(false)} >
-<LiveTvIcon sx={{mr:1 ,mb:0.5}}/>
+        <ListItem>
+          <Link to="/anime" className="nav_btns" onClick={() => setOpen(false)}>
+            <LiveTvIcon sx={{ mr: 1, mb: 0.5 }} />
             Anime
           </Link>
         </ListItem>
 
-        <ListItem  >
+        <ListItem>
           <Link to="/manga" className="nav_btns" onClick={() => setOpen(false)}>
-
-          <MenuBookIcon sx={{mr:1 ,mb:0.5 }}/>
+            <MenuBookIcon sx={{ mr: 1, mb: 0.5 }} />
             Manga
           </Link>
         </ListItem>
 
-        <ListItem >
+        <ListItem>
           <Link
             to="/explore"
             className="nav_btns"
             onClick={() => setOpen(false)}
           >
-
-          <ExploreIcon sx={{mr:1,mb:0.5 }}/>
+            <ExploreIcon sx={{ mr: 1, mb: 0.5 }} />
             Explore
           </Link>
         </ListItem>
