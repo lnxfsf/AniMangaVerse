@@ -90,12 +90,21 @@ const Navbar = () => {
 
           {user ? (
             <>
-              <p onClick={logoutUser}>Logout</p>
+              {/* <p onClick={logoutUser}>Logout</p> */}
+            <Button color="inherit"  onClick={logoutUser}>
+              Logout
+            </Button>
             </>
           ) : (
-            <Button color="inherit" onClick={handleRedirect}>
+            // <Button   sx={{bgcolor: "#e5c9d9", color: "#1e1e1e" , borderRadius: 25,  border: `1px solid #ea1179`,   '&:hover': { background: "rgb(234, 17, 121)", color: "white"    }  }} onClick={handleRedirect}>
+            //
+            //   Login
+            // </Button>
+            // 
+            <Button color="inherit"onClick={handleRedirect}>
               Login
             </Button>
+            
           )}
         </Toolbar>
       </AppBar>

@@ -1,10 +1,18 @@
 import "../../styles/footer.scoped.scss";
 import { Link } from "react-router-dom";
 
+import { Button } from "@mui/material";
+
 const ThirdBox = () => {
   return (
     <>
     {/* hidden lg:inline  */}
+
+    {/* 
+      <Button   sx={{bgcolor: "#e5c9d9", color: "#1e1e1e" , borderRadius: 25,  border: `1px solid #ea1179`,   '&:hover': { background: "rgb(234, 17, 121)", color: "white"    }  }} >
+              Login
+      </Button> */}
+
 
       <div className=" flex justify-end mr-24 mt-8 grow hidden lg:flex  ">
         <div>
@@ -17,7 +25,7 @@ const ThirdBox = () => {
             </div>
           </div>
 
-          <button className="btn">SignUp</button>
+          <Button className="btn"    sx={{bgcolor: "#e5c9d9", color: "#fff" , borderRadius: 25,  border: `1px solid #ea1179`,   '&:hover': { background: "rgb(234, 17, 121)", color: "white"    }  }}  >Sign Up</Button>
 
           <div className="small_header " style={{ marginBottom: "0.8em" }}>
             {/* check index.css, for global use, vertical rectangle.. */}
@@ -26,7 +34,8 @@ const ThirdBox = () => {
             </p>
           </div>
 
-          <button className="btn">LogIn</button>
+
+          <Button className="btn"    sx={{bgcolor: "#e5c9d9", color: "#fff" , borderRadius: 25,  border: `1px solid #ea1179`,   '&:hover': { background: "rgb(234, 17, 121)", color: "white"    }  }}  >Login</Button>
         </div>
       </div>
     </>

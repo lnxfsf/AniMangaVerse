@@ -3,6 +3,12 @@ import AuthContext from "../context/AuthContext";
 
 import "../styles/login.scoped.scss";
 
+
+
+import { Button, } from "@mui/material";
+
+
+
 const Login = () => {
   let { loginUser } = useContext(AuthContext);
 
@@ -56,7 +62,10 @@ const Login = () => {
                   autoComplete="current-password"
                 />
               </div>
-              <input type="submit" value="Login" className="btn solid" />
+
+              <Button sx={{color: "white"}} type="submit" className="btn solid"  variant="text" value="Login" >Login</Button>
+    
+
               <p className="social-text">Or Sign in with social platforms</p>
               <div className="social-media">
                 <a href="#" className="social-icon">
@@ -105,7 +114,7 @@ const Login = () => {
                   autoComplete="new-password"
                 />
               </div>
-              <input type="submit" className="btn" value="Sign up" />
+              <Button sx={{color: "white"}} type="submit" className="btn"  variant="text" value="Sign up" >Sign up</Button>
               <p className="social-text">Or Sign up with social platforms</p>
               <div className="social-media">
                 <a href="#" className="social-icon">
@@ -133,13 +142,13 @@ const Login = () => {
                 If you are new and you would like to create an account to unlock
                 more features, sign up.
               </p>
-              <button
+              <Button
                 onClick={addSignUpModeClass}
                 className="btn transparent"
                 id="sign-up-btn"
               >
                 Sign up
-              </button>
+              </Button>
             </div>
             <img src="login/girl_login.png" className="image" alt="" />
           </div>
@@ -150,13 +159,12 @@ const Login = () => {
                 If you already have an account proceed to log in. <br />
                 Eat your noodles bunny.{" "}
               </p>
-              <button
-                onClick={addSignInModeClass}
-                className="btn transparent"
-                id="sign-in-btn"
-              >
+    
+    
+              <Button onClick={addSignInModeClass} className="btn transparent" id="sign-in-btn" >
+
                 Sign in
-              </button>
+              </Button>
             </div>
             <img src="login/bunny_register.gif" className="image" alt="" />
           </div>
