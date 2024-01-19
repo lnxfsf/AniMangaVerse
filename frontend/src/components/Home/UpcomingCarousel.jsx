@@ -17,6 +17,7 @@ export const UpcomingCarousel = () => {
       direction: "rtl", // ltr
       speed: 5,
       margin: 24,
+      // autoplay: true,
     });
   }, []);
 
@@ -47,7 +48,7 @@ export const UpcomingCarousel = () => {
 
       <div className="main flex flex-col 	">
         {/* this is just container for showing title and then carousel */}
-        <div className="small_header ml-10 mt-6 ">
+        <div className="small_header ml-4 md:ml-10 mt-6 ">
           {/* check index.css, for global use, vertical rectangle.. */}
 
           <div className="secondary-left-line">
@@ -63,16 +64,26 @@ export const UpcomingCarousel = () => {
 
             {/*only prop that will be passed is 'anime_id'. because on DetailedPage, it will be fetched again from database for all info. And 'anime_id' because this if for 'upcoming animes'. it can be manga as well .. just say to include it if needed */}
 
+    
+
+
+    
             {top10UpcomingAnime.map((item, index) => (
               <Link
                 to="/detailspage"
                 state={{ id: item.anime_id, anime: true }}
                 key={item.anime_id}
               >
+              
+
+              
                 <div
-                  className="item flex flex-col justify-start items-stretch"
+                  className="item flex flex-col justify-start items-stretch "
                   key={index}
+              
+                  
                 >
+
                   {/* image */}
                   {/* to scale it well you need to put in <div> contaiener. remove width and height and put ' object-fit: contain;' and on <div> put 'overflow: hidden;'*/}
                   <div className="item_div">
@@ -80,12 +91,12 @@ export const UpcomingCarousel = () => {
                   </div>
                   <div className="line"> </div>
 
-                  <div className="inner flex flex-col gap-2 justify-start items-start ml-4 mt-4">
+                  <div className="inner flex flex-col gap-2 justify-start items-start ml-2 mt-2 md:ml-4 md:mt-4">
                     <h1>{item.title}</h1>
                     <p>Season {item.seasons}</p>
                   </div>
 
-                  <p className="release_date mt-16 ml-4 ">
+                  <p className="release_date md:mt-16 mb-4 mt-4 md:mt-6 ml-2 md:ml-4  ">
                     {convertDate(item.start_date)}{" "}
                   </p>
                 </div>
