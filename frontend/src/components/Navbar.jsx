@@ -1,4 +1,4 @@
-// import "../styles/navbar.scoped.scss";
+import "../styles/navbar.scoped.scss";
 import { Link } from "react-router-dom";
 
 import {
@@ -49,10 +49,11 @@ const Navbar = () => {
     
     
       <AppBar position="static" >
-        <Toolbar sx={{bgcolor: "#1e1e1e"}} >
+        {/* <Toolbar sx={{bgcolor: "#1e1e1e", backg-image:linear-gradient(-45deg, #EA1179 0%, #75083c 100%) }} > */}
+        <Toolbar sx={{ bgcolor: "white",color: "white" , background: { sm:"#1e1e1e", md:`linear-gradient( 90deg, #1e1e1e 44.47%, rgba(30, 30, 30, 0.8) 62.64%) ` }, }} >
     
 
-          <IconButton edge="start" color="inherit" aria-label="open drawer" onClick={() => setOpen(true)} sx={{ display: {  md: 'none'} }} >
+          <IconButton edge="start" color="inherit" aria-label="open drawer" onClick={() => setOpen(true)} sx={{ display: {  md: 'none'},  }} >
           <MenuIcon />
         </IconButton>
 
@@ -65,7 +66,7 @@ const Navbar = () => {
             component="div"
             sx={{
               flexGrow: 1, 
-                width: 150,
+                width: 100,
             }}
           >
             AniManga Verse
