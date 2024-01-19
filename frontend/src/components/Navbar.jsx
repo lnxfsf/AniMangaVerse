@@ -7,10 +7,9 @@ import {
   Typography,
   Button,
   IconButton,
-  Hidden,
   ListItem,
-  ListItemIcon,
-  ListItemText,
+  Hidden,
+
 } from "@mui/material";
 
 import SwipeableDrawer from "@mui/material/Drawer";
@@ -56,6 +55,15 @@ const Navbar = () => {
           >
             <MenuIcon />
           </IconButton>
+    
+
+    <Hidden mdDown>
+          <IconButton variant="text" sx={{mr:2,  }}>
+        <Link className="first_img " to="/">
+          <img src="doggy.png" />
+         </Link>
+          </IconButton>
+</Hidden>
 
           {/* <IconButton edge="start" color="inherit" aria-label="menu">
             <MenuIcon />
@@ -69,7 +77,9 @@ const Navbar = () => {
               width: 300,
             }}
           >
-            AniManga Verse
+            <Link className="first_h2 nav_btns" to="/">
+           AniManga Verse
+         </Link>
           </Typography>
 
           <nav className="flex flex-wrap gap-8 justify-center items-center hidden sm:flex">
