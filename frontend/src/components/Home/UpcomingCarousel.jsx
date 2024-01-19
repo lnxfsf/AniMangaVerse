@@ -48,7 +48,7 @@ export const UpcomingCarousel = () => {
 
       <div className="main flex flex-col 	">
         {/* this is just container for showing title and then carousel */}
-        <div className="small_header ml-4 md:ml-10 mt-6 ">
+        <div className="small_header ml-4 md:ml-6 lg:ml-10  mt-6 ">
           {/* check index.css, for global use, vertical rectangle.. */}
 
           <div className="secondary-left-line">
@@ -96,7 +96,7 @@ export const UpcomingCarousel = () => {
                     <p>Season {item.seasons}</p>
                   </div>
 
-                  <p className="release_date md:mt-16 mb-4 mt-4 md:mt-6 ml-2 md:ml-4  ">
+                  <p className="release_date md:mt-16 mb-4 mt-4  md:mt-26 mb:mb-8 ml-2 md:ml-4  ">
                     {convertDate(item.start_date)}{" "}
                   </p>
                 </div>
