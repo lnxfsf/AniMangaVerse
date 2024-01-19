@@ -45,7 +45,8 @@ export const anime_data = [
   {
     title: "ONE PIECE",
 
-    genre: ["adventure", "drama", "crime"],
+
+    genre: ["adventure", "drama","crime", "crime", "adventure", "adventure", "adventure"],
     anime_id: 1,
     seasons: 20,
 
@@ -74,7 +75,9 @@ export const anime_data = [
   {
     title: "Mushoku Tensei",
 
-    genre: ["adventure", "drama", "crime"],
+
+    genre: ["adventure", "drama", "crime", "adventure", "adventure", "adventure"],
+
     anime_id: 2,
     seasons: 20,
 
@@ -104,7 +107,8 @@ export const anime_data = [
   {
     title: "Zoom 100",
 
-    genre: ["adventure", "drama", "crime"],
+
+    genre: ["adventure", "drama", "crime", "adventure", "adventure", "adventure"],
     anime_id: 3,
     seasons: 20,
 
@@ -133,7 +137,7 @@ export const anime_data = [
   {
     title: "JUJUTSU KAISEN",
 
-    genre: ["adventure", "drama", "crime"],
+    genre: ["adventure", "drama", "crime", "adventure", "adventure", "adventure"],
     anime_id: 4,
     seasons: 20,
 
