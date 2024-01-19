@@ -16,6 +16,9 @@ input {
 
 .container {
   position: relative;
+
+
+
   width: 100%;
   background-color: #1E1E1E;
   min-height: 100vh;
@@ -157,6 +160,9 @@ form.sign-in-form {
 .btn:hover {
   background-color: #C2075A;
 }
+
+
+
 .panels-container {
   position: absolute;
   height: 100%;
@@ -405,6 +411,8 @@ form.sign-in-form {
   .panel .content {
     padding: 0.5rem 1rem;
   }
+  
+  
   .container {
     padding: 1.5rem;
   }
