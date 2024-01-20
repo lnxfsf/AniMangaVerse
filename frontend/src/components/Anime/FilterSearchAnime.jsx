@@ -7,8 +7,8 @@ const FilterSearchAnime = () => {
   return <>
   
   
-    <div className="filter grid grid-cols-6 p-6 ">
-          <div className="flex flex-col  justify-start ml-3 mt-3">
+    <div className="filter grid  custom-grid-cols p-6 ">
+          <div className="flex flex-col  justify-start md:ml-3 mt-3">
             <p className="filter_txt">Search:</p>
 
             <div className="search-container">
@@ -21,7 +21,7 @@ const FilterSearchAnime = () => {
             </div>
           </div>
 
-          <div className="flex flex-col  justify-start ml-3 mt-3">
+          <div className="flex flex-col  justify-start md:ml-3 mt-3">
             <p className="filter_txt">Genres:</p>
 
             <select className="dropdown-select_g1" multiple>
@@ -35,7 +35,7 @@ const FilterSearchAnime = () => {
             </select>
           </div>
 
-          <div className="flex flex-col  justify-start ml-3 mt-3">
+          <div className="flex flex-col  justify-start md:ml-3 mt-3">
             <p className="filter_txt">Year:</p>
 
             <select className="dropdown-select">
@@ -52,7 +52,7 @@ const FilterSearchAnime = () => {
             </select>
           </div>
 
-          <div className="flex flex-col  justify-start ml-3 mt-3">
+          <div className="flex flex-col  justify-start md:ml-3 mt-3">
             <p className="filter_txt">Studio:</p>
 
             <select className="dropdown-select">
@@ -70,7 +70,7 @@ const FilterSearchAnime = () => {
             </select>
           </div>
 
-          <div className="flex flex-col  justify-start ml-3 mt-3">
+          <div className="flex flex-col  justify-start md:ml-3 mt-3">
             <p className="filter_txt">Seasons:</p>
 
             <select className="dropdown-select">
@@ -88,7 +88,7 @@ const FilterSearchAnime = () => {
             </select>
           </div>
 
-          <div className="flex flex-col  justify-start ml-3 mt-3">
+          <div className="flex flex-col  justify-start md:ml-3 mt-3">
             <p className="filter_txt">Episodes:</p>
 
             <select className="dropdown-select">

@@ -5,6 +5,8 @@
   background: linear-gradient(180deg, #111 0%, #1e1e1e 50.52%, #1e1e1e 100%);
 }
 
+
+
 .cards_container {
   width: 0;
   height: 0;
@@ -113,6 +115,11 @@
 
 /* search part */
 .filter {
+
+
+  
+
+  
   width: 100%;
 
   @media screen and (min-width: 768px) {
@@ -243,14 +250,14 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
   
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+/* 
+
+@media (max-width: 350px) {
+
+    grid-template-columns: repeat(1, minmax(0, 1fr));
 
 
-// @media (max-width: 350px) {
-
-//     grid-template-columns: repeat(1, minmax(0, 1fr));
-  
-
-// } 
+}  */
 
 
 /* 
@@ -261,3 +268,25 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
 
 
 }
+
+
+
+
+
+
+
+.filter_btn{
+    
+  
+  @media (min-width: 768px) {
+    // margin-right: 13px;
+    display:none;
+  }
+
+} 
+
+// .filter_toogle{
+
+//   display: none;
+  
+// } */

@@ -10,8 +10,8 @@ const FilterSearchExplore = () => {
 
 
    {/*TODO apply this filter. should react 'onChange'. and results should be displayed on whole page (without these sections..)  */}
-        <div className="filter grid grid-cols-6 p-6 ">
-          <div className="flex flex-col  justify-start ml-3 mt-3">
+        <div className="filter grid custom-grid-cols p-6 ">
+          <div className="flex flex-col  justify-start md:ml-3 mt-3">
             <p className="filter_txt">Search:</p>
 
             <div className="search-container">
@@ -24,7 +24,7 @@ const FilterSearchExplore = () => {
             </div>
           </div>
 
-          <div className="flex flex-col  justify-start ml-3 mt-3">
+          <div className="flex flex-col  justify-start md:ml-3 mt-3">
             <p className="filter_txt">Genres:</p>
 
             <select className="dropdown-select_g1" multiple>
@@ -38,7 +38,7 @@ const FilterSearchExplore = () => {
             </select>
           </div>
 
-          <div className="flex flex-col  justify-start ml-3 mt-3">
+          <div className="flex flex-col  justify-start md:ml-3 mt-3">
             <p className="filter_txt">Year:</p>
 
             <select className="dropdown-select">
