@@ -4,7 +4,7 @@ import React, { useContext } from "react";
 import AuthContext from "../../../context/AuthContext";
 
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 import { Filter } from "./Filter";
@@ -24,6 +24,20 @@ const BrowseHome = () => {
     setShowFilter(value);
   };
 
+
+useEffect(() => {
+    const handleResize = () => {
+      setShowFilter(window.innerWidth >= 768);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   
   
 

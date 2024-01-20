@@ -4,7 +4,7 @@ import "../styles/FilterSearch.scoped.scss";
 
 
 
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 
 import { FilterSearchAnime } from "../components/Anime/FilterSearchAnime";
 import { BrowseAniMan } from "../components/Browse/BrowseAniMan";
@@ -19,6 +19,19 @@ const Anime = () => {
     setShowFilter(value);
   };
 
+useEffect(() => {
+    const handleResize = () => {
+      setShowFilter(window.innerWidth >= 768);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   
 
   

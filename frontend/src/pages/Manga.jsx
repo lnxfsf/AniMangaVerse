@@ -1,7 +1,7 @@
 
 import "../styles/FilterSearch.scoped.scss";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { FilterSearchManga } from "../components/Manga/FilterSearchManga";
 import { BrowseAniMan } from "../components/Browse/BrowseAniMan";
@@ -15,6 +15,22 @@ const Manga = () => {
   const handleShowFilterChange = (value) => {
     setShowFilter(value);
   };
+  
+
+useEffect(() => {
+    const handleResize = () => {
+      setShowFilter(window.innerWidth >= 768);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  
   
   return (
     <>
