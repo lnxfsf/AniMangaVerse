@@ -84,7 +84,6 @@ const Login = () => {
                 />
               </div>
 
-              <input type="submit" sx={{color: "white"}}  className="btn solid mobile"  variant="text" value="Login"  />
               <Button sx={{color: "white"}} type="submit" className="btn solid pc"  variant="text" value="Login"  >Login</Button>
     
 
@@ -142,7 +141,6 @@ const Login = () => {
 
               <Button  sx={{color: "white"}} type="submit" className="btn pc"  variant="text" value="Sign up" >Sign up</Button>
    
-              <input type="submit" sx={{color: "white"}}  className="btn solid mobile"  variant="text" value="Sign up"  />
 
     
               <p className="social-text">Or Sign up with social platforms</p>

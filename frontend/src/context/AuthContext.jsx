@@ -34,7 +34,7 @@ export const AuthProvider = ({ children }) => {
     if(e.target.username.value && e.target.password.value){
 
 
-    const response = await fetch("http://127.0.0.1:8000/token/", {
+    const response = await fetch("https://animanga-fklg.onrender.com/token/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -70,7 +70,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const updateToken = async () => {
-    const response = await fetch("http://127.0.0.1:8000/token/refresh/", {
+    const response = await fetch("https://animanga-fklg.onrender.com/token/refresh/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
