@@ -81,7 +81,7 @@ const Login = () => {
                 />
               </div>
 
-              <Button sx={{color: "white"}} type="submit" className="btn solid"  variant="text" value="Login" >Login</Button>
+              <Button sx={{color: "white"}} type="submit" className="btn solid"  variant="text" value="Login" onClick={loginUser} >Login</Button>
     
 
               <p className="social-text">Or Sign in with social platforms</p>
