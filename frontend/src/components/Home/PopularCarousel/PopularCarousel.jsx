@@ -9,7 +9,7 @@ const PopularCarousel = () => {
 
   var curIndex = 0
   const [curAnime , setAnime] = useState(anime_data[curIndex])
-
+/* 
   useEffect(() => {
     const interval = setInterval(() => {
       curIndex++
@@ -19,7 +19,7 @@ const PopularCarousel = () => {
       setAnime(anime_data[curIndex])
     }, 15000);
     return () => clearInterval(interval);
-  }, []);
+  }, []); */
 
   return (
     <>

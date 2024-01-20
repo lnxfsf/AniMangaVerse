@@ -14,7 +14,7 @@ const Filter = () => {
         */}
 
 
-          <div className="filter flex flex-col border-2 border-pinky m-6 ">
+          <div className="filter flex flex-col border-2 border-pinky md:m-6 ">
             <h1 className="self-center m-4 mt-8 ">Browse</h1>
 
             <div className="flex flex-col  justify-start ml-3 mt-3">

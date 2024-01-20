@@ -6,10 +6,33 @@
 }
 
 .cards_container {
-  width: 100%;
-  height: 100%;
+  width: 0;
+  height: 0;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+  }
 
   overflow-y: auto;
+}
+
+// when its mobile, then it shows this
+.cards_container_mob {
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+  
+  background: linear-gradient(180deg, #111 0%, #1e1e1e 50.52%, #1e1e1e 100%);
+  
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 /* card item */
@@ -27,6 +50,26 @@
 
 .card_img {
   width: 100%;
+
+  
+
+  @media (min-width: 350px) and (max-width: 415px) {
+  
+      width: 9rem;
+  
+  }
+  
+
+  @media (min-width: 250px) and (max-width: 350px) {
+  
+      width: 8rem;
+  
+  }
+  
+  
+  
+  
+
   height: 12em;
   border-radius: 10px;
 
@@ -37,11 +80,37 @@
 .title {
   color: white;
   font-weight: bold;
+  
+
+@media (min-width: 560px) and (max-width: 768px) {
+    
+      font-size: 12pt;
+  }
+  
+
+  @media (min-width: 350px) and (max-width: 415px) {
+    
+      font-size: 11pt;
+  }
+
+  
+
+  @media (min-width: 250px) and (max-width: 350px) {
+  
+      font-size: 10pt;
+  
+  }
+  
 }
 
 /* search part */
 .filter {
-  width: 14vw;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 14vw;
+  }
+
   height: auto;
   border-radius: 25px;
 }
@@ -58,20 +127,20 @@
 
 .submit {
   width: 90%;
+
   color: white;
   background-color: #ea1179;
 }
 
-.submit:hover{
-  background-color: #b80c5f
+.submit:hover {
+  background-color: #b80c5f;
 }
-
-
 
 /* button for search */
 
 .search-container {
   width: 100%;
+
   display: flex;
   align-items: center;
   margin-top: 8px;
@@ -110,7 +179,12 @@
 /* dropdown */
 .dropdown-select,
 .dropdown-select_g {
-  width: 90%;
+  width: 95%;
+
+  @media screen and (min-width: 768px) {
+    width: 90%;
+  }
+
   padding: 5px;
   margin-top: 5px;
 
@@ -130,4 +204,52 @@
 .dropdown-select option {
   background-color: #b80c5f;
   color: #fff;
+}
+
+
+// here define how much what
+.custom-grid-cols {
+  
+
+grid-template-columns: repeat(2, minmax(0, 1fr));
+  
+
+@media (min-width: 921px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) and (max-width: 921px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  
+} 
+
+@media (min-width: 560px) and (max-width: 768px) {
+  
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+}
+
+
+@media (min-width: 415px) and (max-width: 560px) {
+  
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+
+// @media (max-width: 350px) {
+
+//     grid-template-columns: repeat(1, minmax(0, 1fr));
+  
+
+// } 
+
+
+/* 
+@media  {
+  
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+} */
+
+
 }
