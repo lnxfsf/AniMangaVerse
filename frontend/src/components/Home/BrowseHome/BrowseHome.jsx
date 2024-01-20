@@ -24,7 +24,6 @@ const BrowseHome = () => {
     setShowFilter(value);
   };
 
-  console.log(showFilter)
   
   
 
