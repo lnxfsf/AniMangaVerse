@@ -58,7 +58,10 @@ const Login = () => {
       <div className="container">
         <div className="forms-container">
           <div className="signin-signup">
+
+
             <form action="#" className="sign-in-form" onSubmit={loginUser}>
+
               <h2 className="title">Sign in</h2>
               <div className="input-field">
                 <i className="fas fa-user"></i>
@@ -81,7 +84,8 @@ const Login = () => {
                 />
               </div>
 
-              <Button sx={{color: "white"}} type="submit" className="btn solid"  variant="text" value="Login" onClick={loginUser} >Login</Button>
+              <input type="submit" sx={{color: "white"}}  className="btn solid mobile"  variant="text" value="Login"  />
+              <Button sx={{color: "white"}} type="submit" className="btn solid pc"  variant="text" value="Login"  >Login</Button>
     
 
               <p className="social-text">Or Sign in with social platforms</p>
@@ -132,7 +136,15 @@ const Login = () => {
                   autoComplete="new-password"
                 />
               </div>
-              <Button sx={{color: "white"}} type="submit" className="btn"  variant="text" value="Sign up" >Sign up</Button>
+
+    
+
+
+              <Button  sx={{color: "white"}} type="submit" className="btn pc"  variant="text" value="Sign up" >Sign up</Button>
+   
+              <input type="submit" sx={{color: "white"}}  className="btn solid mobile"  variant="text" value="Sign up"  />
+
+    
               <p className="social-text">Or Sign up with social platforms</p>
               <div className="social-media">
                 <a href="#" className="social-icon">

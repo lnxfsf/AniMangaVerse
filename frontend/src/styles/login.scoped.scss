@@ -429,3 +429,37 @@ form.sign-in-form {
     left: 50%;
   }
 }
+
+
+.pc{
+
+  display: none;
+  
+
+  @media (min-width: 1025px) {
+    display: block;
+    
+
+    
+    
+  }
+  
+}
+
+
+
+.mobile{
+
+  
+  display: none;
+
+  @media (max-width: 1024px) {
+
+    display: block;
+    
+
+    
+    
+  }
+  
+}
