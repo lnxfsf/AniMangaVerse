@@ -18,7 +18,7 @@ const BrowseAniMan = ({ isanime }) => {
   return (
     <>
       {isanime ? (
-        <div className=" cards_container grid grid-cols-6 gap-x-6 gap-y-6 p-6  ">
+        <div className=" cards_container grid custom-grid-cols gap-x-6 gap-y-6 p-6  ">
           {anime_data.map((item) => (
             <Link
               to="/detailspage"
@@ -43,7 +43,7 @@ const BrowseAniMan = ({ isanime }) => {
           ))}
         </div>
       ) : (
-        <div className=" cards_container grid grid-cols-6 gap-x-6 gap-y-6 p-6  ">
+        <div className=" cards_container grid custom-grid-cols gap-x-6 gap-y-6 p-6  ">
           {manga_data.map((item) => (
             <Link
               to="/detailspage"
