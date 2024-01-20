@@ -1,5 +1,8 @@
 .main {
   background: #111;
+  
+
+  
 }
 
 .ttl-box {
@@ -7,12 +10,53 @@
     https://css-tricks.com/notched-boxes/
     */
   clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+  
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+
+      clip-path: polygon(0 0, 70% 0, 90% 100%, 0% 100%);
+      
+    }
+    
+
+
+    
+    @media (max-width: 768px) {
+      
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+
+    }
+    
+
+
+
+    
+  
 }
 
 .ttl-box > div > h1 {
   color: white;
   font-family: Inter;
   font-size: 24pt;
+  
+    @media (min-width: 768px) and (max-width: 1024px) {
+      
+      font-size: 20pt;
+
+    }
+    
+    
+    
+    @media (min-width: 300px) and (max-width: 768px) {
+      
+
+      font-size: 19pt;
+
+    }
+
+    
+  
   font-style: bold;
   font-weight: 700;
   line-height: normal;
@@ -48,4 +92,44 @@
   font-style: bold;
   font-weight: 700;
   line-height: normal;
+}
+
+
+.img {
+
+    @media (max-width: 768px) {
+      
+     
+        display: none;
+      
+
+    }
+  
+}
+
+
+
+.img1 {
+
+    @media (min-width: 769px) {
+      
+     
+        display: none;
+      
+
+    }
+  
+}
+
+
+.yt{
+@media (max-width: 768px) {
+  
+ width: 100%; 
+      
+     
+      
+
+    }
+
 }
