@@ -83,12 +83,36 @@
 
 .parag1 {
   font-size: 12pt;
+
+ @media (max-width: 768px) {
+
+  font-size: 11pt;
+   
+ }
 }
 
 .about_ttl {
   color: white;
   font-family: Inter;
   font-size: 20pt;
+  
+ @media (min-width: 768px) and (max-width: 1024px) {
+      
+      font-size: 17pt;
+
+    }
+    
+    
+    
+    @media (min-width: 300px) and (max-width: 768px) {
+      
+
+      font-size: 16pt;
+
+    }
+
+
+
   font-style: bold;
   font-weight: 700;
   line-height: normal;

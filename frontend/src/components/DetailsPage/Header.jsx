@@ -29,7 +29,7 @@ const Header = ({ data }) => {
 
         <div className="ttl-box bg-blacky p-4 mb-[-2px] img1">
 
-          <div className=" m-4  border-pinky border-l-2  pl-2 ">
+          <div className=" md:m-4  border-pinky border-l-2  pl-2 ">
             <h1>{data.title}</h1>
             <p>{data.num_of_fav} favorites</p>
           </div>

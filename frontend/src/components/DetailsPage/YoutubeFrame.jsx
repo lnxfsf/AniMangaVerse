@@ -11,7 +11,7 @@ const YoutubeFrame = ({yt_trailer}) => {
                 
 
                 
-              <div className="w-full pt-6 pb-6 pr-6 pl-2 md:p-6 lg:ml-28">
+              <div className="w-full pt-6 pb-6 pr-6 ml-2 pl-2 md:p-6 lg:ml-28">
                 {/* show trailer, only if it is not null ! whether it is anime or manga (some mangas have trailer... ) */}
                 <iframe
                   className="yt"

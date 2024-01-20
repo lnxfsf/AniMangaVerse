@@ -21,13 +21,24 @@ const DetailsPage = () => {
         {/* upper part. header */}
         <Header data={dataObject} />
 
-        <div className="flex w-full h-auto">
+        <div className="flex w-full h-auto img">
           {/* left box */}
           <LeftBox data={dataObject} anime={anime} />
 
           {/* main content */}
           <MainContent data={dataObject} />
         </div>
+    
+
+
+      <div className=" img1">
+          <MainContent data={dataObject} />
+
+          <LeftBox data={dataObject} anime={anime} />
+      </div> 
+
+
+    
       </div>
     </>
   );

@@ -5,7 +5,7 @@ const LeftBox = ({ data , anime  }) => {
   return (
     <>
       <div className="basis-1/3 flex items-start justify-center ">
-        <div className="flex border-pinky border-2 w-56 m-6 h-auto rounded-2xl p-4 flex-col">
+        <div className="flex border-pinky border-2 w-56 mb-6 mt-6 md:m-6 h-auto rounded-2xl p-4 flex-col">
           {anime ? (
             <div>
               <p className="parag">Studios:</p>
