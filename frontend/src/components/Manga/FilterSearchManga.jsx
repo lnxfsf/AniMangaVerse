@@ -8,8 +8,8 @@ const FilterSearchManga = () => {
   return <>
   
   
-        <div className="filter grid grid-cols-6 p-6 ">
-          <div className="flex flex-col  justify-start ml-3 mt-3">
+        <div className="filter grid  custom-grid-cols p-6 ">
+          <div className="flex flex-col  justify-start md:ml-3 mt-3">
             <p className="filter_txt">Search:</p>
 
             <div className="search-container">
@@ -22,7 +22,7 @@ const FilterSearchManga = () => {
             </div>
           </div>
 
-          <div className="flex flex-col  justify-start ml-3 mt-3">
+          <div className="flex flex-col  justify-start md:ml-3 mt-3">
             <p className="filter_txt">Genres:</p>
 
             <select className="dropdown-select_g1" multiple>
@@ -36,7 +36,7 @@ const FilterSearchManga = () => {
             </select>
           </div>
 
-          <div className="flex flex-col  justify-start ml-3 mt-3">
+          <div className="flex flex-col  justify-start md:ml-3 mt-3">
             <p className="filter_txt">Year:</p>
 
             <select className="dropdown-select">
@@ -53,7 +53,7 @@ const FilterSearchManga = () => {
             </select>
           </div>
 
-          <div className="flex flex-col  justify-start ml-3 mt-3">
+          <div className="flex flex-col  justify-start md:ml-3 mt-3">
             <p className="filter_txt">Publishing Status:</p>
 
             <select className="dropdown-select">
@@ -71,7 +71,7 @@ const FilterSearchManga = () => {
             </select>
           </div>
 
-          <div className="flex flex-col  justify-start ml-3 mt-3">
+          <div className="flex flex-col  justify-start md:ml-3 mt-3">
             <p className="filter_txt">Country Of Origin:</p>
 
             <select className="dropdown-select">
