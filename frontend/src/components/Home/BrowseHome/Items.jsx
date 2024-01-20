@@ -10,7 +10,7 @@ const Items = () => {
     
    return <>
 
-          <div className="  grid grid-cols-4 gap-x-6 gap-y-6  grow ">
+          <div className="  grid  custom-grid-cols  gap-x-6 gap-y-6  grow ">
 
             {/*individual card. for anime it shows */}
             {anime_data.map((item) => (

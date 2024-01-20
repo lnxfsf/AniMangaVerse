@@ -1,6 +1,5 @@
 import "../../../styles/BrowseHome.scoped.scss";
 
-
 import React, { useContext } from "react";
 import AuthContext from "../../../context/AuthContext";
 
@@ -13,25 +12,23 @@ const BrowseHome = () => {
   return (
     <>
       <div className="main flex justify-center items-center ">
-
-        <div className="basis-1/4">
-    
-
-            {/* filter  */}
-            <Filter />
-
+        <div className="md:basis-1/4 m-4 flex justify-center items-center ">
+          {/* filter  */}
+          <Filter />
         </div>
 
-        <div className="cards_container grow p-14">
-    
-    {/* other one */}
+        <div className="cards_container md:grow md:p-14">
 
-    
+          {/* when desktop layout */}
           <Items />
-
-
-
         </div>
+      </div>
+
+
+      <div className="cards_container_mob grow p-6">
+        {/*  when mobile */}
+
+        <Items />
       </div>
     </>
   );
