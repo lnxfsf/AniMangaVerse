@@ -1,5 +1,5 @@
 import { PopularCarousel } from "../components/Home/PopularCarousel/PopularCarousel";
-import { UpcomingCarousel } from "../components/Home/UpcomingCarousel";
+import { UpcomingCarousel } from "../components/Home/UpcomingCarousel/UpcomingCarousel";
 import { BrowseHome } from "../components/Home/BrowseHome/BrowseHome";
 
 const Home = () => {
