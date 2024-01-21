@@ -9,6 +9,7 @@ import { Item } from "./Item";
 
 import Flicking from "@egjs/react-flicking";
 import "@egjs/react-flicking/dist/flicking.css";
+import { AutoPlay } from "@egjs/flicking-plugins";
 
 var top10UpcomingAnime;
 
@@ -16,6 +17,7 @@ export const UpcomingCarousel = () => {
   
 
 
+  const plugins = [new AutoPlay({ duration: 2000, direction: "NEXT", stopOnHover: false })];
 
   
   useEffect(() => {
@@ -105,7 +107,7 @@ export const UpcomingCarousel = () => {
         {/* carousel container (for carousel) */}
         {/* <div className="carousel-container"> */}
     
-        <Flicking moveType="freeScroll" bound={true}>
+        <Flicking moveType="freeScroll" bound={true} plugins={plugins}>
 
     
           {/* container for items*/}
