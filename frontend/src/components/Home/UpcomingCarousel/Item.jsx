@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 
 
+
 const Item = ({item,index }) => {
     
 
@@ -20,7 +21,6 @@ const Item = ({item,index }) => {
     return (
 
         <>
-        
               <Link
                 to="/detailspage"
                 state={{ id: item.anime_id, anime: true }}
@@ -53,7 +53,6 @@ const Item = ({item,index }) => {
                   </p>
                 </div>
               </Link>
-              
         </>
     )
     
