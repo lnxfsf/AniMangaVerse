@@ -5,6 +5,11 @@ import ScrollCarousel from "scroll-carousel";
 import { anime_data } from "../../../data";
 import { Item } from "./Item";
 
+
+
+import Flicking from "@egjs/react-flicking";
+import "@egjs/react-flicking/dist/flicking.css";
+
 var top10UpcomingAnime;
 
 export const UpcomingCarousel = () => {
@@ -42,7 +47,45 @@ export const UpcomingCarousel = () => {
 
   return (
     <>
+    
+
+
+
+<Flicking moveType="freeScroll" bound={true}>
+      <span className="button mr-2 is-white">🍎 Apple</span>
+      <span className="button mr-2 is-white">🍉 Watermelon</span>
+      <span className="button mr-2 is-white">🥝 Kiwi</span>
+    
+      <span className="button mr-2 is-white">🍎 Apple</span>
+      <span className="button mr-2 is-white">🍉 Watermelon</span>
+      <span className="button mr-2 is-white">🥝 Kiwi</span>
+    
+    
+      <span className="button mr-2 is-white">🍎 Apple</span>
+      <span className="button mr-2 is-white">🍉 Watermelon</span>
+      <span className="button mr-2 is-white">🥝 Kiwi</span>
+    
+
+      <span className="button mr-2 is-white">🍎 Apple</span>
+      <span className="button mr-2 is-white">🍉 Watermelon</span>
+      <span className="button mr-2 is-white">🥝 Kiwi</span>
+    
+
+      <span className="button mr-2 is-white">🍎 Apple</span>
+      <span className="button mr-2 is-white">🍉 Watermelon</span>
+      <span className="button mr-2 is-white">🥝 Kiwi</span>
+    
+      <span className="button mr-2 is-white">🍎 Apple</span>
+      <span className="button mr-2 is-white">🍉 Watermelon</span>
+      <span className="button mr-2 is-white">🥝 Kiwi</span>
+
+    
+    
+    </Flicking>
+
+    
       <div className="line"> </div>
+    
 
       <div className="main flex flex-col 	">
 
@@ -55,15 +98,53 @@ export const UpcomingCarousel = () => {
             <p>Season - fall 2023</p>
           </div>
         </div>
-
+    
     
     
 
         {/* carousel container (for carousel) */}
+        {/* <div className="carousel-container"> */}
+    
+        <Flicking moveType="freeScroll" bound={true}>
+
+    
+          {/* container for items*/}
+          <div className="flex  flex-row gap-3 justify-center mt-2">
+            {top10UpcomingAnime.map((item, index) => (
+              <Item item={item} index={index} />
+            ))}
+          </div>
+    
+
+    
+        {/* </div> */}
+    
+        </Flicking>
+
+    
+      </div>
+    
+{/* 
+      <div className="main flex flex-col 	">
+
+        {/* this is just container for showing title and then carousel 
+        <div className="small_header ml-4 md:ml-6 lg:ml-10  mt-6 ">
+          {/* check index.css, for global use, vertical rectangle.. 
+
+          <div className="secondary-left-line">
+            <h3>Top Upcoming animes:</h3>
+            <p>Season - fall 2023</p>
+          </div>
+        </div>
+
+    
+    
+
+        {/* carousel container (for carousel) 
         <div className="carousel-container">
     
 
-          {/* container for items*/}
+          {/* container for items
           <div className="flex  flex-row gap-3 justify-center mt-2">
             {top10UpcomingAnime.map((item, index) => (
               <Item item={item} index={index} />
@@ -76,7 +157,10 @@ export const UpcomingCarousel = () => {
     
 
     
-      </div>
+      </div> */}
+
+
+
     </>
   );
 };
