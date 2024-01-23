@@ -1,25 +1,17 @@
 .main {
-  
   width: 100%;
   height: 22rem;
 
-  @media screen and (min-width: 768px)  {
-
-      width: 100%;
-      height: 40rem;
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    height: 40rem;
   }
-  
 
-  
-    
-  @media screen and (min-width: 1280px)  {
+  @media screen and (min-width: 1280px) {
+    width: 100%;
+    height: 43rem;
+  }
 
-      width: 100%;
-      height: 43rem;
-
-  } 
-
-  
   background: linear-gradient(180deg, #111 0%, #1e1e1e 50.52%, #1e1e1e 100%);
 }
 
@@ -35,22 +27,16 @@
 .small_header > div > h3 {
   color: #fff;
   font-family: Inter;
-  
 
-  
   // font-size: 2vw;
   font-size: 10pt;
-  
-  @media screen and (min-width: 768px)  {
-    
+
+  @media screen and (min-width: 768px) {
     font-size: 13pt;
   }
-  
-  
-  @media screen and (min-width: 1280px)  {
-    
-    font-size: 16pt;
 
+  @media screen and (min-width: 1280px) {
+    font-size: 16pt;
   }
 
   font-style: normal;
@@ -65,16 +51,12 @@
   // font-size: 1.5vw;
 
   font-size: 7pt;
-  
-  
-  @media screen and (min-width: 768px)  {
-    
+
+  @media screen and (min-width: 768px) {
     font-size: 10pt;
   }
-  @media screen and (min-width: 1280px)  {
-    
+  @media screen and (min-width: 1280px) {
     font-size: 12pt;
-
   }
 
   font-style: normal;
@@ -86,40 +68,32 @@
 /* carousel */
 
 .item {
-  
-text-wrap: wrap;
+  text-wrap: wrap;
 
-      // width: 26rem;
-      // height: 35em;
-      
-      
-    width: 10rem;
-    height: 15em;
-      
+  // width: 26rem;
+  // height: 35em;
 
-  // normal 
-  @media screen and (min-width: 1280px)  {
+  width: 10rem;
+  height: 15em;
 
-      width: 26rem;
-      height: 35em;
+  // normal
+  @media screen and (min-width: 1280px) {
+    width: 26rem;
+    height: 35em;
   }
-  
-  
-  @media screen and (min-width: 768px)  {
-    
-      width: 20rem;
-      height: 30em;
+
+  @media screen and (min-width: 768px) {
+    width: 20rem;
+    height: 30em;
   }
-  
-  
+
   // @media screen and (max-width: 768px)  {
 
   //   width: 10rem;
   //   height: 15em;
-      
+
   // }
 
-  
   border: 3px solid #ea1179;
   border-radius: 15px;
   background: linear-gradient(180deg, #111 0%, #1e1e1e 50.52%, #1e1e1e 100%);
@@ -128,34 +102,24 @@ text-wrap: wrap;
 .item > div > img {
   border: 0;
   // object-fit: contain;
-  
-  
-  
-  @media screen and (max-width: 768px)  {
-   object-fit: cover;
-  width:100%;
-  height:14em;
+
+  @media screen and (max-width: 768px) {
+    object-fit: cover;
+    width: 100%;
+    height: 14em;
   }
 
-
-  @media screen and (min-width: 768px)  {
-  object-fit: cover;
-  width:100%;
-  height:30em;
-
-    
+  @media screen and (min-width: 768px) {
+    object-fit: cover;
+    width: 100%;
+    height: 30em;
   }
-  
-  
-  
 }
 
 .item_div {
   width: 100%;
   height: 60%;
-  
-  
-  
+
   border-radius: 12px 12px 0 0;
   overflow: hidden;
 }
@@ -163,20 +127,15 @@ text-wrap: wrap;
 .inner > h1 {
   color: #fff;
   font-family: Inter;
-  
-  
-  // font-size: 1.9vw;
-  
-  font-size: 10pt;
-  
-  
-  @media screen and (min-width: 768px)  {
-    
-    font-size: 15pt;
 
+  // font-size: 1.9vw;
+
+  font-size: 10pt;
+
+  @media screen and (min-width: 768px) {
+    font-size: 15pt;
   }
 
-  
   // font-style: normal;
   // font-weight: 400;
 
@@ -192,11 +151,9 @@ text-wrap: wrap;
   // font-size: 1.5vw;
 
   font-size: 7pt;
-  
-  @media screen and (min-width: 768px)  {
-    
-    font-size: 11pt;
 
+  @media screen and (min-width: 768px) {
+    font-size: 11pt;
   }
 
   font-style: normal;
@@ -208,17 +165,12 @@ text-wrap: wrap;
   color: #fff;
   font-family: Inter;
   // font-size: 1.7vw;
-  
-  
+
   font-size: 7pt;
-  
-  
-  @media screen and (min-width: 768px)  {
-    
-  font-size: 8pt;
 
+  @media screen and (min-width: 768px) {
+    font-size: 8pt;
   }
-
 
   font-style: normal;
   font-weight: 400;
@@ -232,6 +184,23 @@ text-wrap: wrap;
   width: 100%;
 }
 
+.my-carousel-progress {
+  background: #1e1e1e;
 
+  margin-top: 1.5em;
 
+  @media (min-width: 768px) and (max-width: 1279px) {
+    margin-top: 3.8em;
+  }
 
+  @media (min-width: 1279px) and (max-width: 127999px) {
+    margin-top: 6.1em;
+  }
+}
+
+.my-carousel-progress-bar {
+  background: #ea1179;
+  height: 3px;
+  transition: width 400ms ease;
+  width: 0;
+}
