@@ -2,6 +2,8 @@
 
 
 # every day api call to supabase, so it doesnt go in pause after 7 days..
+# and render every 10 mins, so it doesn't go to sleep (as it takes 50 secs for another request when in sleep)
+
 
 name: Supa-keep-alive
 
@@ -12,7 +14,7 @@ on:
     branches: [ main ]
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # Runs every day at midnight
+    - cron: '*/10 0 * * *' # Runs every day at midnight
 
 
 
@@ -22,6 +24,7 @@ jobs:
     env:
       SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
       SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+      RENDER_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
 
 
     steps:
@@ -29,11 +32,15 @@ jobs:
       - uses: supabase/setup-cli@v1
         with:
           version: latest
-      - name: Deploy on Render
+      - name: supabase
         run: |
           curl "https://${SUPABASE_PROJECT_REF}.supabase.co/rest/v1/todos" \
           -H "apikey: ${SUPABASE_ANON_KEY}" \
           -H "Authorization: Bearer ${SUPABASE_ANON_KEY}"
+      - name: render
+        run: |
+          curl "${RENDER_URL}"
+
 
 
 
