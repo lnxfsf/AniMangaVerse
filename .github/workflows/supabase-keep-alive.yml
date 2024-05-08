@@ -20,8 +20,8 @@ jobs:
   keep_alive:
     runs-on: ubuntu-latest  	
     env:
-      supabase_project_ref: ${{ secrets.SUPABASE_PROJECT_REF }}
-      supabase_anon_key: ${{ secrets.SUPABASE_ANON_KEY }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+      SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
 
 
     steps:
@@ -31,9 +31,9 @@ jobs:
           version: latest
       - name: Deploy on Render
         run: |
-          curl 'https://${supabase_project_ref}.supabase.co/rest/v1/todos' \
-          -H "apikey: ${supabase_anon_key}" \
-          -H "Authorization: Bearer ${supabase_anon_key}"
+          curl 'https://${SUPABASE_PROJECT_REF}.supabase.co/rest/v1/todos' \
+          -H "apikey: ${SUPABASE_ANON_KEY}" \
+          -H "Authorization: Bearer ${SUPABASE_ANON_KEY}"
 
 
 
