@@ -24,7 +24,7 @@ jobs:
     env:
       SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
       SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
-      RENDER_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+      RENDER_API_CALL: ${{ secrets.RENDER_API_CALL }}
 
 
     steps:
@@ -39,7 +39,7 @@ jobs:
           -H "Authorization: Bearer ${SUPABASE_ANON_KEY}"
       - name: render
         run: |
-          curl "${RENDER_URL}"
+          curl "${RENDER_API_CALL}"
 
 
 
