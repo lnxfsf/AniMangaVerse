@@ -31,7 +31,7 @@ jobs:
           version: latest
       - name: Deploy on Render
         run: |
-          curl 'https://${SUPABASE_PROJECT_REF}.supabase.co/rest/v1/todos' \
+          curl "https://${SUPABASE_PROJECT_REF}.supabase.co/rest/v1/todos" \
           -H "apikey: ${SUPABASE_ANON_KEY}" \
           -H "Authorization: Bearer ${SUPABASE_ANON_KEY}"
 
