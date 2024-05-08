@@ -1,0 +1,43 @@
+
+
+
+# every day api call to supabase, so it doesnt go in pause after 7 days..
+
+name: Supa-keep-alive
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *' # Runs every day at midnight
+
+
+
+jobs:
+  keep_alive:
+    runs-on: ubuntu-latest  	
+    env:
+      supabase_project_ref: ${{ secrets.SUPABASE_PROJECT_REF }}
+      supabase_anon_key: ${{ secrets.SUPABASE_ANON_KEY }}
+
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+      - name: Deploy on Render
+        run: |
+          curl 'https://${supabase_project_ref}.supabase.co/rest/v1/todos' \
+          -H "apikey: ${supabase_anon_key}" \
+          -H "Authorization: Bearer ${supabase_anon_key}"
+
+
+
+
+
+
+
