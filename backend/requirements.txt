@@ -1,9 +1,2 @@
-django
+flask
 gunicorn
-packaging
-whitenoise
-djangorestframework
-Pillow
-django-cors-headers
-requests
-djangorestframework-simplejwt
