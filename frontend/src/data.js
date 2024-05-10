@@ -989,6 +989,11 @@ export const favorites = [
 
 ]
 
+
+
+// TODO: samo, mozda kasnije, jednog dana, da namestis, da ovo iz baze uzima. za sada je bolje ipak lokalno da i dalje stoji jer brže uzima.... 
+
+
 // options for dropdowns
 export const genres = [
   "Action",
