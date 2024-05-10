@@ -5,7 +5,7 @@
 # and render every 10 mins, so it doesn't go to sleep (as it takes 50 secs for another request when in sleep)
 
 
-name: Supa-keep-alive
+name: api-keep-alive
 
 on:
   push:
@@ -32,11 +32,11 @@ jobs:
       - uses: supabase/setup-cli@v1
         with:
           version: latest
-      - name: supabase
-        run: |
-          curl "https://${SUPABASE_PROJECT_REF}.supabase.co/rest/v1/todos" \
-          -H "apikey: ${SUPABASE_ANON_KEY}" \
-          -H "Authorization: Bearer ${SUPABASE_ANON_KEY}"
+    #  - name: supabase
+     #   run: |
+      #    curl "https://${SUPABASE_PROJECT_REF}.supabase.co/rest/v1/todos" \
+       #   -H "apikey: ${SUPABASE_ANON_KEY}" \
+        #  -H "Authorization: Bearer ${SUPABASE_ANON_KEY}"
       - name: render
         run: |
           curl "${RENDER_API_CALL}"
