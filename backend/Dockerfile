@@ -25,6 +25,6 @@ EXPOSE 5000
 
 # gunicorn -w animanga_project.wsgi:application
 # CMD ["gunicorn", "-w", "4", "animanga_project.wsgi:application", "--bind", "0.0.0.0:8000"]
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:create_app()"]
+CMD ["gunicorn","-w","4", "--bind", "0.0.0.0:5000", "app.wsgi:app"]
 
 
