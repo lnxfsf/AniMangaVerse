@@ -8,8 +8,8 @@ import os
 from dotenv import load_dotenv, dotenv_values 
 load_dotenv() 
 
-password = os.getenv("PASSWORD_MONGODB") or os.environ.get("PASSWORD_MONGODB")
-username = os.getenv("USERNAME_MONGODB") or os.environ.get("USERNAME_MONGODB")
+password = os.environ.get("PASSWORD_MONGODB") or os.getenv("PASSWORD_MONGODB") 
+username =  os.environ.get("USERNAME_MONGODB") or os.getenv("USERNAME_MONGODB")
 
 
 
