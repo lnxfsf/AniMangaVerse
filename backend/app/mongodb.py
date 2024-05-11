@@ -4,11 +4,44 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
 
-uri = "mongodb+srv://igorlerinc7:UjYq4ggEATW8-M!@cluster0.n3bexs7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+import os
+from dotenv import load_dotenv, dotenv_values 
+load_dotenv() 
 
+password = os.getenv("PASSWORD_MONGODB")
+username = os.getenv("USERNAME_MONGODB")
+
+
+uri = f"mongodb+srv://{username}:{password}@cluster0.n3bexs7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 # Create a new client and connect to the server
 client = MongoClient(uri, server_api=ServerApi('1'))
+
+# to database
+database = client['animangaverse']
+
+
+
+
+def getDb():
+    if database is None:
+        raise Exception({'message': 'database connection not established'})
+    
+    return database
+
+
+
+
+# Specify the database and collection you want to read from
+# collection = database['authors']
+
+
+# data = collection.find()
+
+#for item in data:
+    # print(item)
+
+
 
 
 # Send a ping to confirm a successful connection
@@ -17,6 +50,11 @@ try:
     print("Pinged your deployment. You successfully connected to MongoDB!")
 except Exception as e:
     print(e)
+
+
+
+
+# mora da popuni anime-om ovde... ali bolje samo mongodb konekcija ovde i to je to.. koristis ubuduce samo...
 
 
 
