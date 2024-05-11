@@ -29,8 +29,9 @@ def get_animes():
 
 
 
-@app.route('/ListAnime/<string:pk>/',methods=['GET'])
-def get_anime_detail(pk):
+# OVO jE TESTING ZA MONGO DB. dodat 's' pri kraju 'Anime s '
+@app.route('/ListAnimes/<string:pk>/',methods=['GET'])
+def get_anime_detail_test(pk):
 
 
     collection = getDb().anime
@@ -45,11 +46,26 @@ def get_anime_detail(pk):
 
 
 
+# ovaj koristis za FE, ti prosledjujes direktno /id , od anime-a... 
+@app.route('/ListAnime/<int:anime_id>/',methods=['GET'])
+def get_anime_detail(anime_id):
+
+
+    collection = getDb().anime
+
+    # TODO. treba da ide po 'anime_id', 'manga_id' ... ! 
+    anime = collection.find_one({ 'anime_id' : anime_id })
+
+    if anime:
+        anime['_id'] = str(anime['_id'])
+
+    return jsonify(anime)
 
 
 
 
 
+# ovo je okej ... moze ovo za listing, samo ces pagination namestiti kasnije..
 @app.route('/ListManga',methods=['GET'])
 def get_manga():
     
@@ -65,8 +81,11 @@ def get_manga():
 
 
 
-@app.route('/ListManga/<string:pk>/',methods=['GET'])
-def get_manga_detail(pk):
+
+
+# OVO jE TESTING ZA MONGO DB. dodat 's' pri kraju 'Anime s '
+@app.route('/ListMangas/<string:pk>/',methods=['GET'])
+def get_manga_detail_test(pk):
 
 
     collection = getDb().manga
@@ -80,10 +99,25 @@ def get_manga_detail(pk):
     return jsonify(manga)
 
 
+# ovaj koristis za FE, ti prosledjujes direktno /id , od manga-a... 
+@app.route('/ListManga/<int:manga_id>/',methods=['GET'])
+def get_manga_detail(manga_id):
+
+
+    collection = getDb().manga
+     
+    # TODO. treba da ide po 'anime_id', 'manga_id' ... ! 
+    manga = collection.find_one({ 'manga_id': manga_id })
+
+    if manga:
+        manga['_id'] = str(manga['_id'])
+
+    return jsonify(manga)
 
 
 
 #TODO: on ce na FE, da otvara ovaj link za prikaz favorites, tako sto pošalje user_id, i onda na FE, on ce znati, koje tačno njemu da pošalje
+# ovo, ti je samo testing ! zbog mongodb, na kraju, ocistices ti ove rute... 
 @app.route('/ListFavorites',methods=['GET'])
 def get_favorites():
     collection = getDb().favorites
