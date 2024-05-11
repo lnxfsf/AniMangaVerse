@@ -2,4 +2,4 @@ flask
 gunicorn
 pymongo
 Flask-PyMongo
-dotenv
+python-dotenv
