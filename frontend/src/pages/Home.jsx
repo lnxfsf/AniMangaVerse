@@ -4,13 +4,19 @@ import { BrowseHome } from "../components/Home/BrowseHome/BrowseHome";
 
 import React, { useEffect, useState } from 'react';
 
-import {anime_data} from '../data'
+
+import axios from "axios";
+
+import { anime_data } from '../data';
 
 const Home = () => {
   
 
-  const [anime_data, setAnime_data] = useState([]);
+  const [isLoading, setLoading] = useState(true);
 
+  
+
+  
   useEffect(() => {
     
 
@@ -18,7 +24,7 @@ const Home = () => {
       baseURL: "http://localhost:5000/api", // Set the base URL for the API
     });
 
-   //let anime_data = [];
+    let anime_data = [];
 
     // Make a GET request to the API
     apiInstance
@@ -37,13 +43,20 @@ const Home = () => {
       })
       .finally(() => {
         // Hide loader when loading is finished
-        clearInterval(loaderInterval);
+
+        setLoading(false);
         console.log("Loading finished.");
       });
 
 
     
   }, []);
+  
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+  
   
   return (
     <>

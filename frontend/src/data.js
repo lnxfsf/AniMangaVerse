@@ -1,41 +1,45 @@
-// Import Axios
 import axios from "axios";
 
-// TODO , samo da znaš, ti ovde treba da povežeš backend da fetch data ! po tim poljima.. popuni ovu dole listu , jer to svaka komponenta koristi ...
-// Create an Axios instance
+
+
+
+
+
 const apiInstance = axios.create({
-  baseURL: "http://localhost:5000/api", // Set the base URL for the API
+  baseURL: "http://localhost:5000/api", 
 });
 
-// Show loader while loading
 const loaderInterval = setInterval(() => {
   console.log("Loading...");
 }, 1000);
 
-// e ovo treba ispuniti sada, sa backend sto je !
 export let anime_data = [];
 
-  // Make a GET request to the API
+
+
   apiInstance
     .get("/ListAnime")
     .then((response) => {
-      // Handle the response data
-      //
 
       anime_data = response.data;
       console.log(response.data);
       return anime_data;
     })
     .catch((error) => {
-      // Handle errors
       console.error("Error fetching data:", error);
     })
     .finally(() => {
-      // Hide loader when loading is finished
       clearInterval(loaderInterval);
       console.log("Loading finished.");
     });
 
+
+
+
+
+
+
+    
 // dummy manga data values
 export const manga_data = [
   {
