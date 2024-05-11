@@ -1,634 +1,40 @@
-
 // Import Axios
-import axios from 'axios';
+import axios from "axios";
 
+// TODO , samo da znaš, ti ovde treba da povežeš backend da fetch data ! po tim poljima.. popuni ovu dole listu , jer to svaka komponenta koristi ...
 // Create an Axios instance
 const apiInstance = axios.create({
-  baseURL: 'https://animanga-fklg.onrender.com/api', // Set the base URL for the API
+  baseURL: "http://localhost:5000/api", // Set the base URL for the API
 });
-
-
-
 
 // Show loader while loading
 const loaderInterval = setInterval(() => {
-  console.log('Loading...');
+  console.log("Loading...");
 }, 1000);
 
-
-
-// Make a GET request to the API
-apiInstance.get('/')
-  .then(response => {
-    // Handle the response data
-    console.log(response.data);
-  })
-  .catch(error => {
-    // Handle errors
-    console.error('Error fetching data:', error);
-  })
-  .finally(() => {
-
-    // Hide loader when loading is finished
-    clearInterval(loaderInterval);
-    console.log('Loading finished.');
-  });
-
-
-
-
-
-
-  
-// dummy anime data values
-export const anime_data = [
-  {
-    title: "ONE PIECE",
-
-
-    genre: ["adventure", "drama","crime", "crime", "adventure", "adventure", "adventure"],
-    anime_id: 1,
-    seasons: 20,
-
-    user_id: 1,
-
-    //aired
-    start_date: "2024-10-25",
-    // TODO if null , then show 'hasn't landed yet.. '
-    end_date: null,
-
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21-tXMN3Y20PIL9.jpg",
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
-
-    // number of favorites
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    studio: "Toei Animation",
-    episodes: 420,
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-  },
-  {
-    title: "Mushoku Tensei",
-
-
-    genre: ["adventure", "drama", "crime", "adventure", "adventure", "adventure"],
-
-    anime_id: 2,
-    seasons: 20,
-
-    user_id: 1,
-
-    //aired
-    start_date: "2028-03-25",
-    // TODO if null , then show 'hasn't landed yet.. '
-    end_date: "2023-03-25",
-
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx146065-IjirxRK26O03.png",
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/146065-33RDijfuxLLk.jpg",
-
-    // number of favorites
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    studio: "Toei Animation",
-    episodes: 420,
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-  },
-
-  {
-    title: "Zoom 100",
-
-
-    genre: ["adventure", "drama", "crime", "adventure", "adventure", "adventure"],
-    anime_id: 3,
-    seasons: 20,
-
-    user_id: 1,
-
-    //aired
-    start_date: "2023-03-25",
-    // TODO if null , then show 'hasn't landed yet.. '
-    end_date: "2023-03-25",
-
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159831-TxAC0ujoLTK6.png",
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/159831-FWfdyqpxhLli.jpg",
-
-    // number of favorites
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    studio: "Toei Animation",
-    episodes: 420,
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-  },
-  {
-    title: "JUJUTSU KAISEN",
-
-    genre: ["adventure", "drama", "crime", "adventure", "adventure", "adventure"],
-    anime_id: 4,
-    seasons: 20,
-
-    user_id: 1,
-
-    //aired
-    start_date: "2027-03-25",
-    // TODO if null , then show 'hasn't landed yet.. '
-    end_date: null,
-
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx145064-5fa4ZBbW4dqA.jpg",
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/113415-jQBSkxWAAk83.jpg",
-
-    // number of favorites
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    studio: "Toei Animation",
-    episodes: 420,
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-  },
-  {
-    title: "Horimiya",
-
-    genre: ["adventure", "drama", "crime"],
-    anime_id: 5,
-    seasons: 20,
-
-    user_id: 1,
-
-    //aired
-    start_date: "2027-04-25",
-    // TODO if null , then show 'hasn't landed yet.. '
-    end_date: null,
-
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx163132-C220CO5UrTxY.jpg",
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/124080-ARyLAHHgikRq.jpg",
-
-    // number of favorites
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    studio: "Toei Animation",
-    episodes: 420,
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-  },
-  {
-    title: "My Happy Marriage",
-
-    genre: ["adventure", "drama", "crime"],
-    anime_id: 6,
-    seasons: 20,
-
-    user_id: 1,
-
-    //aired
-    start_date: "2023-03-25",
-    // TODO if null , then show 'hasn't landed yet.. '
-    end_date: "2027-05-25",
-
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx147103-Om2LOXlhHNAe.png",
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/147103-MwFq1R7jphZT.jpg",
-
-    // number of favorites
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    studio: "Toei Animation",
-    episodes: 420,
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-  },
-  {
-    title: "GOBLIN SLAYER II",
-
-    genre: ["adventure", "drama", "crime"],
-    anime_id: 7,
-    seasons: 20,
-
-    user_id: 1,
-
-    //aired
-    start_date: "2027-08-25",
-    // TODO if null , then show 'hasn't landed yet.. '
-    end_date: null,
-
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx129188-zWPBGutZXgjZ.jpg",
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/129188-3PyIXSkmcOPH.jpg",
-
-    // number of favorites
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    studio: "Toei Animation",
-    episodes: 420,
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-  },
-  {
-    title: "The Eminence in Shadow",
-
-    genre: ["adventure", "drama", "crime"],
-    anime_id: 8,
-    seasons: 20,
-
-    user_id: 1,
-
-    //aired
-    start_date: "2024-12-30",
-    // TODO if null , then show 'hasn't landed yet.. '
-    end_date: null,
-
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx161964-JpkEbHI8ivaP.jpg",
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/130298-9yxFlFvKMwRk.jpg",
-
-    // number of favorites
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    studio: "Toei Animation",
-    episodes: 420,
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-  },
-  {
-    title: "Demon Slayer",
-
-    genre: ["adventure", "drama", "crime"],
-    anime_id: 9,
-    seasons: 20,
-
-    user_id: 1,
-
-    //aired
-    start_date: "2023-01-10",
-    // TODO if null , then show 'hasn't landed yet.. '
-    end_date: null,
-
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101922-PEn1CTc93blC.jpg",
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101922-YfZhKBUDDS6L.jpg",
-
-    // number of favorites
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    studio: "Toei Animation",
-    episodes: 420,
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-  },
-  {
-    title: "Attack on Titan",
-
-    genre: ["adventure", "drama", "crime"],
-    anime_id: 10,
-    seasons: 20,
-
-    user_id: 1,
-
-    //aired
-    start_date: "2023-03-25",
-    // TODO if null , then show 'hasn't landed yet.. '
-    end_date: null,
-
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-C6FPmWm59CyP.jpg",
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16498-8jpFCOcDmneX.jpg",
-
-    // number of favorites
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    studio: "Toei Animation",
-    episodes: 420,
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-  },
-  {
-    title: "ONE PIECE",
-
-    genre: ["adventure", "drama", "crime"],
-    anime_id: 11,
-    seasons: 20,
-
-    user_id: 1,
-
-    //aired
-    start_date: "2020-10-25",
-    // TODO if null , then show 'hasn't landed yet.. '
-    end_date: null,
-
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21-tXMN3Y20PIL9.jpg",
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
-
-    // number of favorites
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    studio: "Toei Animation",
-    episodes: 420,
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-  },
-  {
-    title: "Mushoku Tensei",
-
-    genre: ["adventure", "drama", "crime"],
-    anime_id: 12,
-    seasons: 20,
-
-    user_id: 1,
-
-    //aired
-    start_date: "2020-03-25",
-    // TODO if null , then show 'hasn't landed yet.. '
-    end_date: null,
-
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx146065-IjirxRK26O03.png",
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/146065-33RDijfuxLLk.jpg",
-
-    // number of favorites
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    studio: "Toei Animation",
-    episodes: 420,
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-  },
-
-  {
-    title: "Zoom 100",
-
-    genre: ["adventure", "drama", "crime"],
-    anime_id: 13,
-    seasons: 20,
-
-    user_id: 1,
-
-    //aired
-    start_date: "2023-03-25",
-    // TODO if null , then show 'hasn't landed yet.. '
-    end_date: null,
-
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159831-TxAC0ujoLTK6.png",
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/159831-FWfdyqpxhLli.jpg",
-
-    // number of favorites
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    studio: "Toei Animation",
-    episodes: 420,
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-  },
-  {
-    title: "JUJUTSU KAISEN",
-
-    genre: ["adventure", "drama", "crime"],
-    anime_id: 14,
-    seasons: 20,
-
-    user_id: 1,
-
-    //aired
-    start_date: "2023-03-25",
-    // TODO if null , then show 'hasn't landed yet.. '
-    end_date: null,
-
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx145064-5fa4ZBbW4dqA.jpg",
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/113415-jQBSkxWAAk83.jpg",
-
-    // number of favorites
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    studio: "Toei Animation",
-    episodes: 420,
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-  },
-  {
-    title: "Horimiya",
-
-    genre: ["adventure", "drama", "crime"],
-    anime_id: 15,
-    seasons: 20,
-
-    user_id: 1,
-
-    //aired
-    start_date: "2023-03-25",
-    // TODO if null , then show 'hasn't landed yet.. '
-    end_date: null,
-
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx163132-C220CO5UrTxY.jpg",
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/124080-ARyLAHHgikRq.jpg",
-
-    // number of favorites
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    studio: "Toei Animation",
-    episodes: 420,
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-  },
-  {
-    title: "My Happy Marriage",
-
-    genre: ["adventure", "drama", "crime"],
-    anime_id: 16,
-    seasons: 20,
-
-    user_id: 1,
-
-    //aired
-    start_date: "2023-03-25",
-    // TODO if null , then show 'hasn't landed yet.. '
-    end_date: null,
-
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx147103-Om2LOXlhHNAe.png",
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/147103-MwFq1R7jphZT.jpg",
-
-    // number of favorites
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    studio: "Toei Animation",
-    episodes: 420,
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-  },
-  {
-    title: "GOBLIN SLAYER II",
-
-    genre: ["adventure", "drama", "crime"],
-    anime_id: 17,
-    seasons: 20,
-
-    user_id: 1,
-
-    //aired
-    start_date: "2023-03-25",
-    // TODO if null , then show 'hasn't landed yet.. '
-    end_date: null,
-
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx129188-zWPBGutZXgjZ.jpg",
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/129188-3PyIXSkmcOPH.jpg",
-
-    // number of favorites
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    studio: "Toei Animation",
-    episodes: 420,
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-  },
-  {
-    title: "The Eminence in Shadow",
-
-    genre: ["adventure", "drama", "crime"],
-    anime_id: 18,
-    seasons: 20,
-
-    user_id: 1,
-
-    //aired
-    start_date: "2023-03-25",
-    // TODO if null , then show 'hasn't landed yet.. '
-    end_date: null,
-
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx161964-JpkEbHI8ivaP.jpg",
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/130298-9yxFlFvKMwRk.jpg",
-
-    // number of favorites
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    studio: "Toei Animation",
-    episodes: 420,
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-  },
-  {
-    title: "Demon Slayer",
-
-    genre: ["adventure", "drama", "crime"],
-    anime_id: 19,
-    seasons: 20,
-
-    user_id: 1,
-
-    //aired
-    start_date: "2023-03-25",
-    // TODO if null , then show 'hasn't landed yet.. '
-    end_date: null,
-
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101922-PEn1CTc93blC.jpg",
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101922-YfZhKBUDDS6L.jpg",
-
-    // number of favorites
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    studio: "Toei Animation",
-    episodes: 420,
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-  },
-  {
-    title: "Attack on Titan",
-
-    genre: ["adventure", "drama", "crime"],
-    anime_id: 20,
-    seasons: 20,
-
-    user_id: 1,
-
-    //aired
-    start_date: "2023-03-25",
-    // TODO if null , then show 'hasn't landed yet.. '
-    end_date: null,
-
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-C6FPmWm59CyP.jpg",
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16498-8jpFCOcDmneX.jpg",
-
-    // number of favorites
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    studio: "Toei Animation",
-    episodes: 420,
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-  },
-];
+// e ovo treba ispuniti sada, sa backend sto je !
+export let anime_data = [];
+
+  // Make a GET request to the API
+  apiInstance
+    .get("/ListAnime")
+    .then((response) => {
+      // Handle the response data
+      //
+
+      anime_data = response.data;
+      console.log(response.data);
+      return anime_data;
+    })
+    .catch((error) => {
+      // Handle errors
+      console.error("Error fetching data:", error);
+    })
+    .finally(() => {
+      // Hide loader when loading is finished
+      clearInterval(loaderInterval);
+      console.log("Loading finished.");
+    });
 
 // dummy manga data values
 export const manga_data = [
@@ -785,8 +191,7 @@ export const manga_data = [
     image:
       "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx159930-pX4aWN9aqihH.jpg",
 
-    background_image:
-      "",
+    background_image: "",
     status: "Releasing",
     country_origin: "Japan",
 
@@ -905,8 +310,7 @@ export const manga_data = [
     image:
       "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx143025-YL8hzpkVFR5J.jpg",
 
-    background_image:
-      "",
+    background_image: "",
     status: "Releasing",
     country_origin: "Japan",
 
@@ -929,8 +333,7 @@ export const manga_data = [
     image:
       "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx117460-46JbftfHSXoc.jpg",
 
-    background_image:
-      "",
+    background_image: "",
     status: "Releasing",
     country_origin: "Japan",
 
@@ -945,54 +348,34 @@ export const manga_data = [
   },
 ];
 
-
 export const favorites = [
+  {
+    user_id: 1,
+    anime_id: 2,
+    manga_id: null,
+  },
+  {
+    user_id: 1,
+    anime_id: 3,
+    manga_id: null,
+  },
+  {
+    user_id: 2,
+    anime_id: 8,
+    manga_id: null,
+  },
+  {
+    user_id: 1,
+    anime_id: null,
+    manga_id: 3,
+  },
 
-{
-
-	user_id: 1,
-	anime_id: 2,
-	manga_id: null
-
-},
-{
-
-	user_id: 1,
-	anime_id: 3,
-	manga_id: null
-
-},
-{
-
-	user_id: 2,
-	anime_id: 8,
-	manga_id: null
-
-},
-{
-
-	user_id: 1,
-	anime_id: null,
-	manga_id: 3
-
-},
-
-
-{
-
-	user_id: 1,
-	anime_id: null,
-	manga_id: 9
-
-},
-
-
-]
-
-
-
-// TODO: samo, mozda kasnije, jednog dana, da namestis, da ovo iz baze uzima. za sada je bolje ipak lokalno da i dalje stoji jer brže uzima.... 
-
+  {
+    user_id: 1,
+    anime_id: null,
+    manga_id: 9,
+  },
+];
 
 // options for dropdowns
 export const genres = [
