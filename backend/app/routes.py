@@ -17,15 +17,16 @@ def index():
 
 @app.route('/ListAnime',methods=['GET'])
 def get_animes():
-    
+    try:
+        collection = getDb().anime
+        animes = list(collection.find())
 
-    collection = getDb().anime
-    animes = list(collection.find())
+        for anime in animes:
+            anime['_id'] = str(anime['_id'])
 
-    for anime in animes:
-        anime['_id'] = str(anime['_id'])
-
-    return jsonify(animes)
+        return jsonify(animes)
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 
 
