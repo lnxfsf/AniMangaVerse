@@ -38,7 +38,6 @@ export let anime_data = [];
 
 
 
-
     
 // dummy manga data values
 export const manga_data = [
