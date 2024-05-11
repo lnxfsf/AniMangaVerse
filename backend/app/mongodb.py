@@ -8,8 +8,9 @@ import os
 from dotenv import load_dotenv, dotenv_values 
 load_dotenv() 
 
-password = os.getenv("PASSWORD_MONGODB")
-username = os.getenv("USERNAME_MONGODB")
+password = os.getenv("PASSWORD_MONGODB") or os.environ.get("PASSWORD_MONGODB")
+username = os.getenv("USERNAME_MONGODB") or os.environ.get("USERNAME_MONGODB")
+
 
 
 uri = f"mongodb+srv://{username}:{password}@cluster0.n3bexs7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
