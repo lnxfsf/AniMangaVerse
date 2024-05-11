@@ -13,7 +13,7 @@ username =  os.environ.get("USERNAME_MONGODB") or os.getenv("USERNAME_MONGODB")
 
 
 
-uri = f"mongodb+srv://{username}:{password}@cluster0.n3bexs7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&authSource=admin"
+uri = f"mongodb://{username}:{password}@cluster0.n3bexs7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 # Create a new client and connect to the server
 client = MongoClient(uri, server_api=ServerApi('1'))
