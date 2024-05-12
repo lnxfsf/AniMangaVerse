@@ -53,9 +53,8 @@ const Login = () => {
     var username = e.target.username1.value
     var email = e.target.email1.value
     var password = e.target.password1.value
-    
-    e.preventDefault();
-
+    var bio = ""
+    var profile_image =  "https://png.pngtree.com/png-vector/20190927/ourmid/pngtree-user-icon-symbol-design-user-icon-isolated-design-png-image_1746919.jpg"
     //console.log("hi: "+username)
 
     
@@ -66,9 +65,15 @@ const Login = () => {
     }
     
 
+    e.preventDefault()
     
-    let response = await axios.post('http://localhost:5000/api/v1/register', {username, email, password} );
+    let response = await axios.post('http://localhost:5000/api/v1/register', {username, email, password, bio, profile_image} );
     
+    if(response){
+      alert("Registration success, login ")
+    }else{
+      alert("Registration failed")
+    }
     
     console.log(e)
     //

@@ -10,6 +10,29 @@ import "@splidejs/splide/dist/css/splide.min.css";
 
 var top10UpcomingAnime;
 
+
+// For season and year current
+function Season() {
+  const currentDate = new Date();
+  const currentMonth = currentDate.getMonth();
+  const currentYear = currentDate.getFullYear();
+
+  let season;
+  if (currentMonth >= 3 && currentMonth <= 5) {
+    season = "Spring";
+  } else if (currentMonth >= 6 && currentMonth <= 8) {
+    season = "Summer";
+  } else if (currentMonth >= 9 && currentMonth <= 11) {
+    season = "Fall";
+  } else {
+    season = "Winter";
+  }
+  
+
+  return <p>Season - {season} {currentYear}</p>;
+}
+
+
 export const UpcomingCarousel = () => {
   
 
@@ -45,6 +68,10 @@ export const UpcomingCarousel = () => {
   }, []);
   
 
+  
+
+
+
 
   return (
     <>
@@ -55,7 +82,7 @@ export const UpcomingCarousel = () => {
         <div className="small_header ml-4 md:ml-6 lg:ml-10  mt-6 ">
           <div className="secondary-left-line">
             <h3>Top Upcoming animes:</h3>
-            <p>Season - fall 2023</p>
+            <Season />
           </div>
         </div>
 

@@ -8,7 +8,6 @@ const loaderInterval = setInterval(() => {
   console.log("Loading...");
 }, 1000);
 
-
 let studio = [];
 let genres = [];
 let season = [];
@@ -75,10 +74,6 @@ apiInstance
     console.log("Loading finished.");
   });
 
-
-
-
-
 let manga_data = [];
 
 apiInstance
@@ -96,20 +91,17 @@ apiInstance
         }
       });
     });
-    
-    
-
 
     // country origin, odakle je
     manga_data.forEach((manga) => {
-        let formattedCountry_origin = manga.country_origin.charAt(0).toUpperCase() + manga.country_origin.slice(1);
-        if (!country_origin.includes(formattedCountry_origin)) {
-          country_origin.push(formattedCountry_origin);
-        }
+      let formattedCountry_origin =
+        manga.country_origin.charAt(0).toUpperCase() +
+        manga.country_origin.slice(1);
+      if (!country_origin.includes(formattedCountry_origin)) {
+        country_origin.push(formattedCountry_origin);
+      }
     });
 
-    
-      
     return manga_data;
   })
   .catch((error) => {
@@ -119,14 +111,6 @@ apiInstance
     clearInterval(loaderInterval);
     console.log("Loading finished.");
   });
-
-
-
-
-  
-   
-    
-
 
 export const year = [
   2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012,
@@ -138,9 +122,6 @@ export const year = [
   1946, 1945, 1944, 1943, 1942, 1941, 1940,
 ];
 
-
-
-//TODO samo i ovaj jos
 export const publishing = [
   "Releasing",
   "Finished",
@@ -148,7 +129,5 @@ export const publishing = [
   "Hiatus",
   "Cancelled",
 ];
-
-
 
 export { studio, genres, season, episodes, manga_data, country_origin };

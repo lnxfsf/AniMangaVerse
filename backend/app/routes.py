@@ -211,12 +211,23 @@ def login():
         # msm, on auto kreira sto da pravis user_id, jos uvek nisi napravio tako nesto ?? ovo drugo ..
         user_id=str(user_from_db['_id'])
         email=user_from_db['email']
+        username=user_from_db['username']
+
+        if user_from_db['bio']:
+            bio=user_from_db['bio']
+        else:
+            bio=""
+
+        if user_from_db['profile_image']:
+            profile_image=user_from_db['profile_image']
+        else:
+            profile_image=""
 
         if encrpted_password == user_from_db['password']:
             access_token = create_access_token(identity=user_from_db['username']) 
 
             # treba string token da bude samo u react. da ne menjas tolko taj FE 
-            return jsonify(access_token=access_token,user_id=user_id, email=email), 200
+            return jsonify(access_token=access_token,user_id=user_id, email=email, username=username, bio=bio, profile_image=profile_image), 200
 
     return jsonify({'msg': 'The username or password is incorrect'}), 401
 

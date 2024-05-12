@@ -4,15 +4,22 @@ import { UserProfileHeader } from "../components/UserProfile/UserProfileHeader";
 import { Favorites } from "../components/UserProfile/Favorites";
 
 const UserProfile = () => {
-  // TODO this is what you pass into. username, bio, profile_image
-  let username = "Jovan Popović";
-  let bio = "Lorem Ipsum is simply dummy text of the printing.";
-  let profile_image =
-    "https://png.pngtree.com/png-vector/20190927/ourmid/pngtree-user-icon-symbol-design-user-icon-isolated-design-png-image_1746919.jpg";
+  
+  //ovo je za uzimanje favorites current user. kao i ostala polja
+  let tokens =  JSON.parse(localStorage.getItem('authTokens'))
+  if (tokens){
+    var user_id = tokens.data.user_id
+    var username = tokens.data.username
+    var bio = tokens.data.bio
+    var profile_image =  tokens.data.profile_image
 
-  // TODO this is dummy 'user_id' . this is passed to here for 'favorites'. you need to use passed 'user_id'
-  let user_id = 1;
 
+  }else{
+    var user_id = null
+    var bio = ""
+    var profile_image = ""
+  }
+    
   return (
     <>
       <div className="bg-blacky w-full h-auto">

@@ -1,6 +1,10 @@
 import "../styles/navbar.scoped.scss";
 import { Link } from "react-router-dom";
 
+
+
+
+
 import {
   AppBar,
   Toolbar,
@@ -9,16 +13,27 @@ import {
   IconButton,
   ListItem,
   Hidden,
+  Avatar,
+  Menu,
+  MenuItem,
+  ListItemIcon,
+  Divider,
+  Tooltip,
+  SwipeableDrawer,
 } from "@mui/material";
 
-import SwipeableDrawer from "@mui/material/Drawer";
+import {
+  Settings,
+  Logout,
+  Star as StarIcon,
+  Home as HomeIcon,
+  Explore as ExploreIcon,
+  LiveTv as LiveTvIcon,
+  MenuBook as MenuBookIcon,
+  Menu as MenuIcon,
+} from "@mui/icons-material";
 
-import HomeIcon from "@mui/icons-material/Home";
-import ExploreIcon from "@mui/icons-material/Explore";
-import LiveTvIcon from "@mui/icons-material/LiveTv";
-import MenuBookIcon from "@mui/icons-material/MenuBook";
 
-import MenuIcon from "@mui/icons-material/Menu";
 
 import React, { useState, useContext } from "react";
 
@@ -27,8 +42,21 @@ import { useNavigate } from "react-router-dom";
 
 import AuthContext from "../context/AuthContext";
 
+import { UserProfile } from "../pages/UserProfile";
+
 const Navbar = () => {
   let { user, logoutUser } = useContext(AuthContext);
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open1 = Boolean(anchorEl);
+
+  const handleClick = (event) => {
+    // ovo ako kliknes sa strane
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   // on button, redirect to other component. like <Link>
   const navigate = useNavigate();
@@ -39,6 +67,15 @@ const Navbar = () => {
   };
 
   const [open, setOpen] = useState(false);
+
+  // to get username, picture..
+  let tokens = JSON.parse(localStorage.getItem("authTokens"));
+  if (tokens) {
+    var username = tokens.data.username;
+    var profile_image = tokens.data.profile_image;
+  }
+
+  function userProfile() {}
 
   return (
     <>
@@ -98,10 +135,117 @@ const Navbar = () => {
 
           {user ? (
             <>
-              {/* <p onClick={logoutUser}>Logout</p> */}
+              {/* <p onClick={logoutUser}>Logout</p> 
               <Button color="inherit" onClick={logoutUser}>
                 Logout
               </Button>
+            */}
+
+              <Tooltip title="Account settings">
+                <IconButton
+                  onClick={handleClick}
+                  size="small"
+                  sx={{ ml: 2 }}
+                  aria-controls={open1 ? "account-menu" : undefined}
+                  aria-haspopup="true"
+                  aria-expanded={open1 ? "true" : undefined}
+                >
+                  {profile_image ===
+                  "https://png.pngtree.com/png-vector/20190927/ourmid/pngtree-user-icon-symbol-design-user-icon-isolated-design-png-image_1746919.jpg" ? (
+                    <Avatar sx={{ width: 32, height: 32 }}>
+                      {username.charAt(0).toUpperCase()}
+                    </Avatar>
+                  ) : (
+                    <Avatar
+                      sx={{ width: 32, height: 32 }}
+                      src={profile_image}
+                    />
+                  )}
+                </IconButton>
+
+                <Menu
+                  anchorEl={anchorEl}
+                  id="account-menu"
+                  open={open1}
+                  onClose={handleClose}
+                  onClick={handleClose}
+                  PaperProps={{
+                    elevation: 0,
+                    sx: {
+                      overflow: "visible",
+                      filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
+                      mt: 1.5,
+                      "& .MuiAvatar-root": {
+                        width: 32,
+                        height: 32,
+                        ml: -0.5,
+                        mr: 1,
+                      },
+                      "&::before": {
+                        content: '""',
+                        display: "block",
+                        position: "absolute",
+                        top: 0,
+                        right: 14,
+                        width: 10,
+                        height: 10,
+                        bgcolor: "background.paper",
+                        transform: "translateY(-50%) rotate(45deg)",
+                        zIndex: 0,
+                      },
+                    },
+                  }}
+                  transformOrigin={{ horizontal: "right", vertical: "top" }}
+                  anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
+                >
+                  <MenuItem
+                    onClick={userProfile}
+                    to="/userprofile"
+                    component={Link}
+                  >
+                    {profile_image ===
+                    "https://png.pngtree.com/png-vector/20190927/ourmid/pngtree-user-icon-symbol-design-user-icon-isolated-design-png-image_1746919.jpg" ? (
+                      <Avatar sx={{ width: 32, height: 32 }}>
+                        {username.charAt(0).toUpperCase()}
+                      </Avatar>
+                    ) : (
+                      <Avatar
+                        sx={{ width: 32, height: 32 }}
+                        src={profile_image}
+                      />
+                    )}
+
+                    {username}
+                  </MenuItem>
+                  <Divider />
+                  <MenuItem
+                    onClick={handleClose}
+                    to="/userprofile"
+                    component={Link}
+                  >
+                    <ListItemIcon>
+                      <StarIcon fontSize="small" />
+                    </ListItemIcon>
+                    Favorites
+                  </MenuItem>
+                  <MenuItem
+                    onClick={handleClose}
+                    to="/edituserprofile"
+                    component={Link}
+                  >
+                    <ListItemIcon>
+                      <Settings fontSize="small" />
+                    </ListItemIcon>
+                    Settings
+                  </MenuItem>
+                  <MenuItem onClick={logoutUser}>
+                    <ListItemIcon>
+                      <Logout fontSize="small" />
+                    </ListItemIcon>
+                    Logout
+                  </MenuItem>
+                </Menu>
+              </Tooltip>
             </>
           ) : (
             // <Button   sx={{bgcolor: "#e5c9d9", color: "#1e1e1e" , borderRadius: 25,  border: `1px solid #ea1179`,   '&:hover': { background: "rgb(234, 17, 121)", color: "white"    }  }} onClick={handleRedirect}>
