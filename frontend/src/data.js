@@ -351,34 +351,7 @@ export const manga_data = [
   },
 ];
 
-export const favorites = [
-  {
-    user_id: 1,
-    anime_id: 2,
-    manga_id: null,
-  },
-  {
-    user_id: 1,
-    anime_id: 3,
-    manga_id: null,
-  },
-  {
-    user_id: 2,
-    anime_id: 8,
-    manga_id: null,
-  },
-  {
-    user_id: 1,
-    anime_id: null,
-    manga_id: 3,
-  },
 
-  {
-    user_id: 1,
-    anime_id: null,
-    manga_id: 9,
-  },
-];
 
 // options for dropdowns
 export const genres = [
@@ -433,6 +406,7 @@ export const year = [
   1945, 1944, 1943, 1942, 1941, 1940,
 ];
 
+// TODO malo advancement query, da uzme iz 'studio' svih polja i doda u listu. NA BACkEND to uradi. i samo da vraća listu, na neki route... da koristis samo za koje treba
 export const studio = [
   "3Hz",
   "A.C.G.T",

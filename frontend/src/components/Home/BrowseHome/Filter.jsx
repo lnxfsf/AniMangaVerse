@@ -1,5 +1,5 @@
 
-import { anime_data, genres, year, studio } from "../../../data";
+import {studio, anime_data, genres, year } from "../../../data";
 import "../../../styles/BrowseHome.scoped.scss";
 
 

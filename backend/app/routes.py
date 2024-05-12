@@ -10,6 +10,12 @@ from pymongo import *
 from bson.objectid import ObjectId
 
 
+from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
+
+
+import datetime
+import hashlib
+
 
 
 
@@ -41,8 +47,7 @@ def get_animes():
 
 
 
-# OVO jE TESTING ZA MONGO DB. dodat 's' pri kraju 'Anime s '
-@app.route('/api/ListAnimes/<string:pk>/',methods=['GET'])
+@app.route('/api/Anime/<string:pk>/',methods=['GET'])
 def get_anime_detail_test(pk):
 
 
@@ -58,8 +63,7 @@ def get_anime_detail_test(pk):
 
 
 
-# ovaj koristis za FE, ti prosledjujes direktno /id , od anime-a... 
-@app.route('/api/ListAnime/<int:anime_id>/',methods=['GET'])
+@app.route('/api/Anime/<int:anime_id>/',methods=['GET'])
 def get_anime_detail(anime_id):
 
 
@@ -77,7 +81,6 @@ def get_anime_detail(anime_id):
 
 
 
-# ovo je okej ... moze ovo za listing, samo ces pagination namestiti kasnije..
 @app.route('/api/ListManga',methods=['GET'])
 def get_manga():
     
@@ -100,8 +103,7 @@ def get_manga():
 
 
 
-# OVO jE TESTING ZA MONGO DB. dodat 's' pri kraju 'Anime s '
-@app.route('/api/ListMangas/<string:pk>/',methods=['GET'])
+@app.route('/api/Manga/<string:pk>/',methods=['GET'])
 def get_manga_detail_test(pk):
 
 
@@ -116,8 +118,7 @@ def get_manga_detail_test(pk):
     return jsonify(manga)
 
 
-# ovaj koristis za FE, ti prosledjujes direktno /id , od manga-a... 
-@app.route('/api/ListManga/<int:manga_id>/',methods=['GET'])
+@app.route('/api/Manga/<int:manga_id>/',methods=['GET'])
 def get_manga_detail(manga_id):
 
 
@@ -133,8 +134,6 @@ def get_manga_detail(manga_id):
 
 
 
-#TODO: on ce na FE, da otvara ovaj link za prikaz favorites, tako sto pošalje user_id, i onda na FE, on ce znati, koje tačno njemu da pošalje
-# ovo, ti je samo testing ! zbog mongodb, na kraju, ocistices ti ove rute... 
 @app.route('/api/ListFavorites',methods=['GET'])
 def get_favorites():
     collection = getDb().favorites
@@ -148,8 +147,7 @@ def get_favorites():
 
 
 
-# TODO, na frontend, taj komponenta za favorites, sada ce trebati samo da otvori link, pod ovim user_id -om, i dobije listu fetched sve što i treba. i to je bukvalno to ! na FE, comment out, onu logiku što si koristio da filtiraš sam ručno preko user_id-a, ovaj put, sada ce dobijati samo za tog korisnika po default-u. da, to tek treba da namestis poziv ka BE u FE, kako ces, al sve je u listi na data.js, i to bi da koristim kao cache samim time..  (da u data.js, namesti logiku, da proveri prvo lokalni cache, ako nema, e onda pravi request. veruj mi, mnogo brze nego da pravi request svaki put ! )
-@app.route('/api/ListFavorites/<int:user_id>',methods=['GET'])
+@app.route('/api/ListFavorites/<string:user_id>',methods=['GET'])
 def get_favorites_user(user_id):
     collection = getDb().favorites
 
@@ -166,3 +164,72 @@ def get_favorites_user(user_id):
 
     return jsonify(favorites)
 
+
+
+
+
+
+
+# TODO ovo samo secret key ?? da sakrijes..
+jwt = JWTManager(app) 
+app.config['JWT_SECRET_KEY'] = 'Your_Secret_Key'
+app.config['JWT_ACCESS_TOKEN_EXPIRES'] = datetime.timedelta(days=1) 
+
+
+
+
+# auth registracija
+@app.route("/api/v1/register", methods=["POST"])
+def register():
+    users_collection = getDb().users
+
+    new_user = request.get_json() 
+    new_user["password"] = hashlib.sha256(new_user["password"].encode("utf-8")).hexdigest() 
+
+    doc = users_collection.find_one({"username": new_user["username"]}) 
+    if not doc:
+        users_collection.insert_one(new_user)
+        return jsonify({'msg': 'User created successfully'}), 201
+    else:
+        return jsonify({'msg': 'Username already exists'}), 409
+
+
+
+
+
+@app.route("/api/v1/login", methods=["post"])
+def login():
+
+
+    users_collection = getDb().users
+
+    login_details = request.get_json() 
+    user_from_db = users_collection.find_one({'username': login_details['username']})  
+
+    if user_from_db:
+        encrpted_password = hashlib.sha256(login_details['password'].encode("utf-8")).hexdigest()
+        # msm, on auto kreira sto da pravis user_id, jos uvek nisi napravio tako nesto ?? ovo drugo ..
+        user_id=str(user_from_db['_id'])
+        email=user_from_db['email']
+
+        if encrpted_password == user_from_db['password']:
+            access_token = create_access_token(identity=user_from_db['username']) 
+
+            # treba string token da bude samo u react. da ne menjas tolko taj FE 
+            return jsonify(access_token=access_token,user_id=user_id, email=email), 200
+
+    return jsonify({'msg': 'The username or password is incorrect'}), 401
+
+
+
+
+#@app.route("/api/v1/user", methods=["GET"])
+#@jwt_required
+#def profile():
+#    current_user = get_jwt_identity() 
+#    user_from_db = users_collection.find_one({'username' : current_user})
+#    if user_from_db:
+#        del user_from_db['_id'], user_from_db['password'] 
+#        return jsonify({'profile' : user_from_db }), 200
+#    else:
+#        return jsonify({'msg': 'Profile not found'}), 404

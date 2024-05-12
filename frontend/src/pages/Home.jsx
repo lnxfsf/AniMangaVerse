@@ -3,6 +3,8 @@ import { UpcomingCarousel } from "../components/Home/UpcomingCarousel/UpcomingCa
 import { BrowseHome } from "../components/Home/BrowseHome/BrowseHome";
 
 
+
+
 import { Favorites } from "../components/UserProfile/Favorites";
 
 import React, { useEffect, useState } from 'react';
@@ -56,8 +58,24 @@ const Home = () => {
   }
   
   
+
+
+  let tokens =  JSON.parse(localStorage.getItem('authTokens'))
+
+  if (tokens){
+
+    var user_id = tokens.data.user_id
+  }else{
+    var user_id = null
+  }
+
+   
+
+  
   return (
     <>
+
+    <Favorites user_id={user_id} />
 
       <PopularCarousel />
       <UpcomingCarousel />

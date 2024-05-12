@@ -7,6 +7,7 @@ import "../styles/login.scoped.scss";
 
 import { Button, } from "@mui/material";
 
+import axios from 'axios';
 
 
 
@@ -46,6 +47,45 @@ const Login = () => {
   
 
 
+
+    
+  let registerUser = async (e) => {
+    var username = e.target.username1.value
+    var email = e.target.email1.value
+    var password = e.target.password1.value
+    
+    e.preventDefault();
+
+    //console.log("hi: "+username)
+
+    
+    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+    if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address");
+    }
+    
+
+    
+    let response = await axios.post('http://localhost:5000/api/v1/register', {username, email, password} );
+    
+    
+    console.log(e)
+    //
+    //let response = await fetch("http://127.0.0.1:5000/api/v1/register", {
+    //  method: "POST",
+    //  headers: {
+    //    "Content-Type": "application/json",
+    //  },
+    //  body: JSON.stringify({
+    //    username: e.target.username1.value,
+    //    password: e.target.password1.value,
+    //  }),
+    //});
+
+    console.log(response);
+    
+  }
   
 
   return (
@@ -103,7 +143,7 @@ const Login = () => {
                 </a>
               </div>
             </form>
-            <form action="#" className="sign-up-form">
+            <form action="#" method="post" className="sign-up-form" onSubmit={registerUser}>
               <h2 className="title">Create Account</h2>
               <div className="input-field">
                 <i className="fas fa-user"></i>

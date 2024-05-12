@@ -11,6 +11,9 @@ const DetailsPage = () => {
   // this is prop from  UpcomingCarousel (anime_id), passed throught <Link>
   const location = useLocation();
   const { id, anime } = location.state;
+  
+
+
 
   // we get all variables from external function (imported .js)
   var dataObject = getDataObject(id, anime);
