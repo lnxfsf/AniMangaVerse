@@ -8,10 +8,12 @@ const loaderInterval = setInterval(() => {
   console.log("Loading...");
 }, 1000);
 
+
 let studio = [];
 let genres = [];
 let season = [];
 let episodes = [];
+let country_origin = [];
 
 export let anime_data = [];
 
@@ -73,317 +75,58 @@ apiInstance
     console.log("Loading finished.");
   });
 
-// dummy manga data values
-export const manga_data = [
-  {
-    title: "Chainsaw Man",
 
-    genre: ["adventure", "drama", "crime"],
-    manga_id: 1,
-    start_date: "October 2022",
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx105778-82gwrvQV6OBc.png",
 
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/banner/105778-wk5qQ7zAaTGl.jpg",
-    status: "Releasing",
-    country_origin: "Japan",
 
-    user_id: 1,
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
 
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
+let manga_data = [];
 
-    end_date: "2023-03-25",
-  },
-  {
-    title: "Jujutsu Kaisen",
+apiInstance
+  .get("/ListManga")
+  .then((response) => {
+    manga_data = response.data;
+    console.log(response.data);
 
-    genre: ["adventure", "drama", "crime"],
-    manga_id: 2,
+    // uzima samo dostupne genres iz manga koje ima
+    manga_data.forEach((manga) => {
+      manga.genre.forEach((genre) => {
+        let formattedGenre = genre.charAt(0).toUpperCase() + genre.slice(1);
+        if (!genres.includes(formattedGenre)) {
+          genres.push(formattedGenre);
+        }
+      });
+    });
+    
+    
 
-    start_date: "October 2022",
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx101517-H3TdM3g5ZUe9.jpg",
 
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/banner/101517-FrJtb3Th3HtF.jpg",
-    status: "Releasing",
-    country_origin: "Japan",
+    // country origin, odakle je
+    manga_data.forEach((manga) => {
+        let formattedCountry_origin = manga.country_origin.charAt(0).toUpperCase() + manga.country_origin.slice(1);
+        if (!country_origin.includes(formattedCountry_origin)) {
+          country_origin.push(formattedCountry_origin);
+        }
+    });
 
-    user_id: 1,
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
+    
+      
+    return manga_data;
+  })
+  .catch((error) => {
+    console.error("Error fetching data:", error);
+  })
+  .finally(() => {
+    clearInterval(loaderInterval);
+    console.log("Loading finished.");
+  });
 
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
 
-    end_date: "2023-03-25",
-  },
 
-  {
-    title: "Omniscient Reader",
-    genre: ["adventure", "drama", "crime"],
 
-    manga_id: 3,
-    start_date: "October 2022",
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx119257-KzlNZtgbRzxF.jpg",
+  
+   
+    
 
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/banner/119257-RtxJMRCunHXc.jpg",
-    status: "Releasing",
-    country_origin: "Japan",
-
-    user_id: 1,
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-
-    end_date: "2023-03-25",
-  },
-
-  {
-    title: "One Piece",
-    genre: ["adventure", "drama", "crime"],
-
-    manga_id: 4,
-    start_date: "October 2022",
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30013-tZVlfBCHbrNL.jpg",
-
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/banner/30013-hbbRZqC5MjYh.jpg",
-    status: "Releasing",
-    country_origin: "Japan",
-
-    user_id: 1,
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-
-    end_date: "2023-03-25",
-  },
-
-  {
-    title: "Frieren: Beyond Journey's End",
-    genre: ["adventure", "drama", "crime"],
-
-    manga_id: 5,
-    start_date: "October 2022",
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx118586-F0Lp86XQV7du.jpg",
-
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/banner/118586-1JLJiwaIlnBp.jpg",
-    status: "Releasing",
-    country_origin: "Japan",
-
-    user_id: 1,
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-
-    end_date: "2023-03-25",
-  },
-
-  {
-    title: "Latna Saga: Survival of a Sword King",
-    genre: ["adventure", "drama", "crime"],
-
-    manga_id: 6,
-    start_date: "October 2022",
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx114605-MYUWMsdjry6m.jpg",
-
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/banner/114605-TdVVCVg2jj28.jpg",
-    status: "Releasing",
-    country_origin: "Japan",
-
-    user_id: 1,
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-
-    end_date: "2023-03-25",
-  },
-
-  {
-    genre: ["adventure", "drama", "crime"],
-    title: "The Infinite Mage",
-
-    manga_id: 7,
-    start_date: "October 2022",
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx159930-pX4aWN9aqihH.jpg",
-
-    background_image: "",
-    status: "Releasing",
-    country_origin: "Japan",
-
-    user_id: 1,
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-
-    end_date: "2023-03-25",
-  },
-
-  {
-    genre: ["adventure", "drama", "crime"],
-    title: "Kingdom",
-
-    manga_id: 8,
-    start_date: "October 2022",
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx46765-KPXir4sRqJBW.png",
-
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/banner/46765-8DqCBEYyt9yP.jpg",
-    status: "Releasing",
-    country_origin: "Japan",
-
-    user_id: 1,
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-
-    end_date: "2023-03-25",
-  },
-
-  {
-    title: "Eleceed",
-
-    genre: ["adventure", "drama", "crime"],
-    manga_id: 9,
-    start_date: "October 2022",
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx106929-flAUvHZDUz5v.jpg",
-
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/banner/106929-jYmT1n3Z0m46.jpg",
-    status: "Releasing",
-    country_origin: "Japan",
-
-    user_id: 1,
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-
-    end_date: "2023-03-25",
-  },
-
-  {
-    title: "Kagurabachi",
-    genre: ["adventure", "drama", "crime"],
-
-    manga_id: 10,
-    start_date: "October 2022",
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx169355-aLIPeq4iQfbK.jpg",
-
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/banner/169355-MzURKZ3veXa7.jpg",
-    status: "Releasing",
-    country_origin: "Japan",
-
-    user_id: 1,
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-
-    end_date: "2023-03-25",
-  },
-
-  {
-    title: "The Legend of the Northern Blade",
-
-    genre: ["adventure", "drama", "crime"],
-    manga_id: 11,
-    start_date: "October 2022",
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx119521-qYqxFvn0NnXo.png",
-
-    background_image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/banner/119521-CPhjvDuMReVg.jpg",
-    status: "Releasing",
-    country_origin: "Japan",
-
-    user_id: 1,
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-
-    end_date: "2023-03-25",
-  },
-
-  {
-    title: "Duke Pendragon: Master of the White Dragon",
-
-    genre: ["adventure", "drama", "crime"],
-    manga_id: 12,
-    start_date: "October 2022",
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx143025-YL8hzpkVFR5J.jpg",
-
-    background_image: "",
-    status: "Releasing",
-    country_origin: "Japan",
-
-    user_id: 1,
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-
-    end_date: "2023-03-25",
-  },
-
-  {
-    title: "Overgeared",
-    genre: ["adventure", "drama", "crime"],
-
-    manga_id: 13,
-    start_date: "October 2022",
-    image:
-      "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx117460-46JbftfHSXoc.jpg",
-
-    background_image: "",
-    status: "Releasing",
-    country_origin: "Japan",
-
-    user_id: 1,
-    num_of_fav: 323,
-    desc: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.",
-
-    yt_trailer:
-      "https://www.youtube.com/embed/Ades3pQbeh8?si=MjLoyWbB-T9aOirP ",
-
-    end_date: "2023-03-25",
-  },
-];
 
 export const year = [
   2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012,
@@ -395,6 +138,9 @@ export const year = [
   1946, 1945, 1944, 1943, 1942, 1941, 1940,
 ];
 
+
+
+//TODO samo i ovaj jos
 export const publishing = [
   "Releasing",
   "Finished",
@@ -403,8 +149,6 @@ export const publishing = [
   "Cancelled",
 ];
 
-//TODO, i search, za epizode i ostalo, to treba samo, sve što je manje od toga..
 
-export const country_origin = ["Japan", "South Corea", "China", "Taiwan"];
 
-export { studio, genres, season, episodes };
+export { studio, genres, season, episodes, manga_data, country_origin };

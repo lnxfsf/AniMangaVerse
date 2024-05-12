@@ -7,9 +7,16 @@ import "../../../styles/PopularCarousel.scoped.scss";
 
 const PopularCarousel = () => {
 
+  
+
+  // TODO: treba da izvuče po broju favorites, koji najvise ima, prvo..  to je ovo, da modifikujes od kojeg indeksa i po kojim indeksima ide.. ostalo ne bi morao dirat
+
   var curIndex = 0
+  
+  
+
+  
   const [curAnime , setAnime] = useState(anime_data[curIndex])
-/* 
   useEffect(() => {
     const interval = setInterval(() => {
       curIndex++
@@ -19,7 +26,7 @@ const PopularCarousel = () => {
       setAnime(anime_data[curIndex])
     }, 15000);
     return () => clearInterval(interval);
-  }, []); */
+  }, []); 
 
   return (
     <>
