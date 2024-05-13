@@ -11,8 +11,8 @@ load_dotenv()
 password = os.environ.get('PASSWORD_MONGODB') or os.getenv("PASSWORD_MONGODB") 
 username =  os.environ.get('USERNAME_MONGODB') or os.getenv("USERNAME_MONGODB")
 
-print("sifra je: " + password)
-print("username je: " + username)
+print("sifra je: ", password)
+print("username je: ", username)
 
 
 uri = f"mongodb+srv://{username}:{password}@cluster0.n3bexs7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
