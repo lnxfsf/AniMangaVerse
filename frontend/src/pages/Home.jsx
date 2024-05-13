@@ -2,17 +2,14 @@ import { PopularCarousel } from "../components/Home/PopularCarousel/PopularCarou
 import { UpcomingCarousel } from "../components/Home/UpcomingCarousel/UpcomingCarousel";
 import { BrowseHome } from "../components/Home/BrowseHome/BrowseHome";
 
-
-
-
-import { Favorites } from "../components/UserProfile/Favorites";
-
 import React, { useEffect, useState } from 'react';
-
 
 import axios from "axios";
 
-import { anime_data } from '../data';
+
+let BACKEND_SERVER_BASE_URL = import.meta.env.VITE_BACKEND_SERVER_BASE_URL || process.env.VITE_BACKEND_SERVER_BASE_URL;
+
+
 
 const Home = () => {
   
@@ -26,7 +23,7 @@ const Home = () => {
     
 
     const apiInstance = axios.create({
-      baseURL: "https://animangaverse.onrender.com/api", 
+      baseURL: `${BACKEND_SERVER_BASE_URL}/api`, 
     });
 
     let anime_data = [];

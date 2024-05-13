@@ -2,8 +2,13 @@
 
 import axios from "axios";
 
+
+
+let BACKEND_SERVER_BASE_URL = import.meta.env.VITE_BACKEND_SERVER_BASE_URL || process.env.VITE_BACKEND_SERVER_BASE_URL;
+
+
 const apiInstance = axios.create({
-  baseURL: "https://animangaverse.onrender.com/api",
+  baseURL: `${BACKEND_SERVER_BASE_URL}/api`,
 });
 
 const loaderInterval = setInterval(() => {

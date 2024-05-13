@@ -6,12 +6,16 @@ import axios from "axios";
 
 import React, { useState, useEffect } from "react";
 
+
+
+let BACKEND_SERVER_BASE_URL = import.meta.env.VITE_BACKEND_SERVER_BASE_URL || process.env.VITE_BACKEND_SERVER_BASE_URL;
+
 const Favorites = ({ user_id }) => {
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     const apiInstance = axios.create({
-      baseURL: "https://animangaverse.onrender.com/api",
+      baseURL: `${BACKEND_SERVER_BASE_URL}/api`,
     });
 
     apiInstance
