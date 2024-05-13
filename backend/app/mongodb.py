@@ -12,7 +12,7 @@ password = os.environ.get('PASSWORD_MONGODB') or os.getenv("PASSWORD_MONGODB")
 username =  os.environ.get('USERNAME_MONGODB') or os.getenv("USERNAME_MONGODB")
 
 
-secret_file_path = "/etc/secrets/.env"
+secret_file_path = "../etc/secrets/.env"
 # Read the secret from the file
 with open(secret_file_path, "r") as file:
     secret = file.read().strip()
