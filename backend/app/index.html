@@ -1,0 +1,88 @@
+
+<h1 id="welcome-to-the-api-documentation">Welcome to the API Documentation</h1>
+<h2 id="routes">Routes</h2>
+<ul>
+<li><a href="#home-page">Home Page</a></li>
+<li><a href="#api">API</a></li>
+<li><a href="#list-anime">List Anime</a></li>
+<li><a href="#anime-detail-by-id">Anime Detail by ID</a></li>
+<li><a href="#anime-detail-by-anime_id">Anime Detail by anime_id</a></li>
+<li><a href="#list-manga">List Manga</a></li>
+<li><a href="#manga-detail-by-id">Manga Detail by ID</a></li>
+<li><a href="#manga-detail-by-manga_id">Manga Detail by manga_id</a></li>
+<li><a href="#list-favorites">List Favorites</a></li>
+<li><a href="#list-favorites-by-user_id">List Favorites by user_id</a></li>
+<li><a href="#user-registration">User Registration</a></li>
+<li><a href="#user-login">User Login</a></li>
+</ul>
+<hr>
+<h2 id="home-page">Home Page</h2>
+<p><strong>Route:</strong> <code>/</code></p>
+<p><strong>Method:</strong> <code>GET</code></p>
+<p><strong>Description:</strong> Route for the homepage.</p>
+<hr>
+<h2 id="api">API</h2>
+<p><strong>Route:</strong> <code>/api</code></p>
+<p><strong>Method:</strong> <code>GET</code></p>
+<p><strong>Description:</strong> Route for the API.</p>
+<hr>
+<h2 id="list-anime">List Anime</h2>
+<p><strong>Route:</strong> <code>/api/ListAnime</code></p>
+<p><strong>Method:</strong> <code>GET</code></p>
+<p><strong>Description:</strong> Route to get a list of anime.</p>
+<hr>
+<h2 id="anime-detail-by-id">Anime Detail by ID</h2>
+<p><strong>Route:</strong> <code>/api/Anime/&lt;string:pk&gt;/</code></p>
+<p><strong>Method:</strong> <code>GET</code></p>
+<p><strong>Description:</strong> Route to get details of a specific anime by ID.</p>
+<hr>
+<h2 id="anime-detail-by-anime_id">Anime Detail by anime_id</h2>
+<p><strong>Route:</strong> <code>/api/Anime/&lt;int:anime_id&gt;/</code></p>
+<p><strong>Method:</strong> <code>GET</code></p>
+<p><strong>Description:</strong> Route to get details of a specific anime by anime_id.</p>
+<hr>
+<h2 id="list-manga">List Manga</h2>
+<p><strong>Route:</strong> <code>/api/ListManga</code></p>
+<p><strong>Method:</strong> <code>GET</code></p>
+<p><strong>Description:</strong> Route to get a list of manga.</p>
+<hr>
+<h2 id="manga-detail-by-id">Manga Detail by ID</h2>
+<p><strong>Route:</strong> <code>/api/Manga/&lt;string:pk&gt;/</code></p>
+<p><strong>Method:</strong> <code>GET</code></p>
+<p><strong>Description:</strong> Route to get details of a specific manga by ID.</p>
+<hr>
+<h2 id="manga-detail-by-manga_id">Manga Detail by manga_id</h2>
+<p><strong>Route:</strong> <code>/api/Manga/&lt;int:manga_id&gt;/</code></p>
+<p><strong>Method:</strong> <code>GET</code></p>
+<p><strong>Description:</strong> Route to get details of a specific manga by manga_id.</p>
+<hr>
+<h2 id="list-favorites">List Favorites</h2>
+<p><strong>Route:</strong> <code>/api/ListFavorites</code></p>
+<p><strong>Method:</strong> <code>GET</code></p>
+<p><strong>Description:</strong> Route to get a list of favorites.</p>
+<hr>
+<h2 id="list-favorites-by-user_id">List Favorites by user_id</h2>
+<p><strong>Route:</strong> <code>/api/ListFavorites/&lt;string:user_id&gt;</code></p>
+<p><strong>Method:</strong> <code>GET</code></p>
+<p><strong>Description:</strong> Route to get a list of favorites by user ID.</p>
+<hr>
+<h2 id="user-registration">User Registration</h2>
+<p><strong>Route:</strong> <code>/api/v1/register</code></p>
+<p><strong>Method:</strong> <code>POST</code></p>
+<p><strong>Description:</strong> Route for user registration.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>username</code> (string, required): Username for registration.</li>
+<li><code>email</code> (string, required): Email for registration.</li>
+<li><code>password</code> (string, required): Password for registration.</li>
+</ul>
+<hr>
+<h2 id="user-login">User Login</h2>
+<p><strong>Route:</strong> <code>/api/v1/login</code></p>
+<p><strong>Method:</strong> <code>POST</code></p>
+<p><strong>Description:</strong> Route for user login.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>username</code> (string, required): Username for login.</li>
+<li><code>password</code> (string, required): Password for login.</li>
+</ul>

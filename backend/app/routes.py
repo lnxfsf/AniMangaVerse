@@ -2,7 +2,7 @@
 
 from app import app
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_file
 
 from .mongodb import *
 from pymongo import * 
@@ -21,7 +21,7 @@ import hashlib
 
 @app.route('/')
 def index():
-    return "Hello, World! hi. hello"
+    return send_file('./index.html')
 
 
 
