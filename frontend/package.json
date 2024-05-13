@@ -23,7 +23,8 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
     "rollup-plugin-react-scoped-css": "^0.8.4",
-    "scroll-carousel": "^1.2.7"
+    "scroll-carousel": "^1.2.7",
+    "serve": "^14.2.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
