@@ -11,7 +11,7 @@ const Favorites = ({ user_id }) => {
 
   useEffect(() => {
     const apiInstance = axios.create({
-      baseURL: "http://localhost:5000/api",
+      baseURL: "https://animangaverse.onrender.com/api",
     });
 
     apiInstance

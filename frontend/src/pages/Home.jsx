@@ -26,7 +26,7 @@ const Home = () => {
     
 
     const apiInstance = axios.create({
-      baseURL: "http://localhost:5000/api", 
+      baseURL: "https://animangaverse.onrender.com/api", 
     });
 
     let anime_data = [];

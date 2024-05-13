@@ -67,7 +67,7 @@ const Login = () => {
 
     e.preventDefault()
     
-    let response = await axios.post('http://localhost:5000/api/v1/register', {username, email, password, bio, profile_image} );
+    let response = await axios.post('https://animangaverse.onrender.com/api/v1/register', {username, email, password, bio, profile_image} );
     
     if(response){
       alert("Registration success, login ")

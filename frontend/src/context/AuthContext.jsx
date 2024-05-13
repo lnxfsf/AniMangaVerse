@@ -56,7 +56,7 @@ export const AuthProvider = ({ children }) => {
     //});
     
     // sa axios request ??
-    let data = await axios.post('http://127.0.0.1:5000/api/v1/login', {username, password} );
+    let data = await axios.post('https://animangaverse.onrender.com/api/v1/login', {username, password} );
     
     console.log("user is: " + username )
     console.log("pass is: " + password )
@@ -90,29 +90,29 @@ export const AuthProvider = ({ children }) => {
     setUser(null);
     navigate("/login");
   };
-
-  const updateToken = async () => {
-    const response = await fetch("http://127.0.0.1:8000/token/refresh/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ refresh: authTokens?.refresh }),
-    });
-
-    const data = await response.json();
-    if (response.status === 200) {
-      setAuthTokens(data);
-      setUser(jwtDecode(data.data.access_token));
-      localStorage.setItem("authTokens", JSON.stringify(data));
-    } else {
-      logoutUser();
-    }
-
-    if (loading) {
-      setLoading(false);
-    }
-  };
+//
+//  const updateToken = async () => {
+//    const response = await fetch("https://animangaverse.onrender.com/token/refresh/", {
+//      method: "POST",
+//      headers: {
+//        "Content-Type": "application/json",
+//      },
+//      body: JSON.stringify({ refresh: authTokens?.refresh }),
+//    });
+//
+//    const data = await response.json();
+//    if (response.status === 200) {
+//      setAuthTokens(data);
+//      setUser(jwtDecode(data.data.access_token));
+//      localStorage.setItem("authTokens", JSON.stringify(data));
+//    } else {
+//      logoutUser();
+//    }
+//
+//    if (loading) {
+//      setLoading(false);
+//    }
+//  };
 
   let contextData = {
     user: user,
@@ -125,7 +125,7 @@ export const AuthProvider = ({ children }) => {
     const REFRESH_INTERVAL = 1000 * 60 * 9; // 9 minutes
     let interval = setInterval(() => {
       if (authTokens && loading) {
-        updateToken();
+        //updateToken();
       }
     }, REFRESH_INTERVAL);
     return () => clearInterval(interval);
