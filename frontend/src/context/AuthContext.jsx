@@ -56,7 +56,16 @@ export const AuthProvider = ({ children }) => {
     //});
     
     // sa axios request ??
-    let data = await axios.post('https://animangaverse.onrender.com/api/v1/login', {username, password} );
+    try{
+	let data = await axios.post('https://animangaverse.onrender.com/api/v1/login', {username, password} );
+    }
+    catch (error){
+	if (error.response.status === 401) {
+		alert("Wrong username or password");
+	}
+
+    }
+
     
     console.log("user is: " + username )
     console.log("pass is: " + password )
