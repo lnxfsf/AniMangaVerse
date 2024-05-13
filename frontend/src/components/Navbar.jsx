@@ -42,7 +42,6 @@ import { useNavigate } from "react-router-dom";
 
 import AuthContext from "../context/AuthContext";
 
-import { UserProfile } from "../pages/UserProfile";
 
 const Navbar = () => {
   let { user, logoutUser } = useContext(AuthContext);
