@@ -6,6 +6,6 @@ List of animes, mangas and more
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/995d2254-e7d1-42cb-8656-268249a9f59d/deploy-status)](https://app.netlify.com/sites/animanga-verse/deploys)
 
-[Backend API](https://animangaverse.onrender.com/)
+[Backend API](https://animanga-fklg.onrender.com)
 
 [Frontend](https://animanga-verse.netlify.app/)
