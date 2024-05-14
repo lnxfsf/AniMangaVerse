@@ -2,8 +2,10 @@
 FROM python:3.11
 
 
+
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONDONTWRITEBYTECODE 1
+
 
 # Allows docker to cache installed dependencies between builds
 COPY requirements.txt requirements.txt
@@ -26,5 +28,6 @@ EXPOSE 5000
 # gunicorn -w animanga_project.wsgi:application
 # CMD ["gunicorn", "-w", "4", "animanga_project.wsgi:application", "--bind", "0.0.0.0:8000"]
 CMD ["gunicorn", "-w", "4", "app:app", "--bind", "0.0.0.0:5000"]
+
 
 
