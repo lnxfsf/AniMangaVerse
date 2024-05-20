@@ -244,3 +244,112 @@ def login():
 #        return jsonify({'profile' : user_from_db }), 200
 #    else:
 #        return jsonify({'msg': 'Profile not found'}), 404
+
+
+
+
+
+# list user info
+@app.route("/api/ListUsers", methods=["GET"])
+def listUsers():
+    collection = getDb().users
+
+    users = list(collection.find())
+
+    for user in users:
+        user['_id'] = str(user['_id'])
+
+    return jsonify(users)
+
+
+
+# list one user only
+@app.route('/api/ListUsers/<string:user_id>',methods=['GET'])
+def listUser(user_id):
+    collection = getDb().users
+
+    users = list(collection.find({  '_id': ObjectId(user_id) }))
+
+    for user in users:
+        user['_id'] = str(user['_id'])
+        
+
+
+    return jsonify(user)
+
+
+
+
+# edit user
+@app.route("/api/edituserprofile", methods=["GET","POST"])
+def edituserprofile():
+
+
+    if request.method == "GET":    
+        users_collection = getDb().users
+
+        new_user = request.get_json() 
+        # user_from_db = users_collection.find_one({ '_id': ObjectId(login_details['user_id']) })
+
+
+
+
+        login_details = request.get_json()
+        user_id = login_details.get("user_id")
+        username = login_details.get("username")
+
+        pass_confirm = login_details.get("passConfirm") # old password, that's gonna be replaced
+
+        pass_new = login_details.get("passNew") # new pass, that will go 
+
+        bio = login_details.get("bio")
+        profile_image = login_details.get("profile_image")
+        
+
+
+
+
+        user_from_db = users_collection.find_one({"_id": ObjectId(user_id)})
+
+
+        if user_from_db:
+
+            # Hash the passConfirm and compare it with the stored password
+            hashed_pass_confirm = hashlib.sha256(pass_confirm.encode("utf-8")).hexdigest()
+            if hashed_pass_confirm == user_from_db["password"]:
+                # Prepare the update document
+                update_fields = {}
+
+
+            if pass_new:
+                hashed_pass_new = hashlib.sha256(pass_new.encode("utf-8")).hexdigest()
+                update_fields["password"] = hashed_pass_new
+
+
+            # Update other fields if provided
+            if username:
+                update_fields["username"] = username
+
+            if bio:
+                update_fields["bio"] = bio
+
+            if profile_image:
+                update_fields["profile_image"] = profile_image
+
+
+
+            # Perform the update
+            users_collection.update_one(
+                {"_id": ObjectId(user_id)},
+                {"$set": update_fields}
+            )
+
+            return jsonify({'msg': 'User profile updated successfully'}), 200
+
+
+        else:
+            return jsonify({'msg': 'Current password is incorrect'}), 401
+
+    else:
+        return jsonify({'msg': 'User not found'}), 404
+

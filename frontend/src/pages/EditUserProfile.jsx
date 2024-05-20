@@ -1,19 +1,82 @@
 import "../styles/EditUserProfile.scoped.scss";
 
-import { useState } from "react";
+import { useEffect,useState } from "react";
+
+
+import axios from 'axios';
+
+
+let BACKEND_SERVER_BASE_URL = import.meta.env.VITE_BACKEND_SERVER_BASE_URL || process.env.VITE_BACKEND_SERVER_BASE_URL;
+
+
 
 const EditUserProfile = () => {
   // reactive variables
-  const [username, setUsername] = useState("Jovan Popović");
-  const [bio, setBio] = useState("");
+  // 
+
+
+
+useEffect(() => {
+
+
+  
+  //TODO treba u localstorage da azurira values takodje... tj. iz tog i treba da uzme sve info u varijable.. da sačuva i uzima posle..
+  
+const fetchData = async () =>{
+  
+  // info da uzme iz localStorage
+  let tokens = JSON.parse(localStorage.getItem("authTokens"));
+  if (tokens) {
+    var user_id = tokens.data.user_id;
+  }
+  
+  var response = await axios.get(`${BACKEND_SERVER_BASE_URL}/api/ListUsers/${user_id}`  );
+  
+  
+  var userData = response;
+  console.log(userData);
+
+  // da sačuva azurirano, samo treba da ga vrati, da, tako prosto...
+  localStorage.setItem('authTokens', JSON.stringify(userData));
+
+};
+
+
+
+fetchData();
+
+
+
+
+
+}, []);
+
+
+  // sada ovo da stavi na default vrednosti za ovo dole
+  // info da uzme iz localStorage
+  let tokens = JSON.parse(localStorage.getItem("authTokens"));
+  if (tokens) {
+    
+    var user_id = tokens.data.user_id;
+
+    var bio1 = tokens.data.bio;
+    var username1 = tokens.data.username;
+    var profile_image1 = tokens.data.profile_image;
+    var email1 = tokens.data.email;
+
+  }
+  
+
+  const [username, setUsername] = useState(username1);
+  const [bio, setBio] = useState(bio1);
   //TODO click on image, and get to insert new image from local storage. it's first cropped to fit, and then it's uploaded to server.
-  const [profile_image, setProfile_image] = useState(
-    "https://png.pngtree.com/png-vector/20190927/ourmid/pngtree-user-icon-symbol-design-user-icon-isolated-design-png-image_1746919.jpg"
-  );
-  const [email] = useState("");
+  const [profile_image, setProfile_image] = useState(profile_image1);
+  const [email] = useState(email1);
   const [passConfirm, setpassConfirm] = useState("");
   const [passNew, setpassNew] = useState("");
   const [passNewConfirm, setpassNewConfirm] = useState("");
+
+  
 
   //TODO in this 'pass' you bring real password so it can be checked to
   const [pass, setPass] = useState("1234");
@@ -39,38 +102,61 @@ const EditUserProfile = () => {
     setpassNewConfirm(event.target.value);
   };
 
-  // when 'submit' button is clicked
-  let updateProfile = () => {
-    // password fields validation
-    if (passNew !== "" || passNewConfirm !== "") {
-      if (passConfirm == pass) {
-        if (passNew !== passNewConfirm) {
-          alert("Passwords don't match");
-        } else {
-          //if new password right, then assign it this new. and now handle it back to server
-          setPass(passNew);
+  
 
-          // clear fields
-          setpassConfirm("");
-          setpassNew("");
-          setpassConfirm("");
-          setpassNewConfirm("");
-        }
-      } else {
-        if (passConfirm == "") {
-          alert("Enter your current password");
-        } else if (passConfirm !== pass) {
-          alert("Current password incorrect");
-        }
-      }
-    } else if (passConfirm && passConfirm !== pass) {
-      alert("Current password incorrect");
-    }
+
+
+
+
+
+
+
+
+  
+  // when 'submit' button is clicked
+  let updateProfile = async (e) => {
+  //  // password fields validation
+  //  if (passNew !== "" || passNewConfirm !== "") {
+  //    //if (passConfirm == pass) {
+  //      if (passNew !== passNewConfirm) {
+  //        alert("Passwords don't match");
+  //      } else {
+  //        //if new password right, then assign it this new. and now handle it back to server
+  //        setPass(passNew);
+
+  //        // clear fields
+  //        setpassConfirm("");
+  //        setpassNew("");
+  //        setpassConfirm("");
+  //        setpassNewConfirm("");
+  //      }
+  //    } else {
+  //      if (passConfirm == "") {
+  //        alert("Enter your current password");
+  //      } 
+  //      //else if (passConfirm !== pass) {
+  //       // alert("Current password incorrect");
+  //      //}
+  //    }
+  //  } else if (passConfirm && passConfirm !== pass) {
+  //    alert("Current password incorrect");
+  //  }
 
     // if username field empty
     if (!username) {
       alert("Username can't be empty");
     }
+    
+
+
+    
+    const uploadData = async () =>{
+        let response = await axios.post(`${BACKEND_SERVER_BASE_URL}/api/edituserprofile`, { user_id, username, passConfirm, passNew, bio, profile_image} );
+
+    }
+
+
+    
   };
 
   return (

@@ -14,6 +14,12 @@
 <li><a href="#list-favorites-by-user_id">List Favorites by user_id</a></li>
 <li><a href="#user-registration">User Registration</a></li>
 <li><a href="#user-login">User Login</a></li>
+
+
+<li><a href="#list-all-users">List All Users</a></li>
+<li><a href="#list-one-user">List One User</a></li>
+<li><a href="#edit-user-profile">Edit User Profile</a></li>
+
 </ul>
 <hr>
 <h2 id="home-page">Home Page</h2>
@@ -86,3 +92,27 @@
 <li><code>username</code> (string, required): Username for login.</li>
 <li><code>password</code> (string, required): Password for login.</li>
 </ul>
+<hr>
+
+<h2 id="list-all-users">List All Users</h2>
+<p><strong>API Route:</strong> <code>/api/ListUsers</code><br><strong>Method:</strong> <code>GET</code><br><strong>Description:</strong> Fetches a list of all users in the database.</p>
+<hr>
+<h2 id="list-one-user">List One User</h2>
+<p><strong>API Route:</strong> <code>/api/ListUsers/&lt;user_id&gt;</code><br><strong>Method:</strong> <code>GET</code><br><strong>Description:</strong> Fetches details of a single user by their user ID.</p>
+<p><strong>Path Parameters:</strong></p>
+<ul>
+<li><strong><code>user_id</code></strong> (string): The ID of the user to retrieve.</li>
+</ul>
+<hr>
+<h2 id="edit-user-profile">Edit User Profile</h2>
+<p><strong>API Route:</strong> <code>/api/edituserprofile</code><br><strong>Methods:</strong> <code>GET</code>, <code>POST</code><br><strong>Description:</strong> Edits the profile of a user. Updates password, username, bio, and profile image if provided.</p>
+<p><strong>Request Body (JSON):</strong></p>
+<ul>
+<li><strong><code>user_id</code></strong> (string): The ID of the user to update.</li>
+<li><strong><code>username</code></strong> (string, optional): The new username.</li>
+<li><strong><code>passConfirm</code></strong> (string): The current password.</li>
+<li><strong><code>passNew</code></strong> (string, optional): The new password.</li>
+<li><strong><code>bio</code></strong> (string, optional): The new bio.</li>
+<li><strong><code>profile_image</code></strong> (string, optional): The new profile image URL.</li>
+</ul>
+<hr>
