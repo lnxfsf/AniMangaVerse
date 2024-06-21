@@ -1,4 +1,4 @@
-/* 
+
 
 import axios from "axios";
 
@@ -139,7 +139,6 @@ export const publishing = [
 
 export { studio, genres, season, episodes, manga_data, country_origin };
 
- */
 
 
 
@@ -148,6 +147,7 @@ export { studio, genres, season, episodes, manga_data, country_origin };
 
 
 
+/*
 
 // Import Axios
 import axios from 'axios';
@@ -1295,3 +1295,4 @@ export const publishing = [
 ];
 
 export const country_origin = ["Japan", "South Corea", "China", "Taiwan"];
+*/
