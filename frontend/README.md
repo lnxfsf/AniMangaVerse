@@ -17,3 +17,6 @@
 [tailwind](https://tailwindcss.com/)
 
 [scroll carousel](https://asif-jalil.github.io/scroll-carousel-website/#api) (css import is in `index.css`, and `npm i scroll-carousel`, put `import ScrollCarousel from 'scroll-carousel';` where relevant)
+
+
+npm install ldrs
