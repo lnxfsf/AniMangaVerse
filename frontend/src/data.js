@@ -143,7 +143,7 @@ export { studio, genres, season, episodes, manga_data, country_origin };
 
 
 
-a99d15a962cf42626090610b0b2fe09a6ec73f7a
+
 
 
 
