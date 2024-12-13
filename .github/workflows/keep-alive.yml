@@ -14,7 +14,7 @@ on:
     branches: [ main ]
   workflow_dispatch:
   schedule:
-    - cron: '*/16 8-18 * * 1-5' #  Runs every 16 minutes from 08:00 to 19:55 on weekdays
+    - cron: '*/15 6-22 * * *' #  Runs every 16 minutes from 08:00 to 19:55 on weekdays
 
 
 
