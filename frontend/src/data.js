@@ -1,5 +1,5 @@
 
-
+/* 
 import axios from "axios";
 
 
@@ -137,13 +137,15 @@ export const publishing = [
   "Cancelled",
 ];
 
+
+
+
+
+
 export { studio, genres, season, episodes, manga_data, country_origin };
 
 
-
-
-
-
+ */
 
 
 
@@ -186,7 +188,7 @@ apiInstance.get('/')
 
 
 
-
+*/
 
 
   
@@ -1141,8 +1143,6 @@ export const favorites = [
 
 
 
-// TODO: samo, mozda kasnije, jednog dana, da namestis, da ovo iz baze uzima. za sada je bolje ipak lokalno da i dalje stoji jer brže uzima.... 
-
 
 // options for dropdowns
 export const genres = [
@@ -1295,4 +1295,6 @@ export const publishing = [
 ];
 
 export const country_origin = ["Japan", "South Corea", "China", "Taiwan"];
-*/
+
+
+
